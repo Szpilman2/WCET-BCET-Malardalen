@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @14->"RandomInteger::7", @161->"alf_label_41", @162->"alf_label_40", @12->"Initialize::6", @153->"alf_label_36", @157->"alf_label_37", @154->"alf_label_35", @10->"Calc_LinCorrCoef::5", @127->"alf_label_34", @123->"alf_label_33", @131->"alf_label_28", @136->"alf_label_31", @141->"alf_label_30", @144->"alf_label_29", @132->"alf_label_27", @145->"alf_label_26", @146->"alf_label_25", @8->"Calc_Var_Stddev::4", @104->"alf_label_24", @107->"alf_label_23", @109->"alf_label_20", @114->"alf_label_21", @110->"alf_label_19", @117->"alf_label_18", @6->"Square::3", @100->"alf_label_17", @4->"Calc_Sum_Mean::2", @92->"alf_label_16", @94->"alf_label_13", @97->"alf_label_14", @95->"alf_label_12", @98->"alf_label_11", @2->"InitSeed::1", @89->"alf_label_10", @90->"alf_label_9", @0->"main::0", @30->"alf_label_8", @36->"alf_label_7", @44->"alf_label_6", @51->"alf_label_5", @56->"alf_label_4", @64->"alf_label_3", @71->"alf_label_2", @76->"alf_label_1", @80->"alf_label_0"};
+
+map(varid, string): {default->"" \ #113->"Array::113", #47->"Array::47", #72->"Array::72", #100->"ArrayA::100", #5->"ArrayA::5", #7->"ArrayB::7", #94->"ArrayB::94", #86->"Aterm::86", #87->"Bterm::87", #78->"Coef::78", #35->"Mean::35", #74->"Mean::74", #102->"MeanA::102", #9->"MeanA::9", #11->"MeanB::11", #96->"MeanB::96", #33->"Seed::33", #55->"Stddev::55", #25->"StddevA::25", #15->"StddevB::15", #37->"Sum::37", #28->"SumA::28", #18->"SumB::18", #60->"Var::60", #23->"VarA::23", #13->"VarB::13", #63->"diffs::63", #109->"i::109", #43->"i::43", #66->"i::66", #88->"i::88", #79->"numerator::79", #52->"x::52"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(73,[#109],[]), (72,[#88],[]), (71,[#87],[]), (70,[#86],[]), (69,[#79],[]), (68,[#78],[]), (67,[#66],[]), (66,[#63],[]), (65,[#43],[]), (64,[#33],[]), (61,[#28, #18],[]), (59,[#25, #15],[]), (57,[#23, #13],[]), (48,[#9, #11],[]), (46,[#7],[]), (45,[#5, #7],[]), (44,[#5],[]), (43,[],["RandomInteger::7"]), (41,[],[]), (40,[],["Initialize::6"]), (38,[],[]), (37,[#113],[]), (36,[],["Calc_LinCorrCoef::5"]), (34,[],[]), (33,[#96],[]), (32,[#102],[]), (31,[#94],[]), (30,[#100],[]), (29,[],["Calc_Var_Stddev::4"]), (27,[],[]), (26,[#55],[]), (25,[#60],[]), (24,[#74],[]), (23,[#72],[]), (22,[],["Square::3"]), (20,[],[]), (19,[#52],[]), (18,[],["Calc_Sum_Mean::2"]), (16,[],[]), (15,[#35],[]), (14,[#37],[]), (13,[#47],[]), (12,[],["InitSeed::1"]), (10,[],[]), (9,[],["main::0"]), (7,[],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(46,45), (44,45), (43,41), (40,38), (37,45), (36,34), (31,45), (30,45), (29,27), (26,59), (25,57), (23,45), (22,20), (18,16), (15,48), (14,61), (13,45), (12,10), (9,7)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#33,64), (#5,44), (#7,46), (#28,61), (#18,61), (#78,68), (#9,48), (#11,48), (#23,57), (#13,57), (#25,59), (#15,59), (#47,13), (#37,14), (#35,15), (#43,65), (#52,19), (#72,23), (#74,24), (#60,25), (#55,26), (#66,67), (#63,66), (#100,30), (#94,31), (#102,32), (#96,33), (#88,72), (#79,69), (#86,70), (#87,71), (#113,37), (#109,73)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

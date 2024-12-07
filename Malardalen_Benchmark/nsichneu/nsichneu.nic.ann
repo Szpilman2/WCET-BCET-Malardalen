@@ -1,0 +1,14 @@
+/* In main:
+      dummy_i = [0..2]
+      P1_is_marked: 3 -> [2..3]
+      P2_is_marked: 5 -> [3..5]
+      P3_is_marked: 5 -> [0..2]
+      P1_marking_member_0[1] = 1
+      P2_marking_member_0[1] = 1
+*/
+$6_main BB0 2 store $274_dummy_i 0 32 int 0 2 ;
+$6_main BB0 3 store $0_P1_is_marked 0 32 int 2 3 ;
+$6_main BB0 3 store $2_P2_is_marked 0 32 int 3 5 ;
+$6_main BB0 3 store $4_P3_is_marked 0 32 int 0 2 ;
+$6_main BB0 3 store $1_P1_marking_member_0 1 32 int 1 1 ;
+$6_main BB0 3 store $3_P2_marking_member_0 1 32 int 1 1 ;

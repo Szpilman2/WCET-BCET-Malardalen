@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @8->"main::4", @52->"alf_label_19", @57->"alf_label_18", @53->"alf_label_17", @67->"alf_label_16", @6->"swap::3", @46->"alf_label_15", @47->"alf_label_14", @4->"prime::2", @24->"alf_label_13", @26->"alf_label_7", @30->"alf_label_9", @36->"alf_label_10", @33->"alf_label_8", @27->"alf_label_6", @38->"alf_label_4", @43->"alf_label_5", @40->"alf_label_3", @2->"even::1", @18->"alf_label_2", @20->"alf_label_1", @0->"divides::0", @16->"alf_label_0"};
+
+map(varid, string): {default->"" \ #2147483647->"a::2147483647", #45->"a::45", #2147483647->"b::2147483647", #41->"b::41", #22->"i::22", #1->"m::1", #2147483647->"m::2147483647", #15->"n::15", #16->"n::16", #2->"n::2", #2147483647->"n::2147483647", #43->"tmp::43", #52->"x::52", #53->"y::53"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(33,[#53],[]), (32,[#52],[]), (30,[#43],[]), (28,[#22],[]), (27,[],["main::4"]), (25,[],[]), (24,[],["swap::3"]), (22,[],[]), (21,[#41],[]), (20,[#45],[]), (19,[],["prime::2"]), (17,[],[]), (16,[#16],[]), (15,[],["even::1"]), (13,[],[]), (12,[#15],[]), (11,[],["divides::0"]), (9,[],[]), (8,[#1],[]), (7,[#2],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(27,25), (24,22), (21,33), (20,32), (19,17), (15,13), (11,9)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#2,7), (#1,8), (#15,12), (#16,16), (#22,28), (#45,20), (#41,21), (#43,30), (#52,32), (#53,33)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

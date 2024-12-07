@@ -1,0 +1,3064 @@
+begin block BB0:
+	pred ;
+	succ ;
+	code
+		4000 : 4 : Mov (CondAL) (SetCC 0) (Reg 4) (Imm 0);
+		4004 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1000);
+		4008 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (RegLSLImm 5 8);
+		4012 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (Imm 11100);
+		4016 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Reg 4);
+	end code
+end block
+
+begin block BB1:
+	pred ;
+	succ ;
+	code
+		4020 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 20);
+		4024 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 544) (UpdateFalse);
+		4028 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		4032 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 544) (UpdateFalse);
+	end code
+end block
+
+begin block BB2:
+	pred ;
+	succ ;
+	code
+		4036 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 28);
+		4040 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 548) (UpdateFalse);
+		4044 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 1);
+		4048 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 548) (UpdateFalse);
+	end code
+end block
+
+begin block BB3:
+	pred ;
+	succ ;
+	code
+		4052 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 24);
+		4056 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 552) (UpdateFalse);
+		4060 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 20);
+		4064 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 556) (UpdateFalse);
+		4068 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 556) (UpdateFalse);
+		4072 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		4076 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 560) (UpdateFalse);
+		4080 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 560) (UpdateFalse);
+		4084 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 552) (UpdateFalse);
+		4088 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB4:
+	pred ;
+	succ ;
+	code
+		4092 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		4096 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 564) (UpdateFalse);
+		4100 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 28);
+		4104 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 568) (UpdateFalse);
+		4108 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 568) (UpdateFalse);
+		4112 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		4116 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 572) (UpdateFalse);
+		4120 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 572) (UpdateFalse);
+		4124 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 564) (UpdateFalse);
+		4128 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB5:
+	pred ;
+	succ ;
+	code
+		4132 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		4136 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 576) (UpdateFalse);
+		4140 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		4144 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 580) (UpdateFalse);
+		4148 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 580) (UpdateFalse);
+		4152 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 576) (UpdateFalse);
+		4156 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB6:
+	pred ;
+	succ ;
+	code
+		4160 : 4 : B (CondAL) (Label ludcmp_57);
+	end code
+end block
+
+begin block BB7:
+	pred ;
+	succ ;
+	code
+		4164 : 4 : Nop;
+	end code
+end block
+
+begin block BB8:
+	pred ;
+	succ ;
+	code
+		4168 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		4172 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 584) (UpdateFalse);
+		4176 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		4180 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 592) (UpdateFalse);
+		4184 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 592) (UpdateFalse);
+		4188 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4192 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 596) (UpdateFalse);
+		4196 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		4200 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 588) (UpdateFalse);
+		4204 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 596) (UpdateFalse);
+		4208 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 588) (UpdateFalse);
+		4212 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4216 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 596) (UpdateFalse);
+		4220 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 596) (UpdateFalse);
+		4224 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 584) (UpdateFalse);
+		4228 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB9:
+	pred ;
+	succ ;
+	code
+		4232 : 4 : B (CondAL) (Label ludcmp_31);
+	end code
+end block
+
+begin block BB10:
+	pred ;
+	succ ;
+	code
+		4236 : 4 : Nop;
+	end code
+end block
+
+begin block BB11:
+	pred ;
+	succ ;
+	code
+		4240 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		4244 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 600) (UpdateFalse);
+		4248 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		4252 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 632) (UpdateFalse);
+		4256 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 632) (UpdateFalse);
+		4260 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4264 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 636) (UpdateFalse);
+		4268 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 636) (UpdateFalse);
+		4272 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		4276 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 640) (UpdateFalse);
+		4280 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 640) (UpdateFalse);
+		4284 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4288 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 644) (UpdateFalse);
+		4292 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		4296 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 620) (UpdateFalse);
+		4300 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		4304 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 612) (UpdateFalse);
+		4308 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 612) (UpdateFalse);
+		4312 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4316 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 616) (UpdateFalse);
+		4320 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 620) (UpdateFalse);
+		4324 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 616) (UpdateFalse);
+		4328 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4332 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 620) (UpdateFalse);
+		4336 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 620) (UpdateFalse);
+		4340 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4344 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 624) (UpdateFalse);
+		4348 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		4352 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 604) (UpdateFalse);
+		4356 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 604) (UpdateFalse);
+		4360 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4364 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 608) (UpdateFalse);
+		4368 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 624) (UpdateFalse);
+		4372 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 608) (UpdateFalse);
+		4376 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4380 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 624) (UpdateFalse);
+		4384 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 624) (UpdateFalse);
+		4388 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4392 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 628) (UpdateFalse);
+		4396 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 644) (UpdateFalse);
+		4400 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 628) (UpdateFalse);
+		4404 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4408 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 644) (UpdateFalse);
+		4412 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 644) (UpdateFalse);
+		4416 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		4420 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 648) (UpdateFalse);
+		4424 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 648) (UpdateFalse);
+		4428 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 600) (UpdateFalse);
+		4432 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB12:
+	pred ;
+	succ ;
+	code
+		4436 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		4440 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 656) (UpdateFalse);
+		4444 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 656) (UpdateFalse);
+		4448 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4452 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 660) (UpdateFalse);
+		4456 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		4460 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 652) (UpdateFalse);
+		4464 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 660) (UpdateFalse);
+		4468 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 652) (UpdateFalse);
+		4472 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		4476 : 4 : B (CondEQ) (Label ludcmp_24);
+		4480 : 4 : B (CondAL) (Label ludcmp_13);
+	end code
+end block
+
+begin block BB13:
+	pred ;
+	succ ;
+	code
+		4484 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		4488 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 664) (UpdateFalse);
+		4492 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		4496 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 668) (UpdateFalse);
+		4500 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 668) (UpdateFalse);
+		4504 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 664) (UpdateFalse);
+		4508 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB14:
+	pred ;
+	succ ;
+	code
+		4512 : 4 : B (CondAL) (Label ludcmp_22);
+	end code
+end block
+
+begin block BB15:
+	pred ;
+	succ ;
+	code
+		4516 : 4 : Nop;
+	end code
+end block
+
+begin block BB16:
+	pred ;
+	succ ;
+	code
+		4520 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 460);
+		4524 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 672) (UpdateFalse);
+		4528 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 10);
+		4532 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 676) (UpdateFalse);
+		4536 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 676) (UpdateFalse);
+		4540 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 672) (UpdateFalse);
+		4544 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB17:
+	pred ;
+	succ ;
+	code
+		4548 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 464);
+		4552 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 680) (UpdateFalse);
+		4556 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		4560 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 684) (UpdateFalse);
+		4564 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 684) (UpdateFalse);
+		4568 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 680) (UpdateFalse);
+		4572 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB18:
+	pred ;
+	succ ;
+	code
+		4576 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 468);
+		4580 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 688) (UpdateFalse);
+		4584 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		4588 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 692) (UpdateFalse);
+		4592 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 692) (UpdateFalse);
+		4596 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 688) (UpdateFalse);
+		4600 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB19:
+	pred ;
+	succ ;
+	code
+		4604 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		4608 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 696) (UpdateFalse);
+		4612 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		4616 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 816) (UpdateFalse);
+		4620 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 816) (UpdateFalse);
+		4624 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4628 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 820) (UpdateFalse);
+		4632 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		4636 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 796) (UpdateFalse);
+		4640 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 796) (UpdateFalse);
+		4644 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4648 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 800) (UpdateFalse);
+		4652 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 460);
+		4656 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 788) (UpdateFalse);
+		4660 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 788) (UpdateFalse);
+		4664 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4668 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 792) (UpdateFalse);
+		4672 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 800) (UpdateFalse);
+		4676 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 792) (UpdateFalse);
+		4680 : 4 : Mov (CondAL) (SetCC 0) (Reg 7) (RegLSLReg 4 5);
+		4684 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 800) (UpdateFalse);
+		4688 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 800) (UpdateFalse);
+		4692 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4696 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 804) (UpdateFalse);
+		4700 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 464);
+		4704 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 772) (UpdateFalse);
+		4708 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 772) (UpdateFalse);
+		4712 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4716 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 776) (UpdateFalse);
+		4720 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		4724 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 764) (UpdateFalse);
+		4728 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 764) (UpdateFalse);
+		4732 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4736 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 768) (UpdateFalse);
+		4740 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 776) (UpdateFalse);
+		4744 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 768) (UpdateFalse);
+		4748 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4752 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 776) (UpdateFalse);
+		4756 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 776) (UpdateFalse);
+		4760 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4764 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 780) (UpdateFalse);
+		4768 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 468);
+		4772 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 756) (UpdateFalse);
+		4776 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 756) (UpdateFalse);
+		4780 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4784 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 760) (UpdateFalse);
+		4788 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 780) (UpdateFalse);
+		4792 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 760) (UpdateFalse);
+		4796 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4800 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 780) (UpdateFalse);
+		4804 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 780) (UpdateFalse);
+		4808 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4812 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 784) (UpdateFalse);
+		4816 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 804) (UpdateFalse);
+		4820 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 784) (UpdateFalse);
+		4824 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4828 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 804) (UpdateFalse);
+		4832 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 804) (UpdateFalse);
+		4836 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4840 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 808) (UpdateFalse);
+		4844 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		4848 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 740) (UpdateFalse);
+		4852 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 740) (UpdateFalse);
+		4856 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4860 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 744) (UpdateFalse);
+		4864 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 460);
+		4868 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 732) (UpdateFalse);
+		4872 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 732) (UpdateFalse);
+		4876 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4880 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 736) (UpdateFalse);
+		4884 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 744) (UpdateFalse);
+		4888 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 736) (UpdateFalse);
+		4892 : 4 : Mov (CondAL) (SetCC 0) (Reg 7) (RegLSLReg 4 5);
+		4896 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 744) (UpdateFalse);
+		4900 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 744) (UpdateFalse);
+		4904 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4908 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 748) (UpdateFalse);
+		4912 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 464);
+		4916 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 716) (UpdateFalse);
+		4920 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 716) (UpdateFalse);
+		4924 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4928 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 720) (UpdateFalse);
+		4932 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		4936 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 708) (UpdateFalse);
+		4940 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 708) (UpdateFalse);
+		4944 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4948 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 712) (UpdateFalse);
+		4952 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 720) (UpdateFalse);
+		4956 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 712) (UpdateFalse);
+		4960 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		4964 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 720) (UpdateFalse);
+		4968 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 720) (UpdateFalse);
+		4972 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		4976 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 724) (UpdateFalse);
+		4980 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 468);
+		4984 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 700) (UpdateFalse);
+		4988 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 700) (UpdateFalse);
+		4992 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		4996 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 704) (UpdateFalse);
+		5000 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 724) (UpdateFalse);
+		5004 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 704) (UpdateFalse);
+		5008 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5012 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 724) (UpdateFalse);
+		5016 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 724) (UpdateFalse);
+		5020 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5024 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 728) (UpdateFalse);
+		5028 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 748) (UpdateFalse);
+		5032 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 728) (UpdateFalse);
+		5036 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5040 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 748) (UpdateFalse);
+		5044 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 748) (UpdateFalse);
+		5048 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5052 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 752) (UpdateFalse);
+		5056 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 808) (UpdateFalse);
+		5060 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 752) (UpdateFalse);
+		5064 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5068 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 808) (UpdateFalse);
+		5072 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 808) (UpdateFalse);
+		5076 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5080 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 812) (UpdateFalse);
+		5084 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 820) (UpdateFalse);
+		5088 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 812) (UpdateFalse);
+		5092 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5096 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 820) (UpdateFalse);
+		5100 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 820) (UpdateFalse);
+		5104 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 696) (UpdateFalse);
+		5108 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB20:
+	pred ;
+	succ ;
+	code
+		5112 : 4 : Nop;
+	end code
+end block
+
+begin block BB21:
+	pred ;
+	succ ;
+	code
+		5116 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		5120 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 824) (UpdateFalse);
+		5124 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		5128 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 832) (UpdateFalse);
+		5132 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 832) (UpdateFalse);
+		5136 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5140 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 836) (UpdateFalse);
+		5144 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		5148 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 828) (UpdateFalse);
+		5152 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 836) (UpdateFalse);
+		5156 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 828) (UpdateFalse);
+		5160 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5164 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 836) (UpdateFalse);
+		5168 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 836) (UpdateFalse);
+		5172 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 824) (UpdateFalse);
+		5176 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		5180 : 4 : B (CondAL) (Label ludcmp_22);
+	end code
+end block
+
+begin block BB22:
+	pred ;
+	succ ;
+	code
+		5184 : 4 : Nop;
+	end code
+end block
+
+begin block BB23:
+	pred ;
+	succ ;
+	code
+		5188 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		5192 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 848) (UpdateFalse);
+		5196 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 848) (UpdateFalse);
+		5200 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5204 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 852) (UpdateFalse);
+		5208 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		5212 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 840) (UpdateFalse);
+		5216 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 840) (UpdateFalse);
+		5220 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5224 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 844) (UpdateFalse);
+		5228 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 852) (UpdateFalse);
+		5232 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 844) (UpdateFalse);
+		5236 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		5240 : 4 : B (CondLT) (Label ludcmp_15);
+		5244 : 4 : B (CondAL) (Label ludcmp_24);
+	end code
+end block
+
+begin block BB24:
+	pred ;
+	succ ;
+	code
+		5248 : 4 : Nop;
+	end code
+end block
+
+begin block BB25:
+	pred ;
+	succ ;
+	code
+		5252 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 476);
+		5256 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 856) (UpdateFalse);
+		5260 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		5264 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 860) (UpdateFalse);
+		5268 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 860) (UpdateFalse);
+		5272 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5276 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 864) (UpdateFalse);
+		5280 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 864) (UpdateFalse);
+		5284 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		5288 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 868) (UpdateFalse);
+		5292 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 868) (UpdateFalse);
+		5296 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 856) (UpdateFalse);
+		5300 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB26:
+	pred ;
+	succ ;
+	code
+		5304 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 480);
+		5308 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 872) (UpdateFalse);
+		5312 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		5316 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 876) (UpdateFalse);
+		5320 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 876) (UpdateFalse);
+		5324 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 872) (UpdateFalse);
+		5328 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB27:
+	pred ;
+	succ ;
+	code
+		5332 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 484);
+		5336 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 880) (UpdateFalse);
+		5340 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		5344 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 884) (UpdateFalse);
+		5348 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 884) (UpdateFalse);
+		5352 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 880) (UpdateFalse);
+		5356 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB28:
+	pred ;
+	succ ;
+	code
+		5360 : 4 : B (CondAL) (Label ludcmp_102);
+	end code
+end block
+
+begin block BB29:
+	pred ;
+	succ ;
+	code
+		5364 : 4 : Nop;
+	end code
+end block
+
+begin block BB30:
+	pred ;
+	succ ;
+	code
+		5368 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		5372 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 888) (UpdateFalse);
+		5376 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		5380 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 896) (UpdateFalse);
+		5384 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 896) (UpdateFalse);
+		5388 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5392 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 900) (UpdateFalse);
+		5396 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		5400 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 892) (UpdateFalse);
+		5404 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 900) (UpdateFalse);
+		5408 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 892) (UpdateFalse);
+		5412 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5416 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 900) (UpdateFalse);
+		5420 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 900) (UpdateFalse);
+		5424 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 888) (UpdateFalse);
+		5428 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		5432 : 4 : B (CondAL) (Label ludcmp_31);
+	end code
+end block
+
+begin block BB31:
+	pred ;
+	succ ;
+	code
+		5436 : 4 : Nop;
+	end code
+end block
+
+begin block BB32:
+	pred ;
+	succ ;
+	code
+		5440 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		5444 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 912) (UpdateFalse);
+		5448 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 912) (UpdateFalse);
+		5452 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5456 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 916) (UpdateFalse);
+		5460 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		5464 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 904) (UpdateFalse);
+		5468 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 904) (UpdateFalse);
+		5472 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5476 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 908) (UpdateFalse);
+		5480 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 916) (UpdateFalse);
+		5484 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 908) (UpdateFalse);
+		5488 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		5492 : 4 : B (CondLE) (Label ludcmp_10);
+		5496 : 4 : B (CondAL) (Label ludcmp_33);
+	end code
+end block
+
+begin block BB33:
+	pred ;
+	succ ;
+	code
+		5500 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		5504 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 920) (UpdateFalse);
+		5508 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		5512 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 928) (UpdateFalse);
+		5516 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 928) (UpdateFalse);
+		5520 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5524 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 932) (UpdateFalse);
+		5528 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		5532 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 924) (UpdateFalse);
+		5536 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 932) (UpdateFalse);
+		5540 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 924) (UpdateFalse);
+		5544 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5548 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 932) (UpdateFalse);
+		5552 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 932) (UpdateFalse);
+		5556 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 920) (UpdateFalse);
+		5560 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB34:
+	pred ;
+	succ ;
+	code
+		5564 : 4 : B (CondAL) (Label ludcmp_53);
+	end code
+end block
+
+begin block BB35:
+	pred ;
+	succ ;
+	code
+		5568 : 4 : Nop;
+	end code
+end block
+
+begin block BB36:
+	pred ;
+	succ ;
+	code
+		5572 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 488);
+		5576 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 936) (UpdateFalse);
+		5580 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		5584 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 940) (UpdateFalse);
+		5588 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 940) (UpdateFalse);
+		5592 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 936) (UpdateFalse);
+		5596 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB37:
+	pred ;
+	succ ;
+	code
+		5600 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		5604 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 944) (UpdateFalse);
+		5608 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		5612 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 992) (UpdateFalse);
+		5616 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 992) (UpdateFalse);
+		5620 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5624 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 996) (UpdateFalse);
+		5628 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 996) (UpdateFalse);
+		5632 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		5636 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1000) (UpdateFalse);
+		5640 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1000) (UpdateFalse);
+		5644 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5648 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1004) (UpdateFalse);
+		5652 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 488);
+		5656 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 976) (UpdateFalse);
+		5660 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 976) (UpdateFalse);
+		5664 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5668 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 980) (UpdateFalse);
+		5672 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		5676 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 968) (UpdateFalse);
+		5680 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 968) (UpdateFalse);
+		5684 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5688 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 972) (UpdateFalse);
+		5692 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 980) (UpdateFalse);
+		5696 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 972) (UpdateFalse);
+		5700 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5704 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 980) (UpdateFalse);
+		5708 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 980) (UpdateFalse);
+		5712 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5716 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 984) (UpdateFalse);
+		5720 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		5724 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 956) (UpdateFalse);
+		5728 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 956) (UpdateFalse);
+		5732 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5736 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 960) (UpdateFalse);
+		5740 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 488);
+		5744 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 948) (UpdateFalse);
+		5748 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 948) (UpdateFalse);
+		5752 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		5756 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 952) (UpdateFalse);
+		5760 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 960) (UpdateFalse);
+		5764 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 952) (UpdateFalse);
+		5768 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5772 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 960) (UpdateFalse);
+		5776 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 960) (UpdateFalse);
+		5780 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5784 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 964) (UpdateFalse);
+		5788 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 984) (UpdateFalse);
+		5792 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 964) (UpdateFalse);
+		5796 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5800 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 984) (UpdateFalse);
+		5804 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 984) (UpdateFalse);
+		5808 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		5812 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 988) (UpdateFalse);
+		5816 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1004) (UpdateFalse);
+		5820 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 988) (UpdateFalse);
+		5824 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		5828 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1004) (UpdateFalse);
+		5832 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1004) (UpdateFalse);
+		5836 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		5840 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1008) (UpdateFalse);
+		5844 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1008) (UpdateFalse);
+		5848 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 944) (UpdateFalse);
+		5852 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB38:
+	pred ;
+	succ ;
+	code
+		5856 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		5860 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1012) (UpdateFalse);
+		5864 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		5868 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1016) (UpdateFalse);
+		5872 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1016) (UpdateFalse);
+		5876 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1012) (UpdateFalse);
+		5880 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB39:
+	pred ;
+	succ ;
+	code
+		5884 : 4 : B (CondAL) (Label ludcmp_47);
+	end code
+end block
+
+begin block BB40:
+	pred ;
+	succ ;
+	code
+		5888 : 4 : Nop;
+	end code
+end block
+
+begin block BB41:
+	pred ;
+	succ ;
+	code
+		5892 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 496);
+		5896 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1020) (UpdateFalse);
+		5900 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 10);
+		5904 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1024) (UpdateFalse);
+		5908 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1024) (UpdateFalse);
+		5912 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1020) (UpdateFalse);
+		5916 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB42:
+	pred ;
+	succ ;
+	code
+		5920 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 500);
+		5924 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1028) (UpdateFalse);
+		5928 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		5932 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1032) (UpdateFalse);
+		5936 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1032) (UpdateFalse);
+		5940 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1028) (UpdateFalse);
+		5944 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB43:
+	pred ;
+	succ ;
+	code
+		5948 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 504);
+		5952 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1036) (UpdateFalse);
+		5956 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		5960 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1040) (UpdateFalse);
+		5964 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1040) (UpdateFalse);
+		5968 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1036) (UpdateFalse);
+		5972 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB44:
+	pred ;
+	succ ;
+	code
+		5976 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		5980 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1044) (UpdateFalse);
+		5984 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		5988 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1176) (UpdateFalse);
+		5992 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1176) (UpdateFalse);
+		5996 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6000 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1180) (UpdateFalse);
+		6004 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		6008 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1156) (UpdateFalse);
+		6012 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1156) (UpdateFalse);
+		6016 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6020 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1160) (UpdateFalse);
+		6024 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 496);
+		6028 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1148) (UpdateFalse);
+		6032 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1148) (UpdateFalse);
+		6036 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6040 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1152) (UpdateFalse);
+		6044 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1160) (UpdateFalse);
+		6048 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1152) (UpdateFalse);
+		6052 : 4 : Mov (CondAL) (SetCC 0) (Reg 7) (RegLSLReg 4 5);
+		6056 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1160) (UpdateFalse);
+		6060 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1160) (UpdateFalse);
+		6064 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6068 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1164) (UpdateFalse);
+		6072 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 500);
+		6076 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1132) (UpdateFalse);
+		6080 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1132) (UpdateFalse);
+		6084 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6088 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1136) (UpdateFalse);
+		6092 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		6096 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1124) (UpdateFalse);
+		6100 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1124) (UpdateFalse);
+		6104 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6108 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1128) (UpdateFalse);
+		6112 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1136) (UpdateFalse);
+		6116 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1128) (UpdateFalse);
+		6120 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6124 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1136) (UpdateFalse);
+		6128 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1136) (UpdateFalse);
+		6132 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6136 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1140) (UpdateFalse);
+		6140 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 504);
+		6144 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1112) (UpdateFalse);
+		6148 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1112) (UpdateFalse);
+		6152 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6156 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1116) (UpdateFalse);
+		6160 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 500);
+		6164 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1104) (UpdateFalse);
+		6168 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1104) (UpdateFalse);
+		6172 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6176 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1108) (UpdateFalse);
+		6180 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1116) (UpdateFalse);
+		6184 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1108) (UpdateFalse);
+		6188 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6192 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1116) (UpdateFalse);
+		6196 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1116) (UpdateFalse);
+		6200 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6204 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1120) (UpdateFalse);
+		6208 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1140) (UpdateFalse);
+		6212 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1120) (UpdateFalse);
+		6216 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6220 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1140) (UpdateFalse);
+		6224 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1140) (UpdateFalse);
+		6228 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6232 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1144) (UpdateFalse);
+		6236 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1164) (UpdateFalse);
+		6240 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1144) (UpdateFalse);
+		6244 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6248 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1164) (UpdateFalse);
+		6252 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1164) (UpdateFalse);
+		6256 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6260 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1168) (UpdateFalse);
+		6264 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		6268 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1088) (UpdateFalse);
+		6272 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1088) (UpdateFalse);
+		6276 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6280 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1092) (UpdateFalse);
+		6284 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 496);
+		6288 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1080) (UpdateFalse);
+		6292 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1080) (UpdateFalse);
+		6296 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6300 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1084) (UpdateFalse);
+		6304 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1092) (UpdateFalse);
+		6308 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1084) (UpdateFalse);
+		6312 : 4 : Mov (CondAL) (SetCC 0) (Reg 7) (RegLSLReg 4 5);
+		6316 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1092) (UpdateFalse);
+		6320 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1092) (UpdateFalse);
+		6324 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6328 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1096) (UpdateFalse);
+		6332 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 500);
+		6336 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1064) (UpdateFalse);
+		6340 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1064) (UpdateFalse);
+		6344 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6348 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1068) (UpdateFalse);
+		6352 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		6356 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1056) (UpdateFalse);
+		6360 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1056) (UpdateFalse);
+		6364 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6368 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1060) (UpdateFalse);
+		6372 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1068) (UpdateFalse);
+		6376 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1060) (UpdateFalse);
+		6380 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6384 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1068) (UpdateFalse);
+		6388 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1068) (UpdateFalse);
+		6392 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6396 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1072) (UpdateFalse);
+		6400 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 504);
+		6404 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1048) (UpdateFalse);
+		6408 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1048) (UpdateFalse);
+		6412 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6416 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1052) (UpdateFalse);
+		6420 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1072) (UpdateFalse);
+		6424 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1052) (UpdateFalse);
+		6428 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6432 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1072) (UpdateFalse);
+		6436 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1072) (UpdateFalse);
+		6440 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6444 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1076) (UpdateFalse);
+		6448 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1096) (UpdateFalse);
+		6452 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1076) (UpdateFalse);
+		6456 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6460 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1096) (UpdateFalse);
+		6464 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1096) (UpdateFalse);
+		6468 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6472 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1100) (UpdateFalse);
+		6476 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1168) (UpdateFalse);
+		6480 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1100) (UpdateFalse);
+		6484 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6488 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1168) (UpdateFalse);
+		6492 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1168) (UpdateFalse);
+		6496 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6500 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1172) (UpdateFalse);
+		6504 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1180) (UpdateFalse);
+		6508 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1172) (UpdateFalse);
+		6512 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6516 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1180) (UpdateFalse);
+		6520 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1180) (UpdateFalse);
+		6524 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1044) (UpdateFalse);
+		6528 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB45:
+	pred ;
+	succ ;
+	code
+		6532 : 4 : Nop;
+	end code
+end block
+
+begin block BB46:
+	pred ;
+	succ ;
+	code
+		6536 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		6540 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1184) (UpdateFalse);
+		6544 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		6548 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1192) (UpdateFalse);
+		6552 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1192) (UpdateFalse);
+		6556 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6560 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1196) (UpdateFalse);
+		6564 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		6568 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1188) (UpdateFalse);
+		6572 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1196) (UpdateFalse);
+		6576 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1188) (UpdateFalse);
+		6580 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6584 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1196) (UpdateFalse);
+		6588 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1196) (UpdateFalse);
+		6592 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1184) (UpdateFalse);
+		6596 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		6600 : 4 : B (CondAL) (Label ludcmp_47);
+	end code
+end block
+
+begin block BB47:
+	pred ;
+	succ ;
+	code
+		6604 : 4 : Nop;
+	end code
+end block
+
+begin block BB48:
+	pred ;
+	succ ;
+	code
+		6608 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		6612 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1208) (UpdateFalse);
+		6616 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1208) (UpdateFalse);
+		6620 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6624 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1212) (UpdateFalse);
+		6628 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		6632 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1200) (UpdateFalse);
+		6636 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1200) (UpdateFalse);
+		6640 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6644 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1204) (UpdateFalse);
+		6648 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1212) (UpdateFalse);
+		6652 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1204) (UpdateFalse);
+		6656 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		6660 : 4 : B (CondLE) (Label ludcmp_40);
+		6664 : 4 : B (CondAL) (Label ludcmp_49);
+	end code
+end block
+
+begin block BB49:
+	pred ;
+	succ ;
+	code
+		6668 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 508);
+		6672 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1216) (UpdateFalse);
+		6676 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		6680 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1220) (UpdateFalse);
+		6684 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1220) (UpdateFalse);
+		6688 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1216) (UpdateFalse);
+		6692 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB50:
+	pred ;
+	succ ;
+	code
+		6696 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		6700 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1268) (UpdateFalse);
+		6704 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1268) (UpdateFalse);
+		6708 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6712 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1272) (UpdateFalse);
+		6716 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1272) (UpdateFalse);
+		6720 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		6724 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1276) (UpdateFalse);
+		6728 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1276) (UpdateFalse);
+		6732 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6736 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1280) (UpdateFalse);
+		6740 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 508);
+		6744 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1252) (UpdateFalse);
+		6748 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1252) (UpdateFalse);
+		6752 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6756 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1256) (UpdateFalse);
+		6760 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		6764 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1244) (UpdateFalse);
+		6768 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1244) (UpdateFalse);
+		6772 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6776 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1248) (UpdateFalse);
+		6780 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1256) (UpdateFalse);
+		6784 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1248) (UpdateFalse);
+		6788 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6792 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1256) (UpdateFalse);
+		6796 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1256) (UpdateFalse);
+		6800 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6804 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1260) (UpdateFalse);
+		6808 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		6812 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1232) (UpdateFalse);
+		6816 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1232) (UpdateFalse);
+		6820 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6824 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1236) (UpdateFalse);
+		6828 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 508);
+		6832 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1224) (UpdateFalse);
+		6836 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1224) (UpdateFalse);
+		6840 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6844 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1228) (UpdateFalse);
+		6848 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1236) (UpdateFalse);
+		6852 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1228) (UpdateFalse);
+		6856 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6860 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1236) (UpdateFalse);
+		6864 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1236) (UpdateFalse);
+		6868 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6872 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1240) (UpdateFalse);
+		6876 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1260) (UpdateFalse);
+		6880 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1240) (UpdateFalse);
+		6884 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6888 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1260) (UpdateFalse);
+		6892 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1260) (UpdateFalse);
+		6896 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		6900 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1264) (UpdateFalse);
+		6904 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1280) (UpdateFalse);
+		6908 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1264) (UpdateFalse);
+		6912 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		6916 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1280) (UpdateFalse);
+		6920 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		6924 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1284) (UpdateFalse);
+		6928 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1284) (UpdateFalse);
+		6932 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		6936 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1288) (UpdateFalse);
+		6940 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1288) (UpdateFalse);
+		6944 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1280) (UpdateFalse);
+		6948 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB51:
+	pred ;
+	succ ;
+	code
+		6952 : 4 : Nop;
+	end code
+end block
+
+begin block BB52:
+	pred ;
+	succ ;
+	code
+		6956 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		6960 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1292) (UpdateFalse);
+		6964 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		6968 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1300) (UpdateFalse);
+		6972 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1300) (UpdateFalse);
+		6976 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		6980 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1304) (UpdateFalse);
+		6984 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		6988 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1296) (UpdateFalse);
+		6992 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1304) (UpdateFalse);
+		6996 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1296) (UpdateFalse);
+		7000 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7004 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1304) (UpdateFalse);
+		7008 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1304) (UpdateFalse);
+		7012 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1292) (UpdateFalse);
+		7016 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		7020 : 4 : B (CondAL) (Label ludcmp_53);
+	end code
+end block
+
+begin block BB53:
+	pred ;
+	succ ;
+	code
+		7024 : 4 : Nop;
+	end code
+end block
+
+begin block BB54:
+	pred ;
+	succ ;
+	code
+		7028 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7032 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1316) (UpdateFalse);
+		7036 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1316) (UpdateFalse);
+		7040 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7044 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1320) (UpdateFalse);
+		7048 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		7052 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1308) (UpdateFalse);
+		7056 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1308) (UpdateFalse);
+		7060 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7064 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1312) (UpdateFalse);
+		7068 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1320) (UpdateFalse);
+		7072 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1312) (UpdateFalse);
+		7076 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		7080 : 4 : B (CondLE) (Label ludcmp_35);
+		7084 : 4 : B (CondAL) (Label ludcmp_55);
+	end code
+end block
+
+begin block BB55:
+	pred ;
+	succ ;
+	code
+		7088 : 4 : Nop;
+	end code
+end block
+
+begin block BB56:
+	pred ;
+	succ ;
+	code
+		7092 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7096 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1324) (UpdateFalse);
+		7100 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7104 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1332) (UpdateFalse);
+		7108 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1332) (UpdateFalse);
+		7112 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7116 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1336) (UpdateFalse);
+		7120 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		7124 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1328) (UpdateFalse);
+		7128 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1336) (UpdateFalse);
+		7132 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1328) (UpdateFalse);
+		7136 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7140 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1336) (UpdateFalse);
+		7144 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1336) (UpdateFalse);
+		7148 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1324) (UpdateFalse);
+		7152 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		7156 : 4 : B (CondAL) (Label ludcmp_57);
+	end code
+end block
+
+begin block BB57:
+	pred ;
+	succ ;
+	code
+		7160 : 4 : Nop;
+	end code
+end block
+
+begin block BB58:
+	pred ;
+	succ ;
+	code
+		7164 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7168 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1348) (UpdateFalse);
+		7172 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1348) (UpdateFalse);
+		7176 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7180 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1352) (UpdateFalse);
+		7184 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		7188 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1340) (UpdateFalse);
+		7192 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1340) (UpdateFalse);
+		7196 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7200 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1344) (UpdateFalse);
+		7204 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1352) (UpdateFalse);
+		7208 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1344) (UpdateFalse);
+		7212 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		7216 : 4 : B (CondLT) (Label ludcmp_7);
+		7220 : 4 : B (CondAL) (Label ludcmp_59);
+	end code
+end block
+
+begin block BB59:
+	pred ;
+	succ ;
+	code
+		7224 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		7228 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1356) (UpdateFalse);
+		7232 : 4 : Ldr (CondAL) (Reg 5) (Label global__1_b);
+		7236 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1360) (UpdateFalse);
+		7240 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1360) (UpdateFalse);
+		7244 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		7248 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1364) (UpdateFalse);
+		7252 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1364) (UpdateFalse);
+		7256 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1356) (UpdateFalse);
+		7260 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB60:
+	pred ;
+	succ ;
+	code
+		7264 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7268 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1368) (UpdateFalse);
+		7272 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		7276 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1372) (UpdateFalse);
+		7280 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1372) (UpdateFalse);
+		7284 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1368) (UpdateFalse);
+		7288 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB61:
+	pred ;
+	succ ;
+	code
+		7292 : 4 : B (CondAL) (Label ludcmp_76);
+	end code
+end block
+
+begin block BB62:
+	pred ;
+	succ ;
+	code
+		7296 : 4 : Nop;
+	end code
+end block
+
+begin block BB63:
+	pred ;
+	succ ;
+	code
+		7300 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		7304 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1376) (UpdateFalse);
+		7308 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7312 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1388) (UpdateFalse);
+		7316 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1388) (UpdateFalse);
+		7320 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7324 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1392) (UpdateFalse);
+		7328 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1392) (UpdateFalse);
+		7332 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		7336 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1396) (UpdateFalse);
+		7340 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1396) (UpdateFalse);
+		7344 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7348 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1400) (UpdateFalse);
+		7352 : 4 : Ldr (CondAL) (Reg 5) (Label global__1_b);
+		7356 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1380) (UpdateFalse);
+		7360 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1380) (UpdateFalse);
+		7364 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7368 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1384) (UpdateFalse);
+		7372 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1400) (UpdateFalse);
+		7376 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1384) (UpdateFalse);
+		7380 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7384 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1400) (UpdateFalse);
+		7388 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1400) (UpdateFalse);
+		7392 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		7396 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1404) (UpdateFalse);
+		7400 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1404) (UpdateFalse);
+		7404 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1376) (UpdateFalse);
+		7408 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB64:
+	pred ;
+	succ ;
+	code
+		7412 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7416 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1408) (UpdateFalse);
+		7420 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		7424 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1412) (UpdateFalse);
+		7428 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1412) (UpdateFalse);
+		7432 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1408) (UpdateFalse);
+		7436 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB65:
+	pred ;
+	succ ;
+	code
+		7440 : 4 : B (CondAL) (Label ludcmp_71);
+	end code
+end block
+
+begin block BB66:
+	pred ;
+	succ ;
+	code
+		7444 : 4 : Nop;
+	end code
+end block
+
+begin block BB67:
+	pred ;
+	succ ;
+	code
+		7448 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 512);
+		7452 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1416) (UpdateFalse);
+		7456 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7460 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1420) (UpdateFalse);
+		7464 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1420) (UpdateFalse);
+		7468 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7472 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1424) (UpdateFalse);
+		7476 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1424) (UpdateFalse);
+		7480 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		7484 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1428) (UpdateFalse);
+		7488 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1428) (UpdateFalse);
+		7492 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1416) (UpdateFalse);
+		7496 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB68:
+	pred ;
+	succ ;
+	code
+		7500 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		7504 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1432) (UpdateFalse);
+		7508 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		7512 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1500) (UpdateFalse);
+		7516 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1500) (UpdateFalse);
+		7520 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7524 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1504) (UpdateFalse);
+		7528 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 512);
+		7532 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1484) (UpdateFalse);
+		7536 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1484) (UpdateFalse);
+		7540 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7544 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1488) (UpdateFalse);
+		7548 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		7552 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1472) (UpdateFalse);
+		7556 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7560 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1464) (UpdateFalse);
+		7564 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1464) (UpdateFalse);
+		7568 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7572 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1468) (UpdateFalse);
+		7576 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1472) (UpdateFalse);
+		7580 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1468) (UpdateFalse);
+		7584 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7588 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1472) (UpdateFalse);
+		7592 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1472) (UpdateFalse);
+		7596 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7600 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1476) (UpdateFalse);
+		7604 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		7608 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1456) (UpdateFalse);
+		7612 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1456) (UpdateFalse);
+		7616 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7620 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1460) (UpdateFalse);
+		7624 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1476) (UpdateFalse);
+		7628 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1460) (UpdateFalse);
+		7632 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7636 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1476) (UpdateFalse);
+		7640 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1476) (UpdateFalse);
+		7644 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7648 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1480) (UpdateFalse);
+		7652 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1488) (UpdateFalse);
+		7656 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1480) (UpdateFalse);
+		7660 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7664 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1488) (UpdateFalse);
+		7668 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1488) (UpdateFalse);
+		7672 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7676 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1492) (UpdateFalse);
+		7680 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 512);
+		7684 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1444) (UpdateFalse);
+		7688 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1444) (UpdateFalse);
+		7692 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7696 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1448) (UpdateFalse);
+		7700 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		7704 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1436) (UpdateFalse);
+		7708 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1436) (UpdateFalse);
+		7712 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7716 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1440) (UpdateFalse);
+		7720 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1448) (UpdateFalse);
+		7724 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1440) (UpdateFalse);
+		7728 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7732 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1448) (UpdateFalse);
+		7736 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1448) (UpdateFalse);
+		7740 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7744 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1452) (UpdateFalse);
+		7748 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1492) (UpdateFalse);
+		7752 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1452) (UpdateFalse);
+		7756 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7760 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1492) (UpdateFalse);
+		7764 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1492) (UpdateFalse);
+		7768 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7772 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1496) (UpdateFalse);
+		7776 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1504) (UpdateFalse);
+		7780 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1496) (UpdateFalse);
+		7784 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7788 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1504) (UpdateFalse);
+		7792 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1504) (UpdateFalse);
+		7796 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1432) (UpdateFalse);
+		7800 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB69:
+	pred ;
+	succ ;
+	code
+		7804 : 4 : Nop;
+	end code
+end block
+
+begin block BB70:
+	pred ;
+	succ ;
+	code
+		7808 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7812 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1508) (UpdateFalse);
+		7816 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7820 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1516) (UpdateFalse);
+		7824 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1516) (UpdateFalse);
+		7828 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7832 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1520) (UpdateFalse);
+		7836 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		7840 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1512) (UpdateFalse);
+		7844 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1520) (UpdateFalse);
+		7848 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1512) (UpdateFalse);
+		7852 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		7856 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1520) (UpdateFalse);
+		7860 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1520) (UpdateFalse);
+		7864 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1508) (UpdateFalse);
+		7868 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		7872 : 4 : B (CondAL) (Label ludcmp_71);
+	end code
+end block
+
+begin block BB71:
+	pred ;
+	succ ;
+	code
+		7876 : 4 : Nop;
+	end code
+end block
+
+begin block BB72:
+	pred ;
+	succ ;
+	code
+		7880 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		7884 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1532) (UpdateFalse);
+		7888 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1532) (UpdateFalse);
+		7892 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7896 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1536) (UpdateFalse);
+		7900 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7904 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1524) (UpdateFalse);
+		7908 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1524) (UpdateFalse);
+		7912 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7916 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1528) (UpdateFalse);
+		7920 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1536) (UpdateFalse);
+		7924 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1528) (UpdateFalse);
+		7928 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		7932 : 4 : B (CondLT) (Label ludcmp_66);
+		7936 : 4 : B (CondAL) (Label ludcmp_73);
+	end code
+end block
+
+begin block BB73:
+	pred ;
+	succ ;
+	code
+		7940 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		7944 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1548) (UpdateFalse);
+		7948 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1548) (UpdateFalse);
+		7952 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		7956 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1552) (UpdateFalse);
+		7960 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1552) (UpdateFalse);
+		7964 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		7968 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1556) (UpdateFalse);
+		7972 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1556) (UpdateFalse);
+		7976 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		7980 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1560) (UpdateFalse);
+		7984 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		7988 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1540) (UpdateFalse);
+		7992 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1540) (UpdateFalse);
+		7996 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8000 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1544) (UpdateFalse);
+		8004 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1560) (UpdateFalse);
+		8008 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1544) (UpdateFalse);
+		8012 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8016 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1560) (UpdateFalse);
+		8020 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		8024 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1564) (UpdateFalse);
+		8028 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1564) (UpdateFalse);
+		8032 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		8036 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1568) (UpdateFalse);
+		8040 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1568) (UpdateFalse);
+		8044 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1560) (UpdateFalse);
+		8048 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB74:
+	pred ;
+	succ ;
+	code
+		8052 : 4 : Nop;
+	end code
+end block
+
+begin block BB75:
+	pred ;
+	succ ;
+	code
+		8056 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8060 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1572) (UpdateFalse);
+		8064 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8068 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1580) (UpdateFalse);
+		8072 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1580) (UpdateFalse);
+		8076 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8080 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1584) (UpdateFalse);
+		8084 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		8088 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1576) (UpdateFalse);
+		8092 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1584) (UpdateFalse);
+		8096 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1576) (UpdateFalse);
+		8100 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8104 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1584) (UpdateFalse);
+		8108 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1584) (UpdateFalse);
+		8112 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1572) (UpdateFalse);
+		8116 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		8120 : 4 : B (CondAL) (Label ludcmp_76);
+	end code
+end block
+
+begin block BB76:
+	pred ;
+	succ ;
+	code
+		8124 : 4 : Nop;
+	end code
+end block
+
+begin block BB77:
+	pred ;
+	succ ;
+	code
+		8128 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8132 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1596) (UpdateFalse);
+		8136 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1596) (UpdateFalse);
+		8140 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8144 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1600) (UpdateFalse);
+		8148 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		8152 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1588) (UpdateFalse);
+		8156 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1588) (UpdateFalse);
+		8160 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8164 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1592) (UpdateFalse);
+		8168 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1600) (UpdateFalse);
+		8172 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1592) (UpdateFalse);
+		8176 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		8180 : 4 : B (CondLE) (Label ludcmp_62);
+		8184 : 4 : B (CondAL) (Label ludcmp_78);
+	end code
+end block
+
+begin block BB78:
+	pred ;
+	succ ;
+	code
+		8188 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		8192 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1604) (UpdateFalse);
+		8196 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		8200 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1608) (UpdateFalse);
+		8204 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1608) (UpdateFalse);
+		8208 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8212 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1612) (UpdateFalse);
+		8216 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1612) (UpdateFalse);
+		8220 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		8224 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1616) (UpdateFalse);
+		8228 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1616) (UpdateFalse);
+		8232 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1604) (UpdateFalse);
+		8236 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB79:
+	pred ;
+	succ ;
+	code
+		8240 : 4 : B (CondAL) (Label ludcmp_105);
+	end code
+end block
+
+begin block BB80:
+	pred ;
+	succ ;
+	code
+		8244 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8248 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1620) (UpdateFalse);
+		8252 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		8256 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1628) (UpdateFalse);
+		8260 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1628) (UpdateFalse);
+		8264 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8268 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1632) (UpdateFalse);
+		8272 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		8276 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1624) (UpdateFalse);
+		8280 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1632) (UpdateFalse);
+		8284 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1624) (UpdateFalse);
+		8288 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8292 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1632) (UpdateFalse);
+		8296 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1632) (UpdateFalse);
+		8300 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1620) (UpdateFalse);
+		8304 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB81:
+	pred ;
+	succ ;
+	code
+		8308 : 4 : B (CondAL) (Label ludcmp_97);
+	end code
+end block
+
+begin block BB82:
+	pred ;
+	succ ;
+	code
+		8312 : 4 : Nop;
+	end code
+end block
+
+begin block BB83:
+	pred ;
+	succ ;
+	code
+		8316 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		8320 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1636) (UpdateFalse);
+		8324 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8328 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1648) (UpdateFalse);
+		8332 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1648) (UpdateFalse);
+		8336 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8340 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1652) (UpdateFalse);
+		8344 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1652) (UpdateFalse);
+		8348 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		8352 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1656) (UpdateFalse);
+		8356 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1656) (UpdateFalse);
+		8360 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8364 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1660) (UpdateFalse);
+		8368 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		8372 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1640) (UpdateFalse);
+		8376 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1640) (UpdateFalse);
+		8380 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8384 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1644) (UpdateFalse);
+		8388 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1660) (UpdateFalse);
+		8392 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1644) (UpdateFalse);
+		8396 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8400 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1660) (UpdateFalse);
+		8404 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1660) (UpdateFalse);
+		8408 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		8412 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1664) (UpdateFalse);
+		8416 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1664) (UpdateFalse);
+		8420 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1636) (UpdateFalse);
+		8424 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB84:
+	pred ;
+	succ ;
+	code
+		8428 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		8432 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1668) (UpdateFalse);
+		8436 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8440 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1676) (UpdateFalse);
+		8444 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1676) (UpdateFalse);
+		8448 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8452 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1680) (UpdateFalse);
+		8456 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		8460 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1672) (UpdateFalse);
+		8464 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1680) (UpdateFalse);
+		8468 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1672) (UpdateFalse);
+		8472 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8476 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1680) (UpdateFalse);
+		8480 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1680) (UpdateFalse);
+		8484 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1668) (UpdateFalse);
+		8488 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB85:
+	pred ;
+	succ ;
+	code
+		8492 : 4 : B (CondAL) (Label ludcmp_91);
+	end code
+end block
+
+begin block BB86:
+	pred ;
+	succ ;
+	code
+		8496 : 4 : Nop;
+	end code
+end block
+
+begin block BB87:
+	pred ;
+	succ ;
+	code
+		8500 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		8504 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1684) (UpdateFalse);
+		8508 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		8512 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1688) (UpdateFalse);
+		8516 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1688) (UpdateFalse);
+		8520 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8524 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1692) (UpdateFalse);
+		8528 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1692) (UpdateFalse);
+		8532 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		8536 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1696) (UpdateFalse);
+		8540 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1696) (UpdateFalse);
+		8544 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1684) (UpdateFalse);
+		8548 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB88:
+	pred ;
+	succ ;
+	code
+		8552 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		8556 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1700) (UpdateFalse);
+		8560 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		8564 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1768) (UpdateFalse);
+		8568 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1768) (UpdateFalse);
+		8572 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8576 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1772) (UpdateFalse);
+		8580 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		8584 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1752) (UpdateFalse);
+		8588 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1752) (UpdateFalse);
+		8592 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8596 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1756) (UpdateFalse);
+		8600 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		8604 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1740) (UpdateFalse);
+		8608 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		8612 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1732) (UpdateFalse);
+		8616 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1732) (UpdateFalse);
+		8620 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8624 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1736) (UpdateFalse);
+		8628 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1740) (UpdateFalse);
+		8632 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1736) (UpdateFalse);
+		8636 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8640 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1740) (UpdateFalse);
+		8644 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1740) (UpdateFalse);
+		8648 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8652 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1744) (UpdateFalse);
+		8656 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		8660 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1724) (UpdateFalse);
+		8664 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1724) (UpdateFalse);
+		8668 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8672 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1728) (UpdateFalse);
+		8676 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1744) (UpdateFalse);
+		8680 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1728) (UpdateFalse);
+		8684 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8688 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1744) (UpdateFalse);
+		8692 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1744) (UpdateFalse);
+		8696 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8700 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1748) (UpdateFalse);
+		8704 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1756) (UpdateFalse);
+		8708 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1748) (UpdateFalse);
+		8712 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8716 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1756) (UpdateFalse);
+		8720 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1756) (UpdateFalse);
+		8724 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8728 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1760) (UpdateFalse);
+		8732 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		8736 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1712) (UpdateFalse);
+		8740 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1712) (UpdateFalse);
+		8744 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8748 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1716) (UpdateFalse);
+		8752 : 4 : Ldr (CondAL) (Reg 5) (Label global__2_x);
+		8756 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1704) (UpdateFalse);
+		8760 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1704) (UpdateFalse);
+		8764 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8768 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1708) (UpdateFalse);
+		8772 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1716) (UpdateFalse);
+		8776 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1708) (UpdateFalse);
+		8780 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8784 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1716) (UpdateFalse);
+		8788 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1716) (UpdateFalse);
+		8792 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8796 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1720) (UpdateFalse);
+		8800 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1760) (UpdateFalse);
+		8804 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1720) (UpdateFalse);
+		8808 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8812 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1760) (UpdateFalse);
+		8816 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1760) (UpdateFalse);
+		8820 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		8824 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1764) (UpdateFalse);
+		8828 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1772) (UpdateFalse);
+		8832 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1764) (UpdateFalse);
+		8836 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8840 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1772) (UpdateFalse);
+		8844 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1772) (UpdateFalse);
+		8848 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1700) (UpdateFalse);
+		8852 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB89:
+	pred ;
+	succ ;
+	code
+		8856 : 4 : Nop;
+	end code
+end block
+
+begin block BB90:
+	pred ;
+	succ ;
+	code
+		8860 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		8864 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1776) (UpdateFalse);
+		8868 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		8872 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1784) (UpdateFalse);
+		8876 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1784) (UpdateFalse);
+		8880 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8884 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1788) (UpdateFalse);
+		8888 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		8892 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1780) (UpdateFalse);
+		8896 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1788) (UpdateFalse);
+		8900 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1780) (UpdateFalse);
+		8904 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		8908 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1788) (UpdateFalse);
+		8912 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1788) (UpdateFalse);
+		8916 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1776) (UpdateFalse);
+		8920 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		8924 : 4 : B (CondAL) (Label ludcmp_91);
+	end code
+end block
+
+begin block BB91:
+	pred ;
+	succ ;
+	code
+		8928 : 4 : Nop;
+	end code
+end block
+
+begin block BB92:
+	pred ;
+	succ ;
+	code
+		8932 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		8936 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1800) (UpdateFalse);
+		8940 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1800) (UpdateFalse);
+		8944 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8948 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1804) (UpdateFalse);
+		8952 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		8956 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1792) (UpdateFalse);
+		8960 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1792) (UpdateFalse);
+		8964 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		8968 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1796) (UpdateFalse);
+		8972 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1804) (UpdateFalse);
+		8976 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1796) (UpdateFalse);
+		8980 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		8984 : 4 : B (CondLE) (Label ludcmp_86);
+		8988 : 4 : B (CondAL) (Label ludcmp_93);
+	end code
+end block
+
+begin block BB93:
+	pred ;
+	succ ;
+	code
+		8992 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 16);
+		8996 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1808) (UpdateFalse);
+		9000 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9004 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1812) (UpdateFalse);
+		9008 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1812) (UpdateFalse);
+		9012 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9016 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1816) (UpdateFalse);
+		9020 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1816) (UpdateFalse);
+		9024 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		9028 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1820) (UpdateFalse);
+		9032 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1820) (UpdateFalse);
+		9036 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1808) (UpdateFalse);
+		9040 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB94:
+	pred ;
+	succ ;
+	code
+		9044 : 4 : B (CondAL) (Label ludcmp_108);
+	end code
+end block
+
+begin block BB95:
+	pred ;
+	succ ;
+	code
+		9048 : 4 : Nop;
+	end code
+end block
+
+begin block BB96:
+	pred ;
+	succ ;
+	code
+		9052 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9056 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1824) (UpdateFalse);
+		9060 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9064 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1832) (UpdateFalse);
+		9068 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1832) (UpdateFalse);
+		9072 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9076 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1836) (UpdateFalse);
+		9080 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		9084 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1828) (UpdateFalse);
+		9088 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1836) (UpdateFalse);
+		9092 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1828) (UpdateFalse);
+		9096 : 4 : Sub (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9100 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1836) (UpdateFalse);
+		9104 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1836) (UpdateFalse);
+		9108 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1824) (UpdateFalse);
+		9112 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		9116 : 4 : B (CondAL) (Label ludcmp_97);
+	end code
+end block
+
+begin block BB97:
+	pred ;
+	succ ;
+	code
+		9120 : 4 : Nop;
+	end code
+end block
+
+begin block BB98:
+	pred ;
+	succ ;
+	code
+		9124 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9128 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1844) (UpdateFalse);
+		9132 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1844) (UpdateFalse);
+		9136 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9140 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1848) (UpdateFalse);
+		9144 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		9148 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1840) (UpdateFalse);
+		9152 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1848) (UpdateFalse);
+		9156 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1840) (UpdateFalse);
+		9160 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		9164 : 4 : B (CondGE) (Label ludcmp_82);
+		9168 : 4 : B (CondAL) (Label ludcmp_99);
+	end code
+end block
+
+begin block BB99:
+	pred ;
+	succ ;
+	code
+		9172 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		9176 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 528) (UpdateFalse);
+	end code
+end block
+
+begin block BB100:
+	pred ;
+	succ ;
+	code
+		9180 : 4 : Nop;
+	end code
+end block
+
+begin block BB101:
+	pred ;
+	succ ;
+	code
+		9184 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 528) (UpdateFalse);
+		9188 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 4);
+		9192 : 4 : Mov (CondAL) (SetCC 0) (Reg 4) (Imm 0);
+		9196 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1000);
+		9200 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (RegLSLImm 5 8);
+		9204 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (Imm 11100);
+		9208 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Reg 4);
+		9212 : 4 : Mov (CondAL) (SetCC 0) (Reg 15) (Reg 14);
+	end code
+end block
+
+begin block BB102:
+	pred ;
+	succ ;
+	code
+		9216 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		9220 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1852) (UpdateFalse);
+		9224 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1852) (UpdateFalse);
+		9228 : 4 : Ldr (CondAL) (Reg 0) (RegInd 4) (UpdateFalse);
+		9232 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 476);
+		9236 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1888) (UpdateFalse);
+		9240 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1888) (UpdateFalse);
+		9244 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9248 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1892) (UpdateFalse);
+		9252 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 480);
+		9256 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1872) (UpdateFalse);
+		9260 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1872) (UpdateFalse);
+		9264 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9268 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1876) (UpdateFalse);
+		9272 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9276 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1864) (UpdateFalse);
+		9280 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1864) (UpdateFalse);
+		9284 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9288 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1868) (UpdateFalse);
+		9292 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1876) (UpdateFalse);
+		9296 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1868) (UpdateFalse);
+		9300 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9304 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1876) (UpdateFalse);
+		9308 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1876) (UpdateFalse);
+		9312 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9316 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1880) (UpdateFalse);
+		9320 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 484);
+		9324 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1856) (UpdateFalse);
+		9328 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1856) (UpdateFalse);
+		9332 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9336 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1860) (UpdateFalse);
+		9340 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1880) (UpdateFalse);
+		9344 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1860) (UpdateFalse);
+		9348 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9352 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1880) (UpdateFalse);
+		9356 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1880) (UpdateFalse);
+		9360 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9364 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1884) (UpdateFalse);
+		9368 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1892) (UpdateFalse);
+		9372 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1884) (UpdateFalse);
+		9376 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9380 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1892) (UpdateFalse);
+		9384 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1892) (UpdateFalse);
+		9388 : 4 : Ldr (CondAL) (Reg 1) (RegInd 4) (UpdateFalse);
+		9392 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		9396 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		9400 : 4 : Bl (CondAL) (Label ??div32_a);
+		9404 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		9408 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		9412 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 1);
+	end code
+end block
+
+begin block BB103:
+	pred ;
+	succ ;
+	code
+		9416 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		9420 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 532) (UpdateFalse);
+	end code
+end block
+
+begin block BB104:
+	pred ;
+	succ ;
+	code
+		9424 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 476);
+		9428 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1928) (UpdateFalse);
+		9432 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1928) (UpdateFalse);
+		9436 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9440 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1932) (UpdateFalse);
+		9444 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 480);
+		9448 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1912) (UpdateFalse);
+		9452 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1912) (UpdateFalse);
+		9456 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9460 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1916) (UpdateFalse);
+		9464 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		9468 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1904) (UpdateFalse);
+		9472 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1904) (UpdateFalse);
+		9476 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9480 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1908) (UpdateFalse);
+		9484 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1916) (UpdateFalse);
+		9488 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1908) (UpdateFalse);
+		9492 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9496 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1916) (UpdateFalse);
+		9500 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1916) (UpdateFalse);
+		9504 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9508 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1920) (UpdateFalse);
+		9512 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 484);
+		9516 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1896) (UpdateFalse);
+		9520 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1896) (UpdateFalse);
+		9524 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9528 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1900) (UpdateFalse);
+		9532 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1920) (UpdateFalse);
+		9536 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1900) (UpdateFalse);
+		9540 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9544 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1920) (UpdateFalse);
+		9548 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1920) (UpdateFalse);
+		9552 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9556 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1924) (UpdateFalse);
+		9560 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1932) (UpdateFalse);
+		9564 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1924) (UpdateFalse);
+		9568 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9572 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1932) (UpdateFalse);
+		9576 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 532) (UpdateFalse);
+		9580 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1932) (UpdateFalse);
+		9584 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		9588 : 4 : B (CondAL) (Label ludcmp_29);
+	end code
+end block
+
+begin block BB105:
+	pred ;
+	succ ;
+	code
+		9592 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		9596 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1944) (UpdateFalse);
+		9600 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1944) (UpdateFalse);
+		9604 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9608 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1948) (UpdateFalse);
+		9612 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		9616 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1936) (UpdateFalse);
+		9620 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1936) (UpdateFalse);
+		9624 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9628 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1940) (UpdateFalse);
+		9632 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1948) (UpdateFalse);
+		9636 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1940) (UpdateFalse);
+		9640 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9644 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1948) (UpdateFalse);
+		9648 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1948) (UpdateFalse);
+		9652 : 4 : Ldr (CondAL) (Reg 0) (RegInd 4) (UpdateFalse);
+		9656 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		9660 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1980) (UpdateFalse);
+		9664 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1980) (UpdateFalse);
+		9668 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9672 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1984) (UpdateFalse);
+		9676 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		9680 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1968) (UpdateFalse);
+		9684 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		9688 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1960) (UpdateFalse);
+		9692 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1960) (UpdateFalse);
+		9696 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9700 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1964) (UpdateFalse);
+		9704 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1968) (UpdateFalse);
+		9708 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1964) (UpdateFalse);
+		9712 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9716 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1968) (UpdateFalse);
+		9720 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1968) (UpdateFalse);
+		9724 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9728 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1972) (UpdateFalse);
+		9732 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		9736 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1952) (UpdateFalse);
+		9740 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1952) (UpdateFalse);
+		9744 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9748 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1956) (UpdateFalse);
+		9752 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1972) (UpdateFalse);
+		9756 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1956) (UpdateFalse);
+		9760 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9764 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1972) (UpdateFalse);
+		9768 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1972) (UpdateFalse);
+		9772 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9776 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1976) (UpdateFalse);
+		9780 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1984) (UpdateFalse);
+		9784 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1976) (UpdateFalse);
+		9788 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9792 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 1984) (UpdateFalse);
+		9796 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1984) (UpdateFalse);
+		9800 : 4 : Ldr (CondAL) (Reg 1) (RegInd 4) (UpdateFalse);
+		9804 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		9808 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		9812 : 4 : Bl (CondAL) (Label ??div32_a);
+		9816 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		9820 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		9824 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 1);
+	end code
+end block
+
+begin block BB106:
+	pred ;
+	succ ;
+	code
+		9828 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		9832 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 536) (UpdateFalse);
+	end code
+end block
+
+begin block BB107:
+	pred ;
+	succ ;
+	code
+		9836 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		9840 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1996) (UpdateFalse);
+		9844 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1996) (UpdateFalse);
+		9848 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9852 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2000) (UpdateFalse);
+		9856 : 4 : Ldr (CondAL) (Reg 5) (Label global__2_x);
+		9860 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 1988) (UpdateFalse);
+		9864 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 1988) (UpdateFalse);
+		9868 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9872 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 1992) (UpdateFalse);
+		9876 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2000) (UpdateFalse);
+		9880 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 1992) (UpdateFalse);
+		9884 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9888 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 2000) (UpdateFalse);
+		9892 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 536) (UpdateFalse);
+		9896 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2000) (UpdateFalse);
+		9900 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		9904 : 4 : B (CondAL) (Label ludcmp_80);
+	end code
+end block
+
+begin block BB108:
+	pred ;
+	succ ;
+	code
+		9908 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 48);
+		9912 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2004) (UpdateFalse);
+		9916 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2004) (UpdateFalse);
+		9920 : 4 : Ldr (CondAL) (Reg 0) (RegInd 4) (UpdateFalse);
+		9924 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 16);
+		9928 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2036) (UpdateFalse);
+		9932 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2036) (UpdateFalse);
+		9936 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9940 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2040) (UpdateFalse);
+		9944 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		9948 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2024) (UpdateFalse);
+		9952 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		9956 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2016) (UpdateFalse);
+		9960 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2016) (UpdateFalse);
+		9964 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		9968 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2020) (UpdateFalse);
+		9972 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2024) (UpdateFalse);
+		9976 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2020) (UpdateFalse);
+		9980 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		9984 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 2024) (UpdateFalse);
+		9988 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2024) (UpdateFalse);
+		9992 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		9996 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2028) (UpdateFalse);
+		10000 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		10004 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2008) (UpdateFalse);
+		10008 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2008) (UpdateFalse);
+		10012 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10016 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2012) (UpdateFalse);
+		10020 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2028) (UpdateFalse);
+		10024 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2012) (UpdateFalse);
+		10028 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10032 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 2028) (UpdateFalse);
+		10036 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2028) (UpdateFalse);
+		10040 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10044 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2032) (UpdateFalse);
+		10048 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2040) (UpdateFalse);
+		10052 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2032) (UpdateFalse);
+		10056 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10060 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 2040) (UpdateFalse);
+		10064 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2040) (UpdateFalse);
+		10068 : 4 : Ldr (CondAL) (Reg 1) (RegInd 4) (UpdateFalse);
+		10072 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		10076 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		10080 : 4 : Bl (CondAL) (Label ??div32_a);
+		10084 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		10088 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		10092 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 1);
+	end code
+end block
+
+begin block BB109:
+	pred ;
+	succ ;
+	code
+		10096 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		10100 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 540) (UpdateFalse);
+	end code
+end block
+
+begin block BB110:
+	pred ;
+	succ ;
+	code
+		10104 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 16);
+		10108 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2052) (UpdateFalse);
+		10112 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2052) (UpdateFalse);
+		10116 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10120 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2056) (UpdateFalse);
+		10124 : 4 : Ldr (CondAL) (Reg 5) (Label global__2_x);
+		10128 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 2044) (UpdateFalse);
+		10132 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2044) (UpdateFalse);
+		10136 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10140 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 2048) (UpdateFalse);
+		10144 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 2056) (UpdateFalse);
+		10148 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2048) (UpdateFalse);
+		10152 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10156 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 2056) (UpdateFalse);
+		10160 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 540) (UpdateFalse);
+		10164 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 2056) (UpdateFalse);
+		10168 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		10172 : 4 : B (CondAL) (Label ludcmp_95);
+	end code
+end block
+
+begin block BB111:
+	pred ;
+	succ ;
+	code
+		10176 : 4 : Mov (CondAL) (SetCC 0) (Reg 4) (Imm 0);
+		10180 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		10184 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (RegLSLImm 5 8);
+		10188 : 4 : Add (CondAL) (SetCC 0) (Reg 4) (Reg 4) (Imm 11111000);
+		10192 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Reg 4);
+	end code
+end block
+
+begin block BB112:
+	pred ;
+	succ ;
+	code
+		10196 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 16);
+		10200 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 76) (UpdateFalse);
+		10204 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 110010);
+		10208 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 80) (UpdateFalse);
+		10212 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 80) (UpdateFalse);
+		10216 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 76) (UpdateFalse);
+		10220 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB113:
+	pred ;
+	succ ;
+	code
+		10224 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 12);
+		10228 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 84) (UpdateFalse);
+		10232 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 101);
+		10236 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 88) (UpdateFalse);
+		10240 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 88) (UpdateFalse);
+		10244 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 84) (UpdateFalse);
+		10248 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB114:
+	pred ;
+	succ ;
+	code
+		10252 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		10256 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 92) (UpdateFalse);
+		10260 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		10264 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 96) (UpdateFalse);
+		10268 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 96) (UpdateFalse);
+		10272 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 92) (UpdateFalse);
+		10276 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB115:
+	pred ;
+	succ ;
+	code
+		10280 : 4 : B (CondAL) (Label main_24);
+	end code
+end block
+
+begin block BB116:
+	pred ;
+	succ ;
+	code
+		10284 : 4 : Nop;
+	end code
+end block
+
+begin block BB117:
+	pred ;
+	succ ;
+	code
+		10288 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		10292 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 100) (UpdateFalse);
+		10296 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		10300 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 104) (UpdateFalse);
+		10304 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 104) (UpdateFalse);
+		10308 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 100) (UpdateFalse);
+		10312 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB118:
+	pred ;
+	succ ;
+	code
+		10316 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10320 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 108) (UpdateFalse);
+		10324 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		10328 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 112) (UpdateFalse);
+		10332 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 112) (UpdateFalse);
+		10336 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 108) (UpdateFalse);
+		10340 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB119:
+	pred ;
+	succ ;
+	code
+		10344 : 4 : B (CondAL) (Label main_19);
+	end code
+end block
+
+begin block BB120:
+	pred ;
+	succ ;
+	code
+		10348 : 4 : Nop;
+	end code
+end block
+
+begin block BB121:
+	pred ;
+	succ ;
+	code
+		10352 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		10356 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 116) (UpdateFalse);
+		10360 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		10364 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 120) (UpdateFalse);
+		10368 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 120) (UpdateFalse);
+		10372 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 116) (UpdateFalse);
+		10376 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB122:
+	pred ;
+	succ ;
+	code
+		10380 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10384 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 152) (UpdateFalse);
+		10388 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 152) (UpdateFalse);
+		10392 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10396 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 156) (UpdateFalse);
+		10400 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 156) (UpdateFalse);
+		10404 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		10408 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 160) (UpdateFalse);
+		10412 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 160) (UpdateFalse);
+		10416 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10420 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 164) (UpdateFalse);
+		10424 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		10428 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 140) (UpdateFalse);
+		10432 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		10436 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 132) (UpdateFalse);
+		10440 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 132) (UpdateFalse);
+		10444 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10448 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 136) (UpdateFalse);
+		10452 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 140) (UpdateFalse);
+		10456 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 136) (UpdateFalse);
+		10460 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10464 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 140) (UpdateFalse);
+		10468 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 140) (UpdateFalse);
+		10472 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10476 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 144) (UpdateFalse);
+		10480 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		10484 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 124) (UpdateFalse);
+		10488 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 124) (UpdateFalse);
+		10492 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10496 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 128) (UpdateFalse);
+		10500 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 144) (UpdateFalse);
+		10504 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 128) (UpdateFalse);
+		10508 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10512 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 144) (UpdateFalse);
+		10516 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 144) (UpdateFalse);
+		10520 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10524 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 148) (UpdateFalse);
+		10528 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 164) (UpdateFalse);
+		10532 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 148) (UpdateFalse);
+		10536 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10540 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 164) (UpdateFalse);
+		10544 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		10548 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 196) (UpdateFalse);
+		10552 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 196) (UpdateFalse);
+		10556 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10560 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 200) (UpdateFalse);
+		10564 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		10568 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 188) (UpdateFalse);
+		10572 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 188) (UpdateFalse);
+		10576 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10580 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 192) (UpdateFalse);
+		10584 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 200) (UpdateFalse);
+		10588 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 192) (UpdateFalse);
+		10592 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10596 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 200) (UpdateFalse);
+		10600 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 200) (UpdateFalse);
+		10604 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10608 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 204) (UpdateFalse);
+		10612 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10616 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 176) (UpdateFalse);
+		10620 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 176) (UpdateFalse);
+		10624 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10628 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 180) (UpdateFalse);
+		10632 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 32);
+		10636 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 168) (UpdateFalse);
+		10640 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 168) (UpdateFalse);
+		10644 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10648 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 172) (UpdateFalse);
+		10652 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 180) (UpdateFalse);
+		10656 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 172) (UpdateFalse);
+		10660 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10664 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 180) (UpdateFalse);
+		10668 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 180) (UpdateFalse);
+		10672 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10676 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 184) (UpdateFalse);
+		10680 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 204) (UpdateFalse);
+		10684 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 184) (UpdateFalse);
+		10688 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10692 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 204) (UpdateFalse);
+		10696 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 204) (UpdateFalse);
+		10700 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 164) (UpdateFalse);
+		10704 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB123:
+	pred ;
+	succ ;
+	code
+		10708 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		10712 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 216) (UpdateFalse);
+		10716 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 216) (UpdateFalse);
+		10720 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10724 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 220) (UpdateFalse);
+		10728 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10732 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 208) (UpdateFalse);
+		10736 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 208) (UpdateFalse);
+		10740 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10744 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 212) (UpdateFalse);
+		10748 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 220) (UpdateFalse);
+		10752 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 212) (UpdateFalse);
+		10756 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		10760 : 4 : B (CondNE) (Label main_15);
+		10764 : 4 : B (CondAL) (Label main_13);
+	end code
+end block
+
+begin block BB124:
+	pred ;
+	succ ;
+	code
+		10768 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		10772 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 224) (UpdateFalse);
+		10776 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10780 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 256) (UpdateFalse);
+		10784 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 256) (UpdateFalse);
+		10788 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10792 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 260) (UpdateFalse);
+		10796 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 260) (UpdateFalse);
+		10800 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		10804 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 264) (UpdateFalse);
+		10808 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 264) (UpdateFalse);
+		10812 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10816 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 268) (UpdateFalse);
+		10820 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		10824 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 244) (UpdateFalse);
+		10828 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		10832 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 236) (UpdateFalse);
+		10836 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 236) (UpdateFalse);
+		10840 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10844 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 240) (UpdateFalse);
+		10848 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 244) (UpdateFalse);
+		10852 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 240) (UpdateFalse);
+		10856 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10860 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 244) (UpdateFalse);
+		10864 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 244) (UpdateFalse);
+		10868 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10872 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 248) (UpdateFalse);
+		10876 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		10880 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 228) (UpdateFalse);
+		10884 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 228) (UpdateFalse);
+		10888 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10892 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 232) (UpdateFalse);
+		10896 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 248) (UpdateFalse);
+		10900 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 232) (UpdateFalse);
+		10904 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10908 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 248) (UpdateFalse);
+		10912 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 248) (UpdateFalse);
+		10916 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		10920 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 252) (UpdateFalse);
+		10924 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 268) (UpdateFalse);
+		10928 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 252) (UpdateFalse);
+		10932 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		10936 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 268) (UpdateFalse);
+		10940 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 268) (UpdateFalse);
+		10944 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 224) (UpdateFalse);
+		10948 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB125:
+	pred ;
+	succ ;
+	code
+		10952 : 4 : B (CondAL) (Label main_34);
+	end code
+end block
+
+begin block BB126:
+	pred ;
+	succ ;
+	code
+		10956 : 4 : Nop;
+	end code
+end block
+
+begin block BB127:
+	pred ;
+	succ ;
+	code
+		10960 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		10964 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 272) (UpdateFalse);
+		10968 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		10972 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 324) (UpdateFalse);
+		10976 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 324) (UpdateFalse);
+		10980 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		10984 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 328) (UpdateFalse);
+		10988 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		10992 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 304) (UpdateFalse);
+		10996 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 304) (UpdateFalse);
+		11000 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11004 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 308) (UpdateFalse);
+		11008 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 308) (UpdateFalse);
+		11012 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		11016 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 312) (UpdateFalse);
+		11020 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 312) (UpdateFalse);
+		11024 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11028 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 316) (UpdateFalse);
+		11032 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 11001000);
+		11036 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 292) (UpdateFalse);
+		11040 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		11044 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 284) (UpdateFalse);
+		11048 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 284) (UpdateFalse);
+		11052 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11056 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 288) (UpdateFalse);
+		11060 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 292) (UpdateFalse);
+		11064 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 288) (UpdateFalse);
+		11068 : 4 : Mul (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11072 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 292) (UpdateFalse);
+		11076 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 292) (UpdateFalse);
+		11080 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11084 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 296) (UpdateFalse);
+		11088 : 4 : Ldr (CondAL) (Reg 5) (Label global__0_a);
+		11092 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 276) (UpdateFalse);
+		11096 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 276) (UpdateFalse);
+		11100 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11104 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 280) (UpdateFalse);
+		11108 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 296) (UpdateFalse);
+		11112 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 280) (UpdateFalse);
+		11116 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11120 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 296) (UpdateFalse);
+		11124 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 296) (UpdateFalse);
+		11128 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11132 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 300) (UpdateFalse);
+		11136 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 316) (UpdateFalse);
+		11140 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 300) (UpdateFalse);
+		11144 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11148 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 316) (UpdateFalse);
+		11152 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 316) (UpdateFalse);
+		11156 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11160 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 320) (UpdateFalse);
+		11164 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 328) (UpdateFalse);
+		11168 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 320) (UpdateFalse);
+		11172 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11176 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 328) (UpdateFalse);
+		11180 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 328) (UpdateFalse);
+		11184 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 272) (UpdateFalse);
+		11188 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB128:
+	pred ;
+	succ ;
+	code
+		11192 : 4 : Nop;
+	end code
+end block
+
+begin block BB129:
+	pred ;
+	succ ;
+	code
+		11196 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		11200 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 332) (UpdateFalse);
+		11204 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		11208 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 340) (UpdateFalse);
+		11212 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 340) (UpdateFalse);
+		11216 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11220 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 344) (UpdateFalse);
+		11224 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		11228 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 336) (UpdateFalse);
+		11232 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 344) (UpdateFalse);
+		11236 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 336) (UpdateFalse);
+		11240 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11244 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 344) (UpdateFalse);
+		11248 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 344) (UpdateFalse);
+		11252 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 332) (UpdateFalse);
+		11256 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		11260 : 4 : B (CondAL) (Label main_19);
+	end code
+end block
+
+begin block BB130:
+	pred ;
+	succ ;
+	code
+		11264 : 4 : Nop;
+	end code
+end block
+
+begin block BB131:
+	pred ;
+	succ ;
+	code
+		11268 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 0);
+		11272 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 356) (UpdateFalse);
+		11276 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 356) (UpdateFalse);
+		11280 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11284 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 360) (UpdateFalse);
+		11288 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 12);
+		11292 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 348) (UpdateFalse);
+		11296 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 348) (UpdateFalse);
+		11300 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11304 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 352) (UpdateFalse);
+		11308 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 360) (UpdateFalse);
+		11312 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 352) (UpdateFalse);
+		11316 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		11320 : 4 : B (CondLE) (Label main_9);
+		11324 : 4 : B (CondAL) (Label main_21);
+	end code
+end block
+
+begin block BB132:
+	pred ;
+	succ ;
+	code
+		11328 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		11332 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 372) (UpdateFalse);
+		11336 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 372) (UpdateFalse);
+		11340 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11344 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 376) (UpdateFalse);
+		11348 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 376) (UpdateFalse);
+		11352 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (RegLSLImm 4 2);
+		11356 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 380) (UpdateFalse);
+		11360 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 380) (UpdateFalse);
+		11364 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11368 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 384) (UpdateFalse);
+		11372 : 4 : Ldr (CondAL) (Reg 5) (Label global__1_b);
+		11376 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 364) (UpdateFalse);
+		11380 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 364) (UpdateFalse);
+		11384 : 4 : Mov (CondAL) (SetCC 0) (Reg 6) (Reg 4);
+		11388 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 368) (UpdateFalse);
+		11392 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 384) (UpdateFalse);
+		11396 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 368) (UpdateFalse);
+		11400 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11404 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 384) (UpdateFalse);
+		11408 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 8);
+		11412 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 388) (UpdateFalse);
+		11416 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 388) (UpdateFalse);
+		11420 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		11424 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 392) (UpdateFalse);
+		11428 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 392) (UpdateFalse);
+		11432 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 384) (UpdateFalse);
+		11436 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB133:
+	pred ;
+	succ ;
+	code
+		11440 : 4 : Nop;
+	end code
+end block
+
+begin block BB134:
+	pred ;
+	succ ;
+	code
+		11444 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		11448 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 396) (UpdateFalse);
+		11452 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		11456 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 404) (UpdateFalse);
+		11460 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 404) (UpdateFalse);
+		11464 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11468 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 408) (UpdateFalse);
+		11472 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 1);
+		11476 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 400) (UpdateFalse);
+		11480 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 408) (UpdateFalse);
+		11484 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 400) (UpdateFalse);
+		11488 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (Reg 5);
+		11492 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 408) (UpdateFalse);
+		11496 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 408) (UpdateFalse);
+		11500 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 396) (UpdateFalse);
+		11504 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		11508 : 4 : B (CondAL) (Label main_24);
+	end code
+end block
+
+begin block BB135:
+	pred ;
+	succ ;
+	code
+		11512 : 4 : Nop;
+	end code
+end block
+
+begin block BB136:
+	pred ;
+	succ ;
+	code
+		11516 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 4);
+		11520 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 420) (UpdateFalse);
+		11524 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 420) (UpdateFalse);
+		11528 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11532 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 424) (UpdateFalse);
+		11536 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 12);
+		11540 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 412) (UpdateFalse);
+		11544 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 412) (UpdateFalse);
+		11548 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11552 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 416) (UpdateFalse);
+		11556 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 424) (UpdateFalse);
+		11560 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 416) (UpdateFalse);
+		11564 : 4 : Cmp (CondAL) (Reg 4) (Reg 5);
+		11568 : 4 : B (CondLE) (Label main_5);
+		11572 : 4 : B (CondAL) (Label main_26);
+	end code
+end block
+
+begin block BB137:
+	pred ;
+	succ ;
+	code
+		11576 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 16);
+		11580 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 428) (UpdateFalse);
+		11584 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 428) (UpdateFalse);
+		11588 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11592 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 60) (UpdateFalse);
+	end code
+end block
+
+begin block BB138:
+	pred ;
+	succ ;
+	code
+		11596 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 12);
+		11600 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 432) (UpdateFalse);
+		11604 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 432) (UpdateFalse);
+		11608 : 4 : Ldr (CondAL) (Reg 6) (RegInd 4) (UpdateFalse);
+		11612 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 64) (UpdateFalse);
+	end code
+end block
+
+begin block BB139:
+	pred ;
+	succ ;
+	code
+		11616 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 60) (UpdateFalse);
+		11620 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 4);
+		11624 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 64) (UpdateFalse);
+		11628 : 4 : Mov (CondAL) (SetCC 0) (Reg 1) (Reg 4);
+		11632 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		11636 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11640 : 4 : Bl (CondAL) (Label ludcmp);
+		11644 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11648 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+	end code
+end block
+
+begin block BB140:
+	pred ;
+	succ ;
+	code
+		11652 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		11656 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 68) (UpdateFalse);
+	end code
+end block
+
+begin block BB141:
+	pred ;
+	succ ;
+	code
+		11660 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		11664 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 436) (UpdateFalse);
+		11668 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 68) (UpdateFalse);
+		11672 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 436) (UpdateFalse);
+		11676 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+	end code
+end block
+
+begin block BB142:
+	pred ;
+	succ ;
+	code
+		11680 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 20);
+		11684 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 440) (UpdateFalse);
+		11688 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 40);
+		11692 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 444) (UpdateFalse);
+		11696 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 444) (UpdateFalse);
+		11700 : 4 : Ldr (CondAL) (Reg 6) (PostIndRegImm 4 1 0) (UpdateFalse);
+		11704 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 448) (UpdateFalse);
+		11708 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 448) (UpdateFalse);
+		11712 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 440) (UpdateFalse);
+		11716 : 4 : Str (CondAL) (Reg 4) (PostIndRegImm 5 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB143:
+	pred ;
+	succ ;
+	code
+		11720 : 4 : Nop;
+	end code
+end block
+
+begin block BB144:
+	pred ;
+	succ ;
+	code
+		11748 : 4 : Nop;
+	end code
+end block
+
+begin block BB145:
+	pred ;
+	succ ;
+	code
+		11752 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		11756 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 452) (UpdateFalse);
+		11760 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 452) (UpdateFalse);
+		11764 : 4 : Ldr (CondAL) (Reg 0) (RegInd 4) (UpdateFalse);
+		11768 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		11772 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11776 : 4 : Bl (CondAL) (Label __longToDouble);
+		11780 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11784 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+	end code
+end block
+
+begin block BB146:
+	pred ;
+	succ ;
+	code
+		11788 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		11792 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 456) (UpdateFalse);
+		11796 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 456) (UpdateFalse);
+		11800 : 4 : Str (CondAL) (Reg 1) (PostIndRegImm 4 1 4) (UpdateFalse);
+		11804 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 456) (UpdateFalse);
+		11808 : 4 : Str (CondAL) (Reg 0) (PostIndRegImm 4 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB147:
+	pred ;
+	succ ;
+	code
+		11812 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		11816 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11820 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 10000000);
+		11824 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 464) (UpdateFalse);
+		11828 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11832 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 464) (UpdateFalse);
+		11836 : 4 : Add (CondAL) (SetCC 0) (Reg 7) (Reg 4) (RegLSLImm 5 24);
+		11840 : 4 : Str (CondAL) (Reg 7) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11844 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11848 : 4 : Add (CondAL) (SetCC 0) (Reg 6) (Reg 4) (Imm 0);
+		11852 : 4 : Str (CondAL) (Reg 6) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11856 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Imm 0);
+		11860 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 468) (UpdateFalse);
+		11864 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 460) (UpdateFalse);
+		11868 : 4 : Mov (CondAL) (SetCC 0) (Reg 1) (Reg 4);
+		11872 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 468) (UpdateFalse);
+		11876 : 4 : Mov (CondAL) (SetCC 0) (Reg 0) (Reg 4);
+		11880 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 44);
+		11884 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 472) (UpdateFalse);
+		11888 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 472) (UpdateFalse);
+		11892 : 4 : Ldr (CondAL) (Reg 2) (PostIndRegImm 4 1 0) (UpdateFalse);
+		11896 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 472) (UpdateFalse);
+		11900 : 4 : Ldr (CondAL) (Reg 3) (PostIndRegImm 4 1 4) (UpdateFalse);
+		11904 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		11908 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11912 : 4 : Bl (CondAL) (Label __dMul);
+		11916 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11920 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+	end code
+end block
+
+begin block BB148:
+	pred ;
+	succ ;
+	code
+		11924 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		11928 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 476) (UpdateFalse);
+		11932 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 476) (UpdateFalse);
+		11936 : 4 : Str (CondAL) (Reg 1) (PostIndRegImm 4 1 4) (UpdateFalse);
+		11940 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 476) (UpdateFalse);
+		11944 : 4 : Str (CondAL) (Reg 0) (PostIndRegImm 4 1 0) (UpdateFalse);
+	end code
+end block
+
+begin block BB149:
+	pred ;
+	succ ;
+	code
+		11948 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 52);
+		11952 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 480) (UpdateFalse);
+		11956 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 480) (UpdateFalse);
+		11960 : 4 : Ldr (CondAL) (Reg 0) (PostIndRegImm 4 1 0) (UpdateFalse);
+		11964 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 480) (UpdateFalse);
+		11968 : 4 : Ldr (CondAL) (Reg 1) (PostIndRegImm 4 1 4) (UpdateFalse);
+		11972 : 4 : Str (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+		11976 : 4 : Sub (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11980 : 4 : Bl (CondAL) (Label __doubleToLong);
+		11984 : 4 : Add (CondAL) (SetCC 0) (Reg 13) (Reg 13) (Imm 8);
+		11988 : 4 : Ldr (CondAL) (Reg 14) (PostIndRegImm 13 1 -4) (UpdateFalse);
+	end code
+end block
+
+begin block BB150:
+	pred ;
+	succ ;
+	code
+		11992 : 4 : Mov (CondAL) (SetCC 0) (Reg 5) (Reg 0);
+		11996 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 72) (UpdateFalse);
+	end code
+end block
+
+begin block BB151:
+	pred ;
+	succ ;
+	code
+		12000 : 4 : Add (CondAL) (SetCC 0) (Reg 5) (Reg 13) (Imm 36);
+		12004 : 4 : Str (CondAL) (Reg 5) (PostIndRegImm 13 1 484) (UpdateFalse);
+		12008 : 4 : Ldr (CondAL) (Reg 4) (PostIndRegImm 13 1 72) (UpdateFalse);
+		12012 : 4 : Ldr (CondAL) (Reg 5) (PostIndRegImm 13 1 484) (UpdateFalse);
+		12016 : 4 : Str (CondAL) (Reg 4) (RegInd 5) (UpdateFalse);
+		12020 : 4 : B (CondAL) (Label main_15);
+	end code
+end block
+

@@ -1,0 +1,2 @@
+/* In main: a -> [0..100] */
+STMT_EXIT main alf_label_10 0 ASSIGN a INT 0 100 ;

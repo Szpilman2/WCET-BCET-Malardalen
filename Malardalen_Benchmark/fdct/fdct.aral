@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @2->"main::1", @136->"alf_label_108", @140->"alf_label_107", @0->"fdct::0", @8->"alf_label_55", @11->"alf_label_104", @12->"alf_label_103", @13->"alf_label_102", @14->"alf_label_101", @15->"alf_label_100", @16->"alf_label_99", @17->"alf_label_98", @18->"alf_label_97", @19->"alf_label_96", @20->"alf_label_95", @21->"alf_label_94", @22->"alf_label_93", @23->"alf_label_92", @24->"alf_label_91", @25->"alf_label_90", @26->"alf_label_89", @27->"alf_label_88", @28->"alf_label_87", @29->"alf_label_86", @30->"alf_label_85", @31->"alf_label_84", @32->"alf_label_83", @33->"alf_label_82", @34->"alf_label_81", @35->"alf_label_80", @36->"alf_label_79", @37->"alf_label_78", @38->"alf_label_77", @39->"alf_label_76", @40->"alf_label_75", @41->"alf_label_74", @42->"alf_label_73", @43->"alf_label_72", @44->"alf_label_71", @45->"alf_label_70", @46->"alf_label_69", @47->"alf_label_68", @48->"alf_label_67", @49->"alf_label_66", @50->"alf_label_65", @51->"alf_label_64", @52->"alf_label_63", @53->"alf_label_62", @54->"alf_label_61", @55->"alf_label_60", @56->"alf_label_59", @57->"alf_label_58", @58->"alf_label_57", @59->"alf_label_56", @9->"alf_label_54", @60->"alf_label_53", @62->"alf_label_2", @65->"alf_label_51", @66->"alf_label_50", @67->"alf_label_49", @68->"alf_label_48", @69->"alf_label_47", @70->"alf_label_46", @71->"alf_label_45", @72->"alf_label_44", @73->"alf_label_43", @74->"alf_label_42", @75->"alf_label_41", @76->"alf_label_40", @77->"alf_label_39", @78->"alf_label_38", @79->"alf_label_37", @80->"alf_label_36", @81->"alf_label_35", @82->"alf_label_34", @83->"alf_label_33", @84->"alf_label_32", @85->"alf_label_31", @86->"alf_label_30", @87->"alf_label_29", @88->"alf_label_28", @89->"alf_label_27", @90->"alf_label_26", @91->"alf_label_25", @92->"alf_label_24", @93->"alf_label_23", @94->"alf_label_22", @95->"alf_label_21", @96->"alf_label_20", @97->"alf_label_19", @98->"alf_label_18", @99->"alf_label_17", @100->"alf_label_16", @101->"alf_label_15", @102->"alf_label_14", @103->"alf_label_13", @104->"alf_label_12", @105->"alf_label_11", @106->"alf_label_10", @107->"alf_label_9", @108->"alf_label_8", @109->"alf_label_7", @110->"alf_label_6", @111->"alf_label_5", @112->"alf_label_4", @113->"alf_label_3", @63->"alf_label_1", @114->"alf_label_0"};
+
+map(varid, string): {default->"" \ #294->"blk::294", #118->"block::118", #354->"block::354", #166->"constant::166", #112->"i::112", #362->"i::362", #120->"lx::120", #361->"out::361", #264->"tmp0::264", #246->"tmp10::246", #247->"tmp11::247", #219->"tmp12::219", #230->"tmp13::230", #258->"tmp1::258", #259->"tmp2::259", #265->"tmp3::265", #157->"tmp4::157", #148->"tmp5::148", #137->"tmp6::137", #122->"tmp7::122", #123->"z1::123", #138->"z2::138", #140->"z3::140", #125->"z4::125", #163->"z5::163"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(38,[#354],[]), (37,[#354],[]), (36,[#265],[]), (35,[#264],[]), (34,[#259],[]), (33,[#258],[]), (32,[#247],[]), (31,[#246],[]), (30,[#230],[]), (29,[#219],[]), (28,[#166],[]), (27,[#163],[]), (26,[#157],[]), (25,[#148],[]), (24,[#140],[]), (23,[#138],[]), (22,[#137],[]), (21,[#125],[]), (20,[#123],[]), (19,[#122],[]), (17,[#118],[]), (16,[#112],[]), (14,[],["main::1"]), (12,[],[]), (11,[],["fdct::0"]), (9,[],[]), (8,[#120],[]), (7,[#294],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(37,38), (17,38), (14,12), (11,9), (7,38)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#354,37), (#294,7), (#120,8), (#264,35), (#258,33), (#259,34), (#265,36), (#157,26), (#148,25), (#137,22), (#122,19), (#246,31), (#247,32), (#219,29), (#230,30), (#123,20), (#138,23), (#140,24), (#125,21), (#163,27), (#112,16), (#118,17), (#166,28)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

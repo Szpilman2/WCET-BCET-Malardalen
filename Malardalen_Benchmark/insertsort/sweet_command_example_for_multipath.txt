@@ -1,0 +1,1 @@
+sweet -i=insertsort.alf annot=insertsort.ann -ae ffg=all merge=all -f lang=sg,ff

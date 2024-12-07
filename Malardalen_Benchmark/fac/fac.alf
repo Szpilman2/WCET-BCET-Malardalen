@@ -1,0 +1,199 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs }
+  { lrefs { lref 64 "fac" } { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "$volatile_32" 32 }
+ }
+ { inits
+  { init { ref "$volatile_32" { dec_unsigned 64 0 } } { const_repeat { dec_unsigned 8 0 } 4 } volatile }
+ }
+ { funcs
+
+  /* Definition of function fac */
+  { func
+   { label 64 { lref 64 "fac" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%n" 32 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%tmp4" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp5" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%.0" 32 } /* Local Variable (PHI node) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "fac::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fac::bb::1
+        *   %tmp = icmp eq i32 %n, 0
+        *   br i1 %tmp, label %bb1, label %bb2 */
+      { switch
+       { eq 32 { load 32 { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } } { dec_unsigned 32 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "fac::bb1" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "fac::bb2" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "fac::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fac::bb1::0
+        *   br label %bb6 */
+      { store { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 1 } }
+
+      { label 64 { lref 64 "fac::bb1::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fac::bb6" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb2 ---------- */
+      { label 64 { lref 64 "fac::bb2" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fac::bb2::1
+        *   %tmp3 = add nsw i32 %n, -1
+        *   %tmp4 = call i32 @fac(i32 %tmp3) */
+      { call { label 64 { lref 64 "fac" } { dec_unsigned 64 0 } }
+       { add 32 { load 32 { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } { dec_unsigned 1 0 } }
+       result
+       { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } }
+      }
+
+      /* STATEMENT fac::bb2::2
+        *   %tmp5 = mul nsw i32 %tmp4, %n */
+      { label 64 { lref 64 "fac::bb2::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } } }
+       }
+      }
+
+      /* STATEMENT fac::bb2::3
+        *   br label %bb6 */
+      { label 64 { lref 64 "fac::bb2::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "fac::bb2::3:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fac::bb6" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb6 ---------- */
+      { label 64 { lref 64 "fac::bb6" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fac::bb6::1
+        *   ret i32 %.0 */
+      { return { load 32 { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+
+  /* Definition of function main */
+  { func
+   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls
+     { alloc 64 "%n" 32 } /* Alloca'd memory */ 
+     { alloc 64 "%i.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%s.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp4" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp6" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp7" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "main::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb::1
+        *   %n = alloca i32, align 4
+        *   store volatile i32 5, i32* %n, align 4 */
+      { store { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } with { dec_unsigned 32 5 } }
+
+      /* STATEMENT main::bb::2
+        *   br label %bb1 */
+      { label 64 { lref 64 "main::bb::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%s.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 0 } { dec_unsigned 32 0 } }
+
+      { label 64 { lref 64 "main::bb::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "main::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb1::2
+        *   %n = alloca i32, align 4
+        *   %tmp = load volatile i32* %n, align 4 */
+      { store { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } with
+       { load 32 { addr 64 { fref 64 "$volatile_32" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT main::bb1::4
+        *   %tmp2 = icmp sgt i32 %i.0, %tmp
+        *   br i1 %tmp2, label %bb8, label %bb3 */
+      { label 64 { lref 64 "main::bb1::4" } { dec_unsigned 64 0 } }
+      { switch
+       { s_gt 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "main::bb8" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "main::bb3" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "main::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb3::0
+        *   %tmp4 = call i32 @fac(i32 %i.0) */
+      { call { label 64 { lref 64 "fac" } { dec_unsigned 64 0 } } { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } result { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } }
+
+      /* STATEMENT main::bb3::1
+        *   br label %bb5 */
+      { label 64 { lref 64 "main::bb3::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb5" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb5 ---------- */
+      { label 64 { lref 64 "main::bb5" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb5::0
+        *   %tmp6 = add nsw i32 %s.0, %tmp4 */
+      { store { addr 64 { fref 64 "%tmp6" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%s.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT main::bb5::1
+        *   %tmp7 = add nsw i32 %i.0, 1 */
+      { label 64 { lref 64 "main::bb5::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT main::bb5::2
+        *   br label %bb1 */
+      { label 64 { lref 64 "main::bb5::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%s.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp6" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "main::bb5::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb8 ---------- */
+      { label 64 { lref 64 "main::bb8" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb8::0
+        *   ret i32 %s.0 */
+      { return { load 32 { addr 64 { fref 64 "%s.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,2 @@
+/* In main: a -> [0..100] */
+$18_main BB19 2 store $21_a 0 32 int 0 100 ;

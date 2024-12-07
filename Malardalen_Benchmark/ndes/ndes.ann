@@ -1,0 +1,18 @@
+/* bit - Array, is calculated */
+/* kns - Array, is calculated */
+/* initflag - Variable controlling test case */
+/* icd - Struct variable 64 bits, calcualted */
+/* value - Variable controlling test case */
+/* iet  - Statically initalized char array, used in arith. */
+/* ipp  - Statically initalized char array, used in arith. */
+/* is   - Statically initalized char array, used in arith. */
+/* ibin - Statically initalized char array, used in arith. */
+/* ipc1 - Statically initalized char array, used in arith. */
+/* ipc2 - Statically initalized char array, used in arith. */
+/* ip   - Statically initalized char array, used in arith. */
+/* ipm  - Statically initalized char array, used in arith. */
+
+/* At beginning of the program: set all elements to top in all char arrays except for `is'. */
+STMT_ENTRY main alf_label_103 0 ASSIGN ipc1 0 8 57 TOP_INT || ipc2 0 8 49 TOP_INT;
+FUNC_ENTRY des ASSIGN ip 0 8 65 TOP_INT || ipm 0 8 65 TOP_INT;
+FUNC_ENTRY cyfun ASSIGN iet 0 8 49 TOP_INT || ipm 0 8 49 TOP_INT;

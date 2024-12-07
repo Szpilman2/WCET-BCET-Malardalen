@@ -1,0 +1,1485 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs
+   { fref 64 "data" }
+  }
+  { lrefs { lref 64 "jpeg_fdct_islow" } { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "data" 2048 }
+ }
+ { inits
+  { init { ref "data" { dec_unsigned 64 0 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 4 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 8 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 12 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 16 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 20 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 24 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 28 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 32 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 36 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 40 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 44 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 48 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 52 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 56 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 60 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 64 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 68 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 72 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 76 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 80 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 84 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 88 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 92 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 96 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 100 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 104 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 108 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 112 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 116 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 120 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 124 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 128 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 132 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 136 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 140 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 144 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 148 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 152 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 156 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 160 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 164 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 168 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 172 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 176 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 180 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 184 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 188 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 192 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 196 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 200 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 204 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 208 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 212 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 216 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 220 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 224 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 228 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 232 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 236 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 240 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 244 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 248 } } { dec_unsigned 32 0 } }
+  { init { ref "data" { dec_unsigned 64 252 } } { dec_unsigned 32 0 } }
+ }
+ { funcs
+
+  /* Definition of function jpeg_fdct_islow */
+  { func
+   { label 64 { lref 64 "jpeg_fdct_islow" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls
+     { alloc 64 "%ctr.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%dataptr.0" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp3" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp5" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp6" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp7" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp9" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp11" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp12" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp13" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp15" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp17" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp18" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp19" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp21" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp23" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp24" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp25" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp26" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp27" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp28" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp29" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp36" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp49" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp50" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp52" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp57" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp58" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp61" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp62" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp84" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp85" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%ctr.1" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%dataptr.1" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp90" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp92" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp93" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp94" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp96" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp98" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp99" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp100" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp102" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp104" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp105" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp106" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp108" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp110" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp111" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp112" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp113" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp114" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp115" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp116" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp125" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp138" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp139" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp141" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp146" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp147" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp150" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp151" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp173" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp174" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb::0
+        *   br label %bb1 */
+      { store { addr 64 { fref 64 "%ctr.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 7 } { addr 64 { fref 64 "data" } { dec_unsigned 64 0 } } }
+
+      { label 64 { lref 64 "jpeg_fdct_islow::bb::0:::1" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb1" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb1::3
+        *   %tmp = icmp sgt i32 %ctr.0, -1
+        *   br i1 %tmp, label %bb2, label %bb86 */
+      { switch
+       { s_gt 32 { load 32 { addr 64 { fref 64 "%ctr.0" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } }
+       { target { dec_signed 1 { minus 1 } }
+        { label 64 { lref 64 "jpeg_fdct_islow::bb2" } { dec_unsigned 64 0 } }
+       }
+       { default
+        { label 64 { lref 64 "jpeg_fdct_islow::bb86" } { dec_unsigned 64 0 } }
+       }
+      }
+
+     /* --------- BASIC BLOCK bb2 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::0
+        *   %tmp3 = load i32* %dataptr.0, align 4 */
+      { store { addr 64 { fref 64 "%tmp3" } { dec_unsigned 64 0 } } with
+       { load 32
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::2
+        *   %tmp4 = getelementptr inbounds i32* %dataptr.0, i64 7
+        *   %tmp5 = load i32* %tmp4, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 28 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::3
+        *   %tmp6 = add nsw i32 %tmp3, %tmp5 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp6" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp3" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::4
+        *   %tmp7 = sub nsw i32 %tmp3, %tmp5 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp3" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::6
+        *   %tmp8 = getelementptr inbounds i32* %dataptr.0, i64 1
+        *   %tmp9 = load i32* %tmp8, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp9" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 4 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::8
+        *   %tmp10 = getelementptr inbounds i32* %dataptr.0, i64 6
+        *   %tmp11 = load i32* %tmp10, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp11" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 24 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::9
+        *   %tmp12 = add nsw i32 %tmp9, %tmp11 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::9" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp12" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp9" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp11" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::10
+        *   %tmp13 = sub nsw i32 %tmp9, %tmp11 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::10" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp9" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp11" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::12
+        *   %tmp14 = getelementptr inbounds i32* %dataptr.0, i64 2
+        *   %tmp15 = load i32* %tmp14, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::12" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp15" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 8 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::14
+        *   %tmp16 = getelementptr inbounds i32* %dataptr.0, i64 5
+        *   %tmp17 = load i32* %tmp16, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::14" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp17" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 20 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::15
+        *   %tmp18 = add nsw i32 %tmp15, %tmp17 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::15" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp15" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp17" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::16
+        *   %tmp19 = sub nsw i32 %tmp15, %tmp17 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::16" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp15" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp17" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::18
+        *   %tmp20 = getelementptr inbounds i32* %dataptr.0, i64 3
+        *   %tmp21 = load i32* %tmp20, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::18" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp21" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 12 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::20
+        *   %tmp22 = getelementptr inbounds i32* %dataptr.0, i64 4
+        *   %tmp23 = load i32* %tmp22, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::20" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp23" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 16 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::21
+        *   %tmp24 = add nsw i32 %tmp21, %tmp23 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::21" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp24" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp21" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp23" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::22
+        *   %tmp25 = sub nsw i32 %tmp21, %tmp23 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::22" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp25" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp21" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp23" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::23
+        *   %tmp26 = add nsw i32 %tmp6, %tmp24 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::23" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp26" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp6" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp24" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::24
+        *   %tmp27 = sub nsw i32 %tmp6, %tmp24 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::24" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp27" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp6" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp24" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::25
+        *   %tmp28 = add nsw i32 %tmp12, %tmp18 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::25" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp28" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp12" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::26
+        *   %tmp29 = sub nsw i32 %tmp12, %tmp18 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::26" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp29" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp12" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::29
+        *   %tmp30 = add nsw i32 %tmp26, %tmp28
+        *   %tmp31 = shl i32 %tmp30, 2
+        *   store i32 %tmp31, i32* %dataptr.0, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::29" } { dec_unsigned 64 0 } }
+      { store
+       { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+       with
+       { l_shift 32 32
+        { add 32 { load 32 { addr 64 { fref 64 "%tmp26" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp28" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+        { dec_unsigned 32 2 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::33
+        *   %tmp32 = sub nsw i32 %tmp26, %tmp28
+        *   %tmp33 = shl i32 %tmp32, 2
+        *   %tmp34 = getelementptr inbounds i32* %dataptr.0, i64 4
+        *   store i32 %tmp33, i32* %tmp34, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::33" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 16 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { l_shift 32 32
+        { sub 32 { load 32 { addr 64 { fref 64 "%tmp26" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp28" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+        { dec_unsigned 32 2 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::35
+        *   %tmp35 = add nsw i32 %tmp29, %tmp27
+        *   %tmp36 = mul nsw i32 %tmp35, 4433 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::35" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp36" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp29" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp27" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_unsigned 32 4433 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::41
+        *   %tmp37 = mul nsw i32 %tmp27, 6270
+        *   %tmp38 = add nsw i32 %tmp36, %tmp37
+        *   %tmp39 = add nsw i32 %tmp38, 1024
+        *   %tmp40 = ashr i32 %tmp39, 11
+        *   %tmp41 = getelementptr inbounds i32* %dataptr.0, i64 2
+        *   store i32 %tmp40, i32* %tmp41, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::41" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 8 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp36" } { dec_unsigned 64 0 } } }
+          { select 64 0 31
+           { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp27" } { dec_unsigned 64 0 } } } { dec_unsigned 32 6270 } }
+          }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::47
+        *   %tmp42 = mul nsw i32 %tmp29, -15137
+        *   %tmp43 = add nsw i32 %tmp36, %tmp42
+        *   %tmp44 = add nsw i32 %tmp43, 1024
+        *   %tmp45 = ashr i32 %tmp44, 11
+        *   %tmp46 = getelementptr inbounds i32* %dataptr.0, i64 6
+        *   store i32 %tmp45, i32* %tmp46, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::47" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 24 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp36" } { dec_unsigned 64 0 } } }
+          { select 64 0 31
+           { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp29" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 15137 } } }
+          }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::50
+        *   %tmp49 = add nsw i32 %tmp25, %tmp13 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::50" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp49" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp25" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::51
+        *   %tmp50 = add nsw i32 %tmp19, %tmp7 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::51" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp50" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::53
+        *   %tmp51 = add nsw i32 %tmp49, %tmp50
+        *   %tmp52 = mul nsw i32 %tmp51, 9633 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::53" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp52" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp49" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp50" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_unsigned 32 9633 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::58
+        *   %tmp47 = add nsw i32 %tmp25, %tmp7
+        *   %tmp57 = mul nsw i32 %tmp47, -7373 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::58" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp57" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp25" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_signed 32 { minus 7373 } }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::59
+        *   %tmp48 = add nsw i32 %tmp19, %tmp13
+        *   %tmp58 = mul nsw i32 %tmp48, -20995 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::59" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp58" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_signed 32 { minus 20995 } }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::62
+        *   %tmp59 = mul nsw i32 %tmp49, -16069
+        *   %tmp61 = add nsw i32 %tmp59, %tmp52 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::62" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp61" } { dec_unsigned 64 0 } } with
+       { add 32
+        { select 64 0 31
+         { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp49" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 16069 } } }
+        }
+        { load 32 { addr 64 { fref 64 "%tmp52" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::63
+        *   %tmp60 = mul nsw i32 %tmp50, -3196
+        *   %tmp62 = add nsw i32 %tmp60, %tmp52 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::63" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp62" } { dec_unsigned 64 0 } } with
+       { add 32
+        { select 64 0 31
+         { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp50" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 3196 } } }
+        }
+        { load 32 { addr 64 { fref 64 "%tmp52" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::69
+        *   %tmp53 = mul nsw i32 %tmp25, 2446
+        *   %tmp63 = add nsw i32 %tmp53, %tmp57
+        *   %tmp64 = add nsw i32 %tmp63, %tmp61
+        *   %tmp65 = add nsw i32 %tmp64, 1024
+        *   %tmp66 = ashr i32 %tmp65, 11
+        *   %tmp67 = getelementptr inbounds i32* %dataptr.0, i64 7
+        *   store i32 %tmp66, i32* %tmp67, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::69" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 28 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp25" } { dec_unsigned 64 0 } } } { dec_unsigned 32 2446 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp57" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp61" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::75
+        *   %tmp54 = mul nsw i32 %tmp19, 16819
+        *   %tmp68 = add nsw i32 %tmp54, %tmp58
+        *   %tmp69 = add nsw i32 %tmp68, %tmp62
+        *   %tmp70 = add nsw i32 %tmp69, 1024
+        *   %tmp71 = ashr i32 %tmp70, 11
+        *   %tmp72 = getelementptr inbounds i32* %dataptr.0, i64 5
+        *   store i32 %tmp71, i32* %tmp72, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::75" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 20 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } } } { dec_unsigned 32 16819 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp58" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp62" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::81
+        *   %tmp55 = mul nsw i32 %tmp13, 25172
+        *   %tmp73 = add nsw i32 %tmp55, %tmp58
+        *   %tmp74 = add nsw i32 %tmp73, %tmp61
+        *   %tmp75 = add nsw i32 %tmp74, 1024
+        *   %tmp76 = ashr i32 %tmp75, 11
+        *   %tmp77 = getelementptr inbounds i32* %dataptr.0, i64 3
+        *   store i32 %tmp76, i32* %tmp77, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::81" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 12 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } } { dec_unsigned 32 25172 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp58" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp61" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::87
+        *   %tmp56 = mul nsw i32 %tmp7, 12299
+        *   %tmp78 = add nsw i32 %tmp56, %tmp57
+        *   %tmp79 = add nsw i32 %tmp78, %tmp62
+        *   %tmp80 = add nsw i32 %tmp79, 1024
+        *   %tmp81 = ashr i32 %tmp80, 11
+        *   %tmp82 = getelementptr inbounds i32* %dataptr.0, i64 1
+        *   store i32 %tmp81, i32* %tmp82, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::87" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 4 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } } { dec_unsigned 32 12299 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp57" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp62" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 1024 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 11 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb2::88
+        *   br label %bb83 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb2::88" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb83" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb83 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb83" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb83::0
+        *   %tmp84 = getelementptr inbounds i32* %dataptr.0, i64 8 */
+      { store { addr 64 { fref 64 "%tmp84" } { dec_unsigned 64 0 } } with
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 32 }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb83::1
+        *   %tmp85 = add nsw i32 %ctr.0, -1 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb83::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%ctr.0" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb83::2
+        *   br label %bb1 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb83::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%ctr.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%dataptr.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp84" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "jpeg_fdct_islow::bb83::2:::1" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb1" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb86 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb86" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb86::0
+        *   br label %bb87 */
+      { store { addr 64 { fref 64 "%ctr.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } with { dec_unsigned 32 7 } { addr 64 { fref 64 "data" } { dec_unsigned 64 0 } } }
+
+      { label 64 { lref 64 "jpeg_fdct_islow::bb86::0:::1" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb87" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb87 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb87" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb87::3
+        *   %tmp88 = icmp sgt i32 %ctr.1, -1
+        *   br i1 %tmp88, label %bb89, label %bb175 */
+      { switch
+       { s_gt 32 { load 32 { addr 64 { fref 64 "%ctr.1" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } }
+       { target { dec_signed 1 { minus 1 } }
+        { label 64 { lref 64 "jpeg_fdct_islow::bb89" } { dec_unsigned 64 0 } }
+       }
+       { default
+        { label 64 { lref 64 "jpeg_fdct_islow::bb175" } { dec_unsigned 64 0 } }
+       }
+      }
+
+     /* --------- BASIC BLOCK bb89 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::0
+        *   %tmp90 = load i32* %dataptr.1, align 4 */
+      { store { addr 64 { fref 64 "%tmp90" } { dec_unsigned 64 0 } } with
+       { load 32
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::2
+        *   %tmp91 = getelementptr inbounds i32* %dataptr.1, i64 56
+        *   %tmp92 = load i32* %tmp91, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp92" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 224 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::3
+        *   %tmp93 = add nsw i32 %tmp90, %tmp92 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp93" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp90" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp92" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::4
+        *   %tmp94 = sub nsw i32 %tmp90, %tmp92 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp94" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp90" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp92" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::6
+        *   %tmp95 = getelementptr inbounds i32* %dataptr.1, i64 8
+        *   %tmp96 = load i32* %tmp95, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp96" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 32 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::8
+        *   %tmp97 = getelementptr inbounds i32* %dataptr.1, i64 48
+        *   %tmp98 = load i32* %tmp97, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp98" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 192 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::9
+        *   %tmp99 = add nsw i32 %tmp96, %tmp98 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::9" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp99" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp96" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp98" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::10
+        *   %tmp100 = sub nsw i32 %tmp96, %tmp98 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::10" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp96" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp98" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::12
+        *   %tmp101 = getelementptr inbounds i32* %dataptr.1, i64 16
+        *   %tmp102 = load i32* %tmp101, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::12" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp102" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 64 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::14
+        *   %tmp103 = getelementptr inbounds i32* %dataptr.1, i64 40
+        *   %tmp104 = load i32* %tmp103, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::14" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp104" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 160 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::15
+        *   %tmp105 = add nsw i32 %tmp102, %tmp104 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::15" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp105" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp102" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp104" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::16
+        *   %tmp106 = sub nsw i32 %tmp102, %tmp104 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::16" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp106" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp102" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp104" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::18
+        *   %tmp107 = getelementptr inbounds i32* %dataptr.1, i64 24
+        *   %tmp108 = load i32* %tmp107, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::18" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp108" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 96 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::20
+        *   %tmp109 = getelementptr inbounds i32* %dataptr.1, i64 32
+        *   %tmp110 = load i32* %tmp109, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::20" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp110" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64
+         { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+         { dec_unsigned 64 128 }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::21
+        *   %tmp111 = add nsw i32 %tmp108, %tmp110 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::21" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp111" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp108" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp110" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::22
+        *   %tmp112 = sub nsw i32 %tmp108, %tmp110 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::22" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp112" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp108" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp110" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::23
+        *   %tmp113 = add nsw i32 %tmp93, %tmp111 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::23" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp113" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp93" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp111" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::24
+        *   %tmp114 = sub nsw i32 %tmp93, %tmp111 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::24" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp114" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp93" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp111" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::25
+        *   %tmp115 = add nsw i32 %tmp99, %tmp105 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::25" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp115" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp99" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp105" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::26
+        *   %tmp116 = sub nsw i32 %tmp99, %tmp105 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::26" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp116" } { dec_unsigned 64 0 } } with
+       { sub 32 { load 32 { addr 64 { fref 64 "%tmp99" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp105" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::30
+        *   %tmp117 = add nsw i32 %tmp113, %tmp115
+        *   %tmp118 = add nsw i32 %tmp117, 2
+        *   %tmp119 = ashr i32 %tmp118, 2
+        *   store i32 %tmp119, i32* %dataptr.1, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::30" } { dec_unsigned 64 0 } }
+      { store
+       { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp113" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp115" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_unsigned 32 2 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 2 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::35
+        *   %tmp120 = sub nsw i32 %tmp113, %tmp115
+        *   %tmp121 = add nsw i32 %tmp120, 2
+        *   %tmp122 = ashr i32 %tmp121, 2
+        *   %tmp123 = getelementptr inbounds i32* %dataptr.1, i64 32
+        *   store i32 %tmp122, i32* %tmp123, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::35" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 128 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { sub 32 { load 32 { addr 64 { fref 64 "%tmp113" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp115" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+         { dec_unsigned 32 2 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 2 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::37
+        *   %tmp124 = add nsw i32 %tmp116, %tmp114
+        *   %tmp125 = mul nsw i32 %tmp124, 4433 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::37" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp125" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp116" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp114" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_unsigned 32 4433 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::43
+        *   %tmp126 = mul nsw i32 %tmp114, 6270
+        *   %tmp127 = add nsw i32 %tmp125, %tmp126
+        *   %tmp128 = add nsw i32 %tmp127, 16384
+        *   %tmp129 = ashr i32 %tmp128, 15
+        *   %tmp130 = getelementptr inbounds i32* %dataptr.1, i64 16
+        *   store i32 %tmp129, i32* %tmp130, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::43" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 64 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp125" } { dec_unsigned 64 0 } } }
+          { select 64 0 31
+           { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp114" } { dec_unsigned 64 0 } } } { dec_unsigned 32 6270 } }
+          }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::49
+        *   %tmp131 = mul nsw i32 %tmp116, -15137
+        *   %tmp132 = add nsw i32 %tmp125, %tmp131
+        *   %tmp133 = add nsw i32 %tmp132, 16384
+        *   %tmp134 = ashr i32 %tmp133, 15
+        *   %tmp135 = getelementptr inbounds i32* %dataptr.1, i64 48
+        *   store i32 %tmp134, i32* %tmp135, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::49" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 192 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp125" } { dec_unsigned 64 0 } } }
+          { select 64 0 31
+           { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp116" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 15137 } } }
+          }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::52
+        *   %tmp138 = add nsw i32 %tmp112, %tmp100 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::52" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp138" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp112" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::53
+        *   %tmp139 = add nsw i32 %tmp106, %tmp94 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::53" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp139" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%tmp106" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp94" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::55
+        *   %tmp140 = add nsw i32 %tmp138, %tmp139
+        *   %tmp141 = mul nsw i32 %tmp140, 9633 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::55" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp141" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp138" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp139" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_unsigned 32 9633 }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::60
+        *   %tmp136 = add nsw i32 %tmp112, %tmp94
+        *   %tmp146 = mul nsw i32 %tmp136, -7373 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::60" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp146" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp112" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp94" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_signed 32 { minus 7373 } }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::61
+        *   %tmp137 = add nsw i32 %tmp106, %tmp100
+        *   %tmp147 = mul nsw i32 %tmp137, -20995 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::61" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp147" } { dec_unsigned 64 0 } } with
+       { select 64 0 31
+        { u_mul 32 32
+         { add 32 { load 32 { addr 64 { fref 64 "%tmp106" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+         { dec_signed 32 { minus 20995 } }
+        }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::64
+        *   %tmp148 = mul nsw i32 %tmp138, -16069
+        *   %tmp150 = add nsw i32 %tmp148, %tmp141 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::64" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp150" } { dec_unsigned 64 0 } } with
+       { add 32
+        { select 64 0 31
+         { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp138" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 16069 } } }
+        }
+        { load 32 { addr 64 { fref 64 "%tmp141" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::65
+        *   %tmp149 = mul nsw i32 %tmp139, -3196
+        *   %tmp151 = add nsw i32 %tmp149, %tmp141 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::65" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp151" } { dec_unsigned 64 0 } } with
+       { add 32
+        { select 64 0 31
+         { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp139" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 3196 } } }
+        }
+        { load 32 { addr 64 { fref 64 "%tmp141" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::71
+        *   %tmp142 = mul nsw i32 %tmp112, 2446
+        *   %tmp152 = add nsw i32 %tmp142, %tmp146
+        *   %tmp153 = add nsw i32 %tmp152, %tmp150
+        *   %tmp154 = add nsw i32 %tmp153, 16384
+        *   %tmp155 = ashr i32 %tmp154, 15
+        *   %tmp156 = getelementptr inbounds i32* %dataptr.1, i64 56
+        *   store i32 %tmp155, i32* %tmp156, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::71" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 224 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp112" } { dec_unsigned 64 0 } } } { dec_unsigned 32 2446 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp146" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp150" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::77
+        *   %tmp143 = mul nsw i32 %tmp106, 16819
+        *   %tmp157 = add nsw i32 %tmp143, %tmp147
+        *   %tmp158 = add nsw i32 %tmp157, %tmp151
+        *   %tmp159 = add nsw i32 %tmp158, 16384
+        *   %tmp160 = ashr i32 %tmp159, 15
+        *   %tmp161 = getelementptr inbounds i32* %dataptr.1, i64 40
+        *   store i32 %tmp160, i32* %tmp161, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::77" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 160 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp106" } { dec_unsigned 64 0 } } } { dec_unsigned 32 16819 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp147" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp151" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::83
+        *   %tmp144 = mul nsw i32 %tmp100, 25172
+        *   %tmp162 = add nsw i32 %tmp144, %tmp147
+        *   %tmp163 = add nsw i32 %tmp162, %tmp150
+        *   %tmp164 = add nsw i32 %tmp163, 16384
+        *   %tmp165 = ashr i32 %tmp164, 15
+        *   %tmp166 = getelementptr inbounds i32* %dataptr.1, i64 24
+        *   store i32 %tmp165, i32* %tmp166, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::83" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 96 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } } { dec_unsigned 32 25172 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp147" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp150" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::89
+        *   %tmp145 = mul nsw i32 %tmp94, 12299
+        *   %tmp167 = add nsw i32 %tmp145, %tmp146
+        *   %tmp168 = add nsw i32 %tmp167, %tmp151
+        *   %tmp169 = add nsw i32 %tmp168, 16384
+        *   %tmp170 = ashr i32 %tmp169, 15
+        *   %tmp171 = getelementptr inbounds i32* %dataptr.1, i64 8
+        *   store i32 %tmp170, i32* %tmp171, align 4 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::89" } { dec_unsigned 64 0 } }
+      { store
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 32 }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { r_shift_a 32 32
+        { add 32
+         { add 32
+          { add 32
+           { select 64 0 31
+            { u_mul 32 32 { load 32 { addr 64 { fref 64 "%tmp94" } { dec_unsigned 64 0 } } } { dec_unsigned 32 12299 } }
+           }
+           { load 32 { addr 64 { fref 64 "%tmp146" } { dec_unsigned 64 0 } } }
+           { dec_unsigned 1 0 }
+          }
+          { load 32 { addr 64 { fref 64 "%tmp151" } { dec_unsigned 64 0 } } }
+          { dec_unsigned 1 0 }
+         }
+         { dec_unsigned 32 16384 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 15 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb89::90
+        *   br label %bb172 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb89::90" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb172" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb172 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb172" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb172::0
+        *   %tmp173 = getelementptr inbounds i32* %dataptr.1, i64 1 */
+      { store { addr 64 { fref 64 "%tmp173" } { dec_unsigned 64 0 } } with
+       { add 64
+        { load 64 { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 64 4 }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb172::1
+        *   %tmp174 = add nsw i32 %ctr.1, -1 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb172::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp174" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%ctr.1" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT jpeg_fdct_islow::bb172::2
+        *   br label %bb87 */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb172::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%ctr.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%dataptr.1" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp174" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp173" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "jpeg_fdct_islow::bb172::2:::1" } { dec_unsigned 64 0 } }
+      { jump
+       { label 64 { lref 64 "jpeg_fdct_islow::bb87" } { dec_unsigned 64 0 } }
+       leaving
+       0
+      }
+
+     /* --------- BASIC BLOCK bb175 ---------- */
+      { label 64 { lref 64 "jpeg_fdct_islow::bb175" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT jpeg_fdct_islow::bb175::0
+        *   ret void */
+      { return }
+    }
+   }
+  }
+
+  /* Definition of function main */
+  { func
+   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls
+     { alloc 64 "%i.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%seed.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp8" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%phitmp2" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "main::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb::0
+        *   br label %bb3 */
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%seed.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 0 } { dec_unsigned 32 214 } }
+
+      { label 64 { lref 64 "main::bb::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "main::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb3::3
+        *   %tmp = icmp slt i32 %i.0, 64
+        *   br i1 %tmp, label %bb4, label %bb9 */
+      { switch
+       { s_lt 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 64 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "main::bb4" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "main::bb9" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb4 ---------- */
+      { label 64 { lref 64 "main::bb4" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb4::2
+        *   %tmp5 = sext i32 %i.0 to i64
+        *   %tmp6 = getelementptr inbounds [64 x i32]* @data, i64 0, i64 %tmp5
+        *   store i32 %seed.0, i32* %tmp6, align 4 */
+      { store
+       { add 64 { addr 64 { fref 64 "data" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { s_ext 32 64 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%seed.0" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT main::bb4::3
+        *   br label %bb7 */
+      { label 64 { lref 64 "main::bb4::3" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb7" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb7 ---------- */
+      { label 64 { lref 64 "main::bb7" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb7::0
+        *   %tmp8 = add nsw i32 %i.0, 1 */
+      { store { addr 64 { fref 64 "%tmp8" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT main::bb7::3
+        *   %phitmp = mul i32 %seed.0, 133
+        *   %phitmp1 = add i32 %phitmp, 81
+        *   %phitmp2 = srem i32 %phitmp1, 65535 */
+      { label 64 { lref 64 "main::bb7::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%phitmp2" } { dec_unsigned 64 0 } } with
+       { s_mod 32 32
+        { add 32
+         { select 64 0 31
+          { u_mul 32 32 { load 32 { addr 64 { fref 64 "%seed.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 133 } }
+         }
+         { dec_unsigned 32 81 }
+         { dec_unsigned 1 0 }
+        }
+        { dec_unsigned 32 65535 }
+       }
+      }
+
+      /* STATEMENT main::bb7::4
+        *   br label %bb3 */
+      { label 64 { lref 64 "main::bb7::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%seed.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp8" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%phitmp2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "main::bb7::4:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "main::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb9 ---------- */
+      { label 64 { lref 64 "main::bb9" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb9::0
+        *   call void @jpeg_fdct_islow() */
+      { call { label 64 { lref 64 "jpeg_fdct_islow" } { dec_unsigned 64 0 } } result }
+
+      /* STATEMENT main::bb9::1
+        *   ret i32 0 */
+      { label 64 { lref 64 "main::bb9::1" } { dec_unsigned 64 0 } }
+      { return { dec_unsigned 32 0 } }
+    }
+   }
+  }
+ }
+}

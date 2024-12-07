@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @2->"main::1", @82->"alf_label_54", @86->"alf_label_53", @0->"select::0", @7->"alf_label_52", @9->"alf_label_3", @11->"alf_label_4", @21->"alf_label_11", @23->"alf_label_48", @24->"alf_label_49", @26->"alf_label_46", @27->"alf_label_47", @28->"alf_label_45", @29->"alf_label_44", @31->"alf_label_31", @32->"alf_label_43", @33->"alf_label_42", @35->"alf_label_40", @36->"alf_label_41", @38->"alf_label_38", @39->"alf_label_39", @41->"alf_label_36", @42->"alf_label_37", @43->"alf_label_35", @45->"alf_label_33", @46->"alf_label_34", @47->"alf_label_32", @48->"alf_label_30", @49->"alf_label_29", @50->"alf_label_28", @52->"alf_label_24", @53->"alf_label_27", @54->"alf_label_26", @55->"alf_label_25", @57->"alf_label_20", @58->"alf_label_23", @59->"alf_label_22", @60->"alf_label_21", @62->"alf_label_16", @63->"alf_label_19", @64->"alf_label_18", @65->"alf_label_17", @66->"alf_label_15", @67->"alf_label_14", @68->"alf_label_13", @69->"alf_label_12", @12->"alf_label_10", @14->"alf_label_5", @16->"alf_label_6", @17->"alf_label_9", @18->"alf_label_8", @19->"alf_label_7", @70->"alf_label_2", @71->"alf_label_1", @72->"alf_label_0"};
+
+map(varid, string): {default->"" \ #94->"a::94", #63->"arr::63", #97->"flag2::97", #67->"flag::67", #88->"i::88", #71->"ir::71", #86->"j::86", #2147483647->"k::2147483647", #64->"k::64", #72->"l::72", #122->"mid::122", #131->"n::131", #2147483647->"n::2147483647", #82->"temp::82"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(26,[#122],[]), (25,[#97],[]), (24,[#94],[]), (23,[#88],[]), (22,[#86],[]), (21,[#82],[]), (20,[#72],[]), (19,[#71],[]), (18,[#67],[]), (17,[#63],[]), (16,[#63],[]), (14,[],["main::1"]), (12,[],[]), (11,[],["select::0"]), (9,[],[]), (8,[#131],[]), (7,[#64],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(16,17), (14,12), (11,9)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#63,16), (#64,7), (#131,8), (#88,23), (#71,19), (#86,22), (#72,20), (#122,26), (#94,24), (#82,21), (#67,18), (#97,25)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

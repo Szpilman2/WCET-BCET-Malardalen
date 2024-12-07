@@ -1,0 +1,9 @@
+/*
+Note: the alf code has been unmangled, by running
+
+sed 's/::[0-9]* / /g' bs.alf > bs_unmangled.alf
+mv bs_unmangled.alf bs.alf
+
+This annotation lets bs look in and outside all key positions
+*/
+FUNC_ENTRY binary_search ASSIGN x TOP_INT;

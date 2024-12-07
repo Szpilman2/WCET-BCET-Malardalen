@@ -1,0 +1,76 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11700\viewh14400\viewkind0
+\pard\tx565\tx1133\tx1700\tx2266\tx2833\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\fs24 \cf0 Analys av resultat f\'9ar compress.\
+\
+Loop 1 \
+#define BUFFERSIZE	50\
+  for (i = 0 ; i < BUFFERSIZE ; i++)\
+scope main1__27_initbuffer1_L1:maxiter 50; \
+\
+OK??? Borde vara 51\
+\
+Kommentar: klaras av syntaktisk analys.\
+\
+Loop 2\
+    for ( fcode = (long) hsize;  fcode < 65536L; fcode *= 2L )\
+scope main1__28_compress1_L1: maxiter 9;\
+\
+OK.\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 Kommentar: kanske klaras av syntaktisk analys. Vad \'8ar L?\
+\
+Loop 3\
+    while ( InCnt > 0 )           /* apsim_loop 11 0 */\
+stor loopkropp\
+\
+scope main1__28_compress1_L2:  maxiter 50;\
+\
+OK.\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 Kommentar: klaras inte av syntaktisk analys.\
+\
+Loop 4\
+Strukturerad loop fast konstruerad med goto!\
+goto probe;\
+scope main1__28_compress1_L2_L1:  maxiter 1;\
+\
+Vet ej om OK.\
+\
+Kommentar: klaras inte av syntaktisk analys.\
+\
+Loop 5\
+do \{		.... 	\} while ((i -= 16) >= 0);\
+scope main1__28_compress1_L2__32_cl_block1__29_cl_hash1_L1:  maxiter 1;\
+\
+Vet ej om OK.\
+\
+Kommentar: klaras inte av syntaktisk analys.\
+\
+Loop 6\
+for ( i += 16; i > 0; i-- )\
+scope main1__28_compress1_L2__32_cl_block1__29_cl_hash1_L2:  maxiter 1;\
+\
+Vet ej om OK.\
+\
+Kommentar: borde klaras av syntaktisk analys. Beror p\'8c om i \'8ar k\'8ant.\
+\
+Loop 7\
+do \{		.... 	\} while ((i -= 16) >= 0);\
+scope main1__28_compress1__29_cl_hash1_L1:  maxiter 16;Vet ej om OK.\
+\
+Kommentar: klaras inte av syntaktisk analys.\
+\
+Loop 8\
+for ( i += 16; i > 0; i-- )\
+scope main1__28_compress1__29_cl_hash1_L2:  maxiter 2;\
+\
+Vet ej om OK.\
+\
+Kommentar: borde klaras av syntaktisk analys. Beror p\'8c om i \'8ar k\'8ant.\
+}

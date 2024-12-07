@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @2->"main::1", @32->"alf_label_16", @0->"foo::0", @6->"alf_label_15", @8->"alf_label_1", @12->"alf_label_3", @16->"alf_label_5", @20->"alf_label_7", @24->"alf_label_8", @25->"alf_label_9", @21->"alf_label_6", @17->"alf_label_4", @13->"alf_label_2", @9->"alf_label_0"};
+
+map(varid, string): {default->"" \ #123->"answer::123", #99->"i::99", #104->"j::104", #108->"k::108", #116->"keys::116", #112->"l::112", #121->"x::121"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(339,[#123],[]), (338,[],[]), (337,[],[]), (336,[],[]), (335,[#123],[]), (334,[#116],[]), (333,[],[]), (332,[],[]), (331,[],[]), (330,[#116],[]), (329,[#112],[]), (328,[#108],[]), (327,[#104],[]), (326,[#99],[]), (13,[],["main::1"]), (11,[],[]), (10,[],["foo::0"]), (8,[],[]), (7,[#121],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(338,339), (337,338), (336,337), (335,336), (333,334), (332,333), (331,332), (330,331), (13,11), (10,8)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#116,330), (#123,335), (#121,7), (#99,326), (#104,327), (#108,328), (#112,329)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

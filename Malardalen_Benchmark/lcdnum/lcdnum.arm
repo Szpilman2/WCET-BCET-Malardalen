@@ -1,0 +1,841 @@
+        NAME main
+        PUBLIC main
+        PUBLIC OUT
+        PUBLIC IN
+        PUBLIC num_to_lcd
+        EXTERN __fAdd
+        EXTERN __fSub
+        EXTERN __fMul
+        EXTERN __fDiv
+        EXTERN __dAdd
+        EXTERN __dSub
+        EXTERN __dMul
+        EXTERN __dDiv
+        EXTERN __floatToLong
+        EXTERN __longToFloat
+        EXTERN __ulongToFloat
+        EXTERN __doubleToUlong
+        EXTERN __ulongToDouble
+        EXTERN __doubleToLong
+        EXTERN __longToDouble
+        EXTERN __floatToDouble
+        EXTERN __doubleToFloat
+        EXTERN ??div32_a
+        EXTERN ??divu32_a
+        EXTERN __fEqual
+        EXTERN __fNotEqual
+        EXTERN __fLess
+        EXTERN __fLessEqual
+        EXTERN __dEqual
+        EXTERN __dNotEqual
+        EXTERN __dLess
+        EXTERN __dLessEqual
+        RSEG HUGE_C:HUGECONST:SORT:NOROOT(0)
+global_$85_OUT:
+        DC8 0x00
+        RSEG HUGE_C:HUGECONST:SORT:NOROOT(0)
+global_$84_IN:
+        DC8 0x00
+        DATA
+        RSEG ICODE
+        CODE32
+num_to_lcd:
+        MOV R4, #0
+        MOV R5, #10b
+        ADD R4, R4, R5, LSL #8
+        ADD R4, R4, #100101b
+        SUB SP, SP, R4
+        ADD R5, SP, #0		;BB1
+        STR R5, [SP, #81]
+        MOV R5, R0
+        STR R5, [SP, #81]
+        ADD R5, SP, #4		;BB2
+        STR R5, [SP, #85]
+        ADD R5, SP, #0
+        STR R5, [SP, #89]
+        LDR R4, [SP, #89]
+        LDR R6, [R4]
+        STR R6, [SP, #93]
+        LDR R4, [SP, #93]
+        MOV R6, R4
+        STR R6, [SP, #97]
+        LDR R4, [SP, #97]
+        MOV R6, R4, LSL #24
+        STR R6, [SP, #97]
+        LDR R4, [SP, #97]
+        MOV R6, R4, LSR #24
+        STR R6, [SP, #97]
+        LDR R4, [SP, #97]
+        LDR R5, [SP, #85]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB3
+        STR R5, [SP, #101]
+        ADD R5, SP, #4
+        STR R5, [SP, #105]
+        MOV R5, #0
+        STR R5, [SP, #109]
+        LDR R4, [SP, #105]
+        LDRB R6, [R4, #0]
+        STR R6, [SP, #113]
+        LDR R4, [SP, #109]
+        LDR R5, [SP, #113]
+        ADD R7, R4, R5
+        STR R7, [SP, #109]
+        LDR R4, [SP, #109]
+        MOV R6, R4, LSL #8
+        STR R6, [SP, #109]
+        LDR R4, [SP, #109]
+        MOV R6, R4, LSR #8
+        STR R6, [SP, #109]
+        LDR R4, [SP, #109]
+        LDR R5, [SP, #101]
+        STR R4, [R5]
+        ADD R5, SP, #13		;BB4
+        STR R5, [SP, #117]
+        MOV R5, #111b
+        STR R5, [SP, #121]
+        LDR R4, [SP, #121]
+        LDR R5, [SP, #117]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB5
+        STR R5, [SP, #133]
+        LDR R4, [SP, #133]
+        LDR R6, [R4]
+        STR R6, [SP, #137]
+        ADD R5, SP, #13
+        STR R5, [SP, #125]
+        LDR R4, [SP, #125]
+        LDR R6, [R4]
+        STR R6, [SP, #129]
+        LDR R4, [SP, #137]
+        LDR R5, [SP, #129]
+        CMP R4, R5
+        BEQ num_to_lcd_80
+        B num_to_lcd_6
+num_to_lcd_6:			;BB6
+        ADD R5, SP, #5
+        STR R5, [SP, #149]
+        LDR R4, [SP, #149]
+        LDR R6, [R4]
+        STR R6, [SP, #153]
+        ADD R5, SP, #13
+        STR R5, [SP, #141]
+        LDR R4, [SP, #141]
+        LDR R6, [R4]
+        STR R6, [SP, #145]
+        LDR R4, [SP, #153]
+        LDR R5, [SP, #145]
+        CMP R4, R5
+        BGT num_to_lcd_31
+        B num_to_lcd_7
+num_to_lcd_7:			;BB7
+;NULL
+        ADD R5, SP, #21		;BB8
+        STR R5, [SP, #157]
+        MOV R5, #11b
+        STR R5, [SP, #161]
+        LDR R4, [SP, #161]
+        LDR R5, [SP, #157]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB9
+        STR R5, [SP, #173]
+        LDR R4, [SP, #173]
+        LDR R6, [R4]
+        STR R6, [SP, #177]
+        ADD R5, SP, #21
+        STR R5, [SP, #165]
+        LDR R4, [SP, #165]
+        LDR R6, [R4]
+        STR R6, [SP, #169]
+        LDR R4, [SP, #177]
+        LDR R5, [SP, #169]
+        CMP R4, R5
+        BEQ num_to_lcd_68
+        B num_to_lcd_10
+num_to_lcd_10:			;BB10
+        ADD R5, SP, #5
+        STR R5, [SP, #189]
+        LDR R4, [SP, #189]
+        LDR R6, [R4]
+        STR R6, [SP, #193]
+        ADD R5, SP, #21
+        STR R5, [SP, #181]
+        LDR R4, [SP, #181]
+        LDR R6, [R4]
+        STR R6, [SP, #185]
+        LDR R4, [SP, #193]
+        LDR R5, [SP, #185]
+        CMP R4, R5
+        BGT num_to_lcd_21
+        B num_to_lcd_11
+num_to_lcd_11:			;BB11
+;NULL
+        ADD R5, SP, #29		;BB12
+        STR R5, [SP, #197]
+        MOV R5, #1b
+        STR R5, [SP, #201]
+        LDR R4, [SP, #201]
+        LDR R5, [SP, #197]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB13
+        STR R5, [SP, #213]
+        LDR R4, [SP, #213]
+        LDR R6, [R4]
+        STR R6, [SP, #217]
+        ADD R5, SP, #29
+        STR R5, [SP, #205]
+        LDR R4, [SP, #205]
+        LDR R6, [R4]
+        STR R6, [SP, #209]
+        LDR R4, [SP, #217]
+        LDR R5, [SP, #209]
+        CMP R4, R5
+        BEQ num_to_lcd_62
+        B num_to_lcd_14
+num_to_lcd_14:			;BB14
+        ADD R5, SP, #5
+        STR R5, [SP, #229]
+        LDR R4, [SP, #229]
+        LDR R6, [R4]
+        STR R6, [SP, #233]
+        ADD R5, SP, #29
+        STR R5, [SP, #221]
+        LDR R4, [SP, #221]
+        LDR R6, [R4]
+        STR R6, [SP, #225]
+        LDR R4, [SP, #233]
+        LDR R5, [SP, #225]
+        CMP R4, R5
+        BGT num_to_lcd_18
+        B num_to_lcd_15
+num_to_lcd_15:			;BB15
+;NULL
+        ADD R5, SP, #5		;BB16
+        STR R5, [SP, #241]
+        LDR R4, [SP, #241]
+        LDR R6, [R4]
+        STR R6, [SP, #245]
+        MOV R5, #0b
+        STR R5, [SP, #237]
+        LDR R4, [SP, #245]
+        LDR R5, [SP, #237]
+        CMP R4, R5
+        BEQ num_to_lcd_59
+        B num_to_lcd_17
+num_to_lcd_17:			;BB17
+;NULL
+        B num_to_lcd_107
+num_to_lcd_107:			;BB107
+;NULL
+        MOV R5, #0b		;BB108
+        STR R5, [SP, #77]
+        B num_to_lcd_109
+num_to_lcd_109:			;BB109
+;NULL
+        LDR R4, [SP, #77]		;BB110
+        MOV R0, R4
+        MOV R4, #0
+        MOV R5, #10b
+        ADD R4, R4, R5, LSL #8
+        ADD R4, R4, #100101b
+        ADD SP, SP, R4
+        MOV PC, R14
+main:			;BB111
+        SUB SP, SP, #173
+        ADD R5, SP, #5		;BB112
+        STR R5, [SP, #21]
+        MOV R5, #1010b
+        STR R5, [SP, #25]
+        LDR R4, [SP, #25]
+        LDR R5, [SP, #21]
+        STR R4, [R5]
+        ADD R5, SP, #0		;BB113
+        STR R5, [SP, #29]
+        MOV R5, #0b
+        STR R5, [SP, #33]
+        LDR R4, [SP, #33]
+        LDR R5, [SP, #29]
+        STR R4, [R5]
+;NULL
+        B main_16
+main_16:			;BB127
+;NULL
+        ADD R5, SP, #0		;BB128
+        STR R5, [SP, #149]
+        LDR R4, [SP, #149]
+        LDR R6, [R4]
+        STR R6, [SP, #153]
+        ADD R5, SP, #5
+        STR R5, [SP, #141]
+        LDR R4, [SP, #141]
+        LDR R6, [R4]
+        STR R6, [SP, #145]
+        LDR R4, [SP, #153]
+        LDR R5, [SP, #145]
+        CMP R4, R5
+        BLT main_4
+        B main_18
+main_4:			;BB115
+;NULL
+        ADD R5, SP, #4		;BB116
+        STR R5, [SP, #37]
+        LDR R5, =global_$84_IN
+        STR R5, [SP, #41]
+        LDR R4, [SP, #41]
+        LDRB R6, [R4, #0]
+        STR R6, [SP, #45]
+        LDR R4, [SP, #45]
+        LDR R5, [SP, #37]
+        STRB R4, [R5, #0]
+        ADD R5, SP, #0		;BB117
+        STR R5, [SP, #53]
+        LDR R4, [SP, #53]
+        LDR R6, [R4]
+        STR R6, [SP, #57]
+        MOV R5, #101b
+        STR R5, [SP, #49]
+        LDR R4, [SP, #57]
+        LDR R5, [SP, #49]
+        CMP R4, R5
+        BGE main_13
+        B main_7
+main_7:			;BB118
+        ADD R5, SP, #4
+        STR R5, [SP, #61]
+        ADD R5, SP, #4
+        STR R5, [SP, #69]
+        MOV R5, #0
+        STR R5, [SP, #73]
+        LDR R4, [SP, #69]
+        LDRB R6, [R4, #0]
+        STR R6, [SP, #77]
+        LDR R4, [SP, #73]
+        LDR R5, [SP, #77]
+        ADD R7, R4, R5
+        STR R7, [SP, #73]
+        LDR R4, [SP, #73]
+        MOV R6, R4, LSL #8
+        STR R6, [SP, #73]
+        LDR R4, [SP, #73]
+        MOV R6, R4, LSR #8
+        STR R6, [SP, #73]
+        LDR R4, [SP, #73]
+        MOV R6, R4
+        STR R6, [SP, #81]
+        MOV R5, #1111b
+        STR R5, [SP, #65]
+        LDR R4, [SP, #81]
+        LDR R5, [SP, #65]
+        AND R7, R4, R5
+        STR R7, [SP, #81]
+        LDR R4, [SP, #81]
+        MOV R6, R4
+        STR R6, [SP, #85]
+        LDR R4, [SP, #85]
+        MOV R6, R4
+        STR R6, [SP, #89]
+        LDR R4, [SP, #89]
+        MOV R6, R4, LSL #24
+        STR R6, [SP, #89]
+        LDR R4, [SP, #89]
+        MOV R6, R4, LSR #24
+        STR R6, [SP, #89]
+        LDR R4, [SP, #89]
+        LDR R5, [SP, #61]
+        STR R4, [R5]
+        ADD R5, SP, #4		;BB119
+        STR R5, [SP, #93]
+        MOV R5, #0
+        STR R5, [SP, #97]
+        LDR R4, [SP, #93]
+        LDRB R6, [R4, #0]
+        STR R6, [SP, #101]
+        LDR R4, [SP, #97]
+        LDR R5, [SP, #101]
+        ADD R7, R4, R5
+        STR R7, [SP, #97]
+        LDR R4, [SP, #97]
+        MOV R6, R4, LSL #8
+        STR R6, [SP, #97]
+        LDR R4, [SP, #97]
+        MOV R6, R4, LSR #8
+        STR R6, [SP, #97]
+        LDR R4, [SP, #97]
+        MOV R6, R4
+        STR R6, [SP, #13]
+        LDR R4, [SP, #13]		;BB120
+        MOV R0, R4
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL num_to_lcd
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB121
+        STR R5, [SP, #17]
+        ADD R5, SP, #9		;BB122
+        STR R5, [SP, #105]
+        LDR R4, [SP, #17]
+        LDR R5, [SP, #105]
+        STR R4, [R5]
+        LDR R5, =global_$85_OUT		;BB123
+        STR R5, [SP, #109]
+        ADD R5, SP, #9
+        STR R5, [SP, #113]
+        LDR R4, [SP, #113]
+        LDR R6, [R4]
+        STR R6, [SP, #117]
+        LDR R4, [SP, #117]
+        MOV R6, R4
+        STR R6, [SP, #121]
+        LDR R4, [SP, #121]
+        MOV R6, R4, LSL #24
+        STR R6, [SP, #121]
+        LDR R4, [SP, #121]
+        MOV R6, R4, LSR #24
+        STR R6, [SP, #121]
+        LDR R4, [SP, #121]
+        LDR R5, [SP, #109]
+        STR R4, [R5]
+        B main_13
+main_13:			;BB124
+;NULL
+;NULL
+        ADD R5, SP, #0		;BB126
+        STR R5, [SP, #125]
+        ADD R5, SP, #0
+        STR R5, [SP, #133]
+        LDR R4, [SP, #133]
+        LDR R6, [R4]
+        STR R6, [SP, #137]
+        MOV R5, #1b
+        STR R5, [SP, #129]
+        LDR R4, [SP, #137]
+        LDR R5, [SP, #129]
+        ADD R7, R4, R5
+        STR R7, [SP, #137]
+        LDR R4, [SP, #137]
+        LDR R5, [SP, #125]
+        STR R4, [R5]
+        B main_16
+main_18:			;BB129
+;NULL
+        B main_19
+num_to_lcd_59:			;BB59
+;NULL
+        MOV R5, #0b		;BB60
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_18:			;BB18
+;NULL
+        ADD R5, SP, #5		;BB19
+        STR R5, [SP, #253]
+        LDR R4, [SP, #253]
+        LDR R6, [R4]
+        STR R6, [SP, #257]
+        MOV R5, #10b
+        STR R5, [SP, #249]
+        LDR R4, [SP, #257]
+        LDR R5, [SP, #249]
+        CMP R4, R5
+        BEQ num_to_lcd_65
+        B num_to_lcd_20
+num_to_lcd_20:			;BB20
+;NULL
+        B num_to_lcd_107
+num_to_lcd_65:			;BB65
+;NULL
+        MOV R5, #1011101b		;BB66
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_62:			;BB62
+;NULL
+        MOV R5, #100100b		;BB63
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_21:			;BB21
+;NULL
+        ADD R5, SP, #37		;BB22
+        STR R5, [SP, #261]
+        MOV R5, #101b
+        STR R5, [SP, #265]
+        LDR R4, [SP, #265]
+        LDR R5, [SP, #261]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB23
+        STR R5, [SP, #277]
+        LDR R4, [SP, #277]
+        LDR R6, [R4]
+        STR R6, [SP, #281]
+        ADD R5, SP, #37
+        STR R5, [SP, #269]
+        LDR R4, [SP, #269]
+        LDR R6, [R4]
+        STR R6, [SP, #273]
+        LDR R4, [SP, #281]
+        LDR R5, [SP, #273]
+        CMP R4, R5
+        BEQ num_to_lcd_74
+        B num_to_lcd_24
+num_to_lcd_24:			;BB24
+        ADD R5, SP, #5
+        STR R5, [SP, #293]
+        LDR R4, [SP, #293]
+        LDR R6, [R4]
+        STR R6, [SP, #297]
+        ADD R5, SP, #37
+        STR R5, [SP, #285]
+        LDR R4, [SP, #285]
+        LDR R6, [R4]
+        STR R6, [SP, #289]
+        LDR R4, [SP, #297]
+        LDR R5, [SP, #289]
+        CMP R4, R5
+        BGT num_to_lcd_28
+        B num_to_lcd_25
+num_to_lcd_25:			;BB25
+;NULL
+        ADD R5, SP, #5		;BB26
+        STR R5, [SP, #305]
+        LDR R4, [SP, #305]
+        LDR R6, [R4]
+        STR R6, [SP, #309]
+        MOV R5, #100b
+        STR R5, [SP, #301]
+        LDR R4, [SP, #309]
+        LDR R5, [SP, #301]
+        CMP R4, R5
+        BEQ num_to_lcd_71
+        B num_to_lcd_27
+num_to_lcd_27:			;BB27
+;NULL
+        B num_to_lcd_107
+num_to_lcd_71:			;BB71
+;NULL
+        MOV R5, #101110b		;BB72
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_28:			;BB28
+;NULL
+        ADD R5, SP, #5		;BB29
+        STR R5, [SP, #317]
+        LDR R4, [SP, #317]
+        LDR R6, [R4]
+        STR R6, [SP, #321]
+        MOV R5, #110b
+        STR R5, [SP, #313]
+        LDR R4, [SP, #321]
+        LDR R5, [SP, #313]
+        CMP R4, R5
+        BEQ num_to_lcd_77
+        B num_to_lcd_30
+num_to_lcd_30:			;BB30
+;NULL
+        B num_to_lcd_107
+num_to_lcd_77:			;BB77
+;NULL
+        MOV R5, #1111011b		;BB78
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_74:			;BB74
+;NULL
+        MOV R5, #1011101b		;BB75
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_68:			;BB68
+;NULL
+        MOV R5, #1101101b		;BB69
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_31:			;BB31
+;NULL
+        ADD R5, SP, #45		;BB32
+        STR R5, [SP, #325]
+        MOV R5, #1011b
+        STR R5, [SP, #329]
+        LDR R4, [SP, #329]
+        LDR R5, [SP, #325]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB33
+        STR R5, [SP, #341]
+        LDR R4, [SP, #341]
+        LDR R6, [R4]
+        STR R6, [SP, #345]
+        ADD R5, SP, #45
+        STR R5, [SP, #333]
+        LDR R4, [SP, #333]
+        LDR R6, [R4]
+        STR R6, [SP, #337]
+        LDR R4, [SP, #345]
+        LDR R5, [SP, #337]
+        CMP R4, R5
+        BEQ num_to_lcd_92
+        B num_to_lcd_34
+num_to_lcd_34:			;BB34
+        ADD R5, SP, #5
+        STR R5, [SP, #357]
+        LDR R4, [SP, #357]
+        LDR R6, [R4]
+        STR R6, [SP, #361]
+        ADD R5, SP, #45
+        STR R5, [SP, #349]
+        LDR R4, [SP, #349]
+        LDR R6, [R4]
+        STR R6, [SP, #353]
+        LDR R4, [SP, #361]
+        LDR R5, [SP, #353]
+        CMP R4, R5
+        BGT num_to_lcd_45
+        B num_to_lcd_35
+num_to_lcd_35:			;BB35
+;NULL
+        ADD R5, SP, #53		;BB36
+        STR R5, [SP, #365]
+        MOV R5, #1001b
+        STR R5, [SP, #369]
+        LDR R4, [SP, #369]
+        LDR R5, [SP, #365]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB37
+        STR R5, [SP, #381]
+        LDR R4, [SP, #381]
+        LDR R6, [R4]
+        STR R6, [SP, #385]
+        ADD R5, SP, #53
+        STR R5, [SP, #373]
+        LDR R4, [SP, #373]
+        LDR R6, [R4]
+        STR R6, [SP, #377]
+        LDR R4, [SP, #385]
+        LDR R5, [SP, #377]
+        CMP R4, R5
+        BEQ num_to_lcd_86
+        B num_to_lcd_38
+num_to_lcd_38:			;BB38
+        ADD R5, SP, #5
+        STR R5, [SP, #397]
+        LDR R4, [SP, #397]
+        LDR R6, [R4]
+        STR R6, [SP, #401]
+        ADD R5, SP, #53
+        STR R5, [SP, #389]
+        LDR R4, [SP, #389]
+        LDR R6, [R4]
+        STR R6, [SP, #393]
+        LDR R4, [SP, #401]
+        LDR R5, [SP, #393]
+        CMP R4, R5
+        BGT num_to_lcd_42
+        B num_to_lcd_39
+num_to_lcd_39:			;BB39
+;NULL
+        ADD R5, SP, #5		;BB40
+        STR R5, [SP, #409]
+        LDR R4, [SP, #409]
+        LDR R6, [R4]
+        STR R6, [SP, #413]
+        MOV R5, #1000b
+        STR R5, [SP, #405]
+        LDR R4, [SP, #413]
+        LDR R5, [SP, #405]
+        CMP R4, R5
+        BEQ num_to_lcd_83
+        B num_to_lcd_41
+num_to_lcd_41:			;BB41
+;NULL
+        B num_to_lcd_107
+num_to_lcd_83:			;BB83
+;NULL
+        MOV R5, #1111111b		;BB84
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_42:			;BB42
+;NULL
+        ADD R5, SP, #5		;BB43
+        STR R5, [SP, #421]
+        LDR R4, [SP, #421]
+        LDR R6, [R4]
+        STR R6, [SP, #425]
+        MOV R5, #1010b
+        STR R5, [SP, #417]
+        LDR R4, [SP, #425]
+        LDR R5, [SP, #417]
+        CMP R4, R5
+        BEQ num_to_lcd_89
+        B num_to_lcd_44
+num_to_lcd_44:			;BB44
+;NULL
+        B num_to_lcd_107
+num_to_lcd_89:			;BB89
+;NULL
+        MOV R5, #111111b		;BB90
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_86:			;BB86
+;NULL
+        MOV R5, #1101111b		;BB87
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_45:			;BB45
+;NULL
+        ADD R5, SP, #61		;BB46
+        STR R5, [SP, #429]
+        MOV R5, #1101b
+        STR R5, [SP, #433]
+        LDR R4, [SP, #433]
+        LDR R5, [SP, #429]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB47
+        STR R5, [SP, #445]
+        LDR R4, [SP, #445]
+        LDR R6, [R4]
+        STR R6, [SP, #449]
+        ADD R5, SP, #61
+        STR R5, [SP, #437]
+        LDR R4, [SP, #437]
+        LDR R6, [R4]
+        STR R6, [SP, #441]
+        LDR R4, [SP, #449]
+        LDR R5, [SP, #441]
+        CMP R4, R5
+        BEQ num_to_lcd_98
+        B num_to_lcd_48
+num_to_lcd_48:			;BB48
+        ADD R5, SP, #5
+        STR R5, [SP, #461]
+        LDR R4, [SP, #461]
+        LDR R6, [R4]
+        STR R6, [SP, #465]
+        ADD R5, SP, #61
+        STR R5, [SP, #453]
+        LDR R4, [SP, #453]
+        LDR R6, [R4]
+        STR R6, [SP, #457]
+        LDR R4, [SP, #465]
+        LDR R5, [SP, #457]
+        CMP R4, R5
+        BGT num_to_lcd_52
+        B num_to_lcd_49
+num_to_lcd_49:			;BB49
+;NULL
+        ADD R5, SP, #5		;BB50
+        STR R5, [SP, #473]
+        LDR R4, [SP, #473]
+        LDR R6, [R4]
+        STR R6, [SP, #477]
+        MOV R5, #1100b
+        STR R5, [SP, #469]
+        LDR R4, [SP, #477]
+        LDR R5, [SP, #469]
+        CMP R4, R5
+        BEQ num_to_lcd_95
+        B num_to_lcd_51
+num_to_lcd_51:			;BB51
+;NULL
+        B num_to_lcd_107
+num_to_lcd_95:			;BB95
+;NULL
+        MOV R5, #1010011b		;BB96
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_52:			;BB52
+;NULL
+        ADD R5, SP, #69		;BB53
+        STR R5, [SP, #481]
+        MOV R5, #1110b
+        STR R5, [SP, #485]
+        LDR R4, [SP, #485]
+        LDR R5, [SP, #481]
+        STR R4, [R5]
+        ADD R5, SP, #5		;BB54
+        STR R5, [SP, #497]
+        LDR R4, [SP, #497]
+        LDR R6, [R4]
+        STR R6, [SP, #501]
+        ADD R5, SP, #69
+        STR R5, [SP, #489]
+        LDR R4, [SP, #489]
+        LDR R6, [R4]
+        STR R6, [SP, #493]
+        LDR R4, [SP, #501]
+        LDR R5, [SP, #493]
+        CMP R4, R5
+        BEQ num_to_lcd_101
+        B num_to_lcd_55
+num_to_lcd_55:			;BB55
+        ADD R5, SP, #5
+        STR R5, [SP, #513]
+        LDR R4, [SP, #513]
+        LDR R6, [R4]
+        STR R6, [SP, #517]
+        ADD R5, SP, #69
+        STR R5, [SP, #505]
+        LDR R4, [SP, #505]
+        LDR R6, [R4]
+        STR R6, [SP, #509]
+        LDR R4, [SP, #517]
+        LDR R5, [SP, #509]
+        CMP R4, R5
+        BLT num_to_lcd_107
+        B num_to_lcd_56
+num_to_lcd_56:			;BB56
+;NULL
+        ADD R5, SP, #5		;BB57
+        STR R5, [SP, #525]
+        LDR R4, [SP, #525]
+        LDR R6, [R4]
+        STR R6, [SP, #529]
+        MOV R5, #1111b
+        STR R5, [SP, #521]
+        LDR R4, [SP, #529]
+        LDR R5, [SP, #521]
+        CMP R4, R5
+        BEQ num_to_lcd_104
+        B num_to_lcd_58
+num_to_lcd_58:			;BB58
+;NULL
+        B num_to_lcd_107
+num_to_lcd_104:			;BB104
+;NULL
+        MOV R5, #11011b		;BB105
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_101:			;BB101
+;NULL
+        MOV R5, #1011011b		;BB102
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_98:			;BB98
+;NULL
+        MOV R5, #1111100b		;BB99
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_92:			;BB92
+;NULL
+        MOV R5, #1111010b		;BB93
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+num_to_lcd_80:			;BB80
+;NULL
+        MOV R5, #100101b		;BB81
+        STR R5, [SP, #77]
+;NULL
+        B num_to_lcd_109
+main_19:
+        ADD SP, SP, #173
+        MOV PC, R14
+        END main

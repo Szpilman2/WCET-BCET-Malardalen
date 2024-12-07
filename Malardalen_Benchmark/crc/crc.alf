@@ -1,0 +1,1660 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs
+   { fref 64 "lin" }
+  }
+  { lrefs { lref 64 "icrc1" } { lref 64 "icrc" } { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "lin" 2048 }
+  { alloc 64 "icrc.icrctb" 4096 }
+  { alloc 64 "icrc.init" 16 }
+  { alloc 64 "icrc.rchr" 2048 }
+  { alloc 64 "icrc.it" 128 }
+ }
+ { inits
+  { init { ref "lin" { dec_unsigned 64 0 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 1 } } { dec_unsigned 8 115 } }
+  { init { ref "lin" { dec_unsigned 64 2 } } { dec_unsigned 8 100 } }
+  { init { ref "lin" { dec_unsigned 64 3 } } { dec_unsigned 8 102 } }
+  { init { ref "lin" { dec_unsigned 64 4 } } { dec_unsigned 8 102 } }
+  { init { ref "lin" { dec_unsigned 64 5 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 6 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 7 } } { dec_unsigned 8 103 } }
+  { init { ref "lin" { dec_unsigned 64 8 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 9 } } { dec_unsigned 8 119 } }
+  { init { ref "lin" { dec_unsigned 64 10 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 11 } } { dec_unsigned 8 72 } }
+  { init { ref "lin" { dec_unsigned 64 12 } } { dec_unsigned 8 65 } }
+  { init { ref "lin" { dec_unsigned 64 13 } } { dec_unsigned 8 70 } }
+  { init { ref "lin" { dec_unsigned 64 14 } } { dec_unsigned 8 69 } }
+  { init { ref "lin" { dec_unsigned 64 15 } } { dec_unsigned 8 70 } }
+  { init { ref "lin" { dec_unsigned 64 16 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 17 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 18 } } { dec_unsigned 8 68 } }
+  { init { ref "lin" { dec_unsigned 64 19 } } { dec_unsigned 8 115 } }
+  { init { ref "lin" { dec_unsigned 64 20 } } { dec_unsigned 8 70 } }
+  { init { ref "lin" { dec_unsigned 64 21 } } { dec_unsigned 8 69 } }
+  { init { ref "lin" { dec_unsigned 64 22 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 23 } } { dec_unsigned 8 119 } }
+  { init { ref "lin" { dec_unsigned 64 24 } } { dec_unsigned 8 70 } }
+  { init { ref "lin" { dec_unsigned 64 25 } } { dec_unsigned 8 100 } }
+  { init { ref "lin" { dec_unsigned 64 26 } } { dec_unsigned 8 115 } }
+  { init { ref "lin" { dec_unsigned 64 27 } } { dec_unsigned 8 70 } }
+  { init { ref "lin" { dec_unsigned 64 28 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 29 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 30 } } { dec_unsigned 8 102 } }
+  { init { ref "lin" { dec_unsigned 64 31 } } { dec_unsigned 8 97 } }
+  { init { ref "lin" { dec_unsigned 64 32 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 33 } } { dec_unsigned 8 101 } }
+  { init { ref "lin" { dec_unsigned 64 34 } } { dec_unsigned 8 114 } }
+  { init { ref "lin" { dec_unsigned 64 35 } } { dec_unsigned 8 100 } }
+  { init { ref "lin" { dec_unsigned 64 36 } } { dec_unsigned 8 106 } }
+  { init { ref "lin" { dec_unsigned 64 37 } } { dec_unsigned 8 103 } }
+  { init { ref "lin" { dec_unsigned 64 38 } } { dec_unsigned 8 112 } }
+  { init { ref "lin" { dec_unsigned 64 39 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 40 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 41 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 42 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 43 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 44 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 45 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 46 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 47 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 48 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 49 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 50 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 51 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 52 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 53 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 54 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 55 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 56 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 57 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 58 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 59 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 60 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 61 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 62 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 63 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 64 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 65 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 66 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 67 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 68 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 69 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 70 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 71 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 72 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 73 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 74 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 75 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 76 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 77 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 78 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 79 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 80 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 81 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 82 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 83 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 84 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 85 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 86 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 87 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 88 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 89 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 90 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 91 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 92 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 93 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 94 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 95 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 96 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 97 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 98 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 99 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 100 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 101 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 102 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 103 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 104 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 105 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 106 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 107 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 108 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 109 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 110 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 111 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 112 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 113 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 114 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 115 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 116 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 117 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 118 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 119 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 120 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 121 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 122 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 123 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 124 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 125 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 126 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 127 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 128 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 129 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 130 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 131 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 132 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 133 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 134 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 135 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 136 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 137 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 138 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 139 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 140 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 141 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 142 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 143 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 144 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 145 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 146 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 147 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 148 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 149 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 150 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 151 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 152 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 153 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 154 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 155 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 156 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 157 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 158 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 159 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 160 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 161 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 162 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 163 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 164 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 165 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 166 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 167 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 168 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 169 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 170 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 171 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 172 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 173 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 174 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 175 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 176 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 177 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 178 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 179 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 180 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 181 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 182 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 183 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 184 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 185 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 186 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 187 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 188 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 189 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 190 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 191 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 192 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 193 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 194 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 195 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 196 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 197 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 198 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 199 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 200 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 201 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 202 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 203 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 204 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 205 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 206 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 207 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 208 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 209 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 210 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 211 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 212 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 213 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 214 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 215 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 216 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 217 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 218 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 219 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 220 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 221 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 222 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 223 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 224 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 225 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 226 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 227 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 228 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 229 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 230 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 231 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 232 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 233 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 234 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 235 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 236 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 237 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 238 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 239 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 240 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 241 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 242 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 243 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 244 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 245 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 246 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 247 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 248 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 249 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 250 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 251 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 252 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 253 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 254 } } { dec_unsigned 8 0 } }
+  { init { ref "lin" { dec_unsigned 64 255 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 0 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 2 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 4 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 6 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 8 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 10 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 12 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 14 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 16 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 18 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 20 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 22 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 24 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 26 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 28 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 30 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 32 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 34 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 36 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 38 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 40 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 42 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 44 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 46 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 48 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 50 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 52 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 54 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 56 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 58 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 60 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 62 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 64 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 66 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 68 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 70 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 72 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 74 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 76 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 78 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 80 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 82 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 84 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 86 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 88 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 90 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 92 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 94 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 96 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 98 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 100 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 102 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 104 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 106 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 108 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 110 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 112 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 114 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 116 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 118 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 120 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 122 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 124 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 126 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 128 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 130 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 132 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 134 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 136 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 138 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 140 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 142 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 144 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 146 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 148 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 150 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 152 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 154 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 156 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 158 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 160 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 162 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 164 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 166 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 168 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 170 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 172 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 174 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 176 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 178 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 180 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 182 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 184 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 186 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 188 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 190 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 192 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 194 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 196 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 198 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 200 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 202 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 204 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 206 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 208 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 210 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 212 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 214 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 216 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 218 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 220 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 222 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 224 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 226 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 228 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 230 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 232 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 234 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 236 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 238 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 240 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 242 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 244 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 246 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 248 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 250 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 252 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 254 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 256 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 258 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 260 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 262 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 264 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 266 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 268 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 270 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 272 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 274 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 276 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 278 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 280 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 282 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 284 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 286 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 288 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 290 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 292 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 294 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 296 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 298 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 300 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 302 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 304 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 306 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 308 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 310 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 312 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 314 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 316 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 318 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 320 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 322 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 324 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 326 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 328 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 330 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 332 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 334 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 336 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 338 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 340 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 342 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 344 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 346 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 348 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 350 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 352 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 354 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 356 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 358 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 360 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 362 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 364 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 366 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 368 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 370 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 372 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 374 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 376 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 378 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 380 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 382 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 384 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 386 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 388 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 390 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 392 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 394 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 396 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 398 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 400 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 402 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 404 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 406 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 408 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 410 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 412 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 414 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 416 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 418 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 420 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 422 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 424 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 426 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 428 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 430 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 432 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 434 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 436 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 438 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 440 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 442 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 444 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 446 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 448 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 450 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 452 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 454 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 456 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 458 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 460 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 462 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 464 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 466 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 468 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 470 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 472 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 474 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 476 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 478 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 480 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 482 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 484 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 486 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 488 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 490 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 492 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 494 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 496 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 498 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 500 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 502 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 504 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 506 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 508 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.icrctb" { dec_unsigned 64 510 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.init" { dec_unsigned 64 0 } } { dec_unsigned 16 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 0 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 1 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 2 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 3 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 4 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 5 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 6 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 7 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 8 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 9 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 10 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 11 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 12 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 13 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 14 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 15 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 16 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 17 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 18 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 19 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 20 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 21 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 22 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 23 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 24 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 25 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 26 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 27 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 28 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 29 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 30 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 31 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 32 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 33 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 34 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 35 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 36 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 37 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 38 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 39 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 40 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 41 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 42 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 43 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 44 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 45 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 46 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 47 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 48 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 49 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 50 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 51 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 52 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 53 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 54 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 55 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 56 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 57 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 58 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 59 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 60 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 61 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 62 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 63 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 64 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 65 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 66 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 67 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 68 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 69 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 70 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 71 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 72 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 73 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 74 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 75 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 76 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 77 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 78 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 79 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 80 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 81 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 82 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 83 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 84 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 85 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 86 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 87 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 88 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 89 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 90 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 91 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 92 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 93 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 94 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 95 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 96 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 97 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 98 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 99 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 100 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 101 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 102 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 103 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 104 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 105 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 106 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 107 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 108 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 109 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 110 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 111 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 112 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 113 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 114 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 115 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 116 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 117 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 118 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 119 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 120 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 121 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 122 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 123 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 124 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 125 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 126 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 127 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 128 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 129 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 130 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 131 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 132 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 133 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 134 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 135 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 136 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 137 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 138 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 139 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 140 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 141 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 142 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 143 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 144 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 145 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 146 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 147 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 148 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 149 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 150 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 151 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 152 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 153 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 154 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 155 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 156 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 157 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 158 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 159 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 160 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 161 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 162 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 163 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 164 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 165 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 166 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 167 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 168 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 169 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 170 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 171 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 172 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 173 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 174 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 175 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 176 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 177 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 178 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 179 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 180 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 181 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 182 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 183 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 184 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 185 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 186 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 187 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 188 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 189 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 190 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 191 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 192 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 193 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 194 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 195 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 196 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 197 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 198 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 199 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 200 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 201 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 202 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 203 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 204 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 205 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 206 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 207 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 208 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 209 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 210 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 211 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 212 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 213 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 214 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 215 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 216 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 217 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 218 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 219 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 220 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 221 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 222 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 223 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 224 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 225 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 226 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 227 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 228 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 229 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 230 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 231 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 232 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 233 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 234 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 235 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 236 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 237 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 238 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 239 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 240 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 241 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 242 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 243 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 244 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 245 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 246 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 247 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 248 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 249 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 250 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 251 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 252 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 253 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 254 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.rchr" { dec_unsigned 64 255 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.it" { dec_unsigned 64 0 } } { dec_unsigned 8 0 } }
+  { init { ref "icrc.it" { dec_unsigned 64 1 } } { dec_unsigned 8 8 } }
+  { init { ref "icrc.it" { dec_unsigned 64 2 } } { dec_unsigned 8 4 } }
+  { init { ref "icrc.it" { dec_unsigned 64 3 } } { dec_unsigned 8 12 } }
+  { init { ref "icrc.it" { dec_unsigned 64 4 } } { dec_unsigned 8 2 } }
+  { init { ref "icrc.it" { dec_unsigned 64 5 } } { dec_unsigned 8 10 } }
+  { init { ref "icrc.it" { dec_unsigned 64 6 } } { dec_unsigned 8 6 } }
+  { init { ref "icrc.it" { dec_unsigned 64 7 } } { dec_unsigned 8 14 } }
+  { init { ref "icrc.it" { dec_unsigned 64 8 } } { dec_unsigned 8 1 } }
+  { init { ref "icrc.it" { dec_unsigned 64 9 } } { dec_unsigned 8 9 } }
+  { init { ref "icrc.it" { dec_unsigned 64 10 } } { dec_unsigned 8 5 } }
+  { init { ref "icrc.it" { dec_unsigned 64 11 } } { dec_unsigned 8 13 } }
+  { init { ref "icrc.it" { dec_unsigned 64 12 } } { dec_unsigned 8 3 } }
+  { init { ref "icrc.it" { dec_unsigned 64 13 } } { dec_unsigned 8 11 } }
+  { init { ref "icrc.it" { dec_unsigned 64 14 } } { dec_unsigned 8 7 } }
+  { init { ref "icrc.it" { dec_unsigned 64 15 } } { dec_unsigned 8 15 } }
+ }
+ { funcs
+
+  /* Definition of function icrc1 */
+  { func
+   { label 64 { lref 64 "icrc1" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%crc" 16 }
+    { alloc 64 "%onech" 8 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%tmp2" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%i.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%ans.0" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp9" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp11" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%ans.1" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp14" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "icrc1::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb::2
+        *   %tmp = zext i8 %onech to i16
+        *   %tmp1 = shl nuw i16 %tmp, 8
+        *   %tmp2 = xor i16 %tmp1, %crc */
+      { store { addr 64 { fref 64 "%tmp2" } { dec_unsigned 64 0 } } with
+       { xor 16
+        { l_shift 16 16
+         { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%onech" } { dec_unsigned 64 0 } } } }
+         { dec_unsigned 16 8 }
+        }
+        { load 16 { addr 64 { fref 64 "%crc" } { dec_unsigned 64 0 } } }
+       }
+      }
+
+      /* STATEMENT icrc1::bb::3
+        *   br label %bb3 */
+      { label 64 { lref 64 "icrc1::bb::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 0 } { load 16 { addr 64 { fref 64 "%tmp2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc1::bb::3:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc1::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "icrc1::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb3::3
+        *   %tmp4 = icmp slt i32 %i.0, 8
+        *   br i1 %tmp4, label %bb5, label %bb15 */
+      { switch
+       { s_lt 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 8 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc1::bb5" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc1::bb15" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb5 ---------- */
+      { label 64 { lref 64 "icrc1::bb5" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb5::1
+        *   %tmp6 = icmp slt i16 %ans.0, 0
+        *   br i1 %tmp6, label %bb7, label %bb10 */
+      { switch
+       { s_lt 16 { load 16 { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc1::bb7" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc1::bb10" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb7 ---------- */
+      { label 64 { lref 64 "icrc1::bb7" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb7::1
+        *   %tmp8 = shl i16 %ans.0, 1
+        *   %tmp9 = xor i16 %tmp8, 4129 */
+      { store { addr 64 { fref 64 "%tmp9" } { dec_unsigned 64 0 } } with
+       { xor 16
+        { l_shift 16 16 { load 16 { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 1 } }
+        { dec_unsigned 16 4129 }
+       }
+      }
+
+      /* STATEMENT icrc1::bb7::2
+        *   br label %bb12 */
+      { label 64 { lref 64 "icrc1::bb7::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%ans.1" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp9" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc1::bb7::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc1::bb12" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb10 ---------- */
+      { label 64 { lref 64 "icrc1::bb10" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb10::0
+        *   %tmp11 = shl i16 %ans.0, 1 */
+      { store { addr 64 { fref 64 "%tmp11" } { dec_unsigned 64 0 } } with
+       { l_shift 16 16 { load 16 { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 1 } }
+      }
+
+      /* STATEMENT icrc1::bb10::1
+        *   br label %bb12 */
+      { label 64 { lref 64 "icrc1::bb10::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%ans.1" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp11" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc1::bb10::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc1::bb12" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb12 ---------- */
+      { label 64 { lref 64 "icrc1::bb12" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb12::1
+        *   br label %bb13 */
+      { jump { label 64 { lref 64 "icrc1::bb13" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb13 ---------- */
+      { label 64 { lref 64 "icrc1::bb13" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb13::0
+        *   %tmp14 = add nsw i32 %i.0, 1 */
+      { store { addr 64 { fref 64 "%tmp14" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT icrc1::bb13::1
+        *   br label %bb3 */
+      { label 64 { lref 64 "icrc1::bb13::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp14" } { dec_unsigned 64 0 } } } { load 16 { addr 64 { fref 64 "%ans.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc1::bb13::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc1::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb15 ---------- */
+      { label 64 { lref 64 "icrc1::bb15" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc1::bb15::0
+        *   ret i16 %ans.0 */
+      { return { load 16 { addr 64 { fref 64 "%ans.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+
+  /* Definition of function icrc */
+  { func
+   { label 64 { lref 64 "icrc" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%crc" 16 }
+    { alloc 64 "%len" 64 }
+    { alloc 64 "%jinit" 16 }
+    { alloc 64 "%jrev" 32 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%tmp" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%j.0" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp7" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp13" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp18" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp23" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp30" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp37" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp42" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp45" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%cword.0" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%cword.1" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%j.1" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%cword.2" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp56" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp59" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp62" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp66" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp69" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp1.0" 16 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp75" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp76" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp77" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp85" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp90" 8 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp93" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp2.0" 16 } /* Local Variable (PHI node) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "icrc::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb::0
+        *   %tmp = load i16* @icrc.init, align 2 */
+      { store { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } with
+       { load 16 { addr 64 { fref 64 "icrc.init" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT icrc::bb::2
+        *   %tmp1 = icmp eq i16 %tmp, 0
+        *   br i1 %tmp1, label %bb2, label %bb25 */
+      { label 64 { lref 64 "icrc::bb::2" } { dec_unsigned 64 0 } }
+      { switch
+       { eq 16 { load 16 { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } } { dec_unsigned 16 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb2" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb25" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb2 ---------- */
+      { label 64 { lref 64 "icrc::bb2" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb2::0
+        *   store i16 1, i16* @icrc.init, align 2 */
+      { store { addr 64 { fref 64 "icrc.init" } { dec_unsigned 64 0 } } with { dec_unsigned 16 1 } }
+
+      /* STATEMENT icrc::bb2::1
+        *   br label %bb3 */
+      { label 64 { lref 64 "icrc::bb2::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } with { dec_unsigned 16 0 } }
+
+      { label 64 { lref 64 "icrc::bb2::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "icrc::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb3::2
+        *   %tmp4 = icmp ult i16 %j.0, 256
+        *   br i1 %tmp4, label %bb5, label %bb24 */
+      { switch
+       { u_lt 16 { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 256 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb5" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb24" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb5 ---------- */
+      { label 64 { lref 64 "icrc::bb5" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb5::1
+        *   %tmp6 = shl i16 %j.0, 8
+        *   %tmp7 = call zeroext i16 @icrc1(i16 zeroext %tmp6, i8 zeroext 0) */
+      { call { label 64 { lref 64 "icrc1" } { dec_unsigned 64 0 } }
+       { l_shift 16 16 { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       { dec_unsigned 8 0 }
+       result
+       { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } }
+      }
+
+      /* STATEMENT icrc::bb5::4
+        *   %tmp8 = zext i16 %j.0 to i64
+        *   %tmp9 = getelementptr inbounds [256 x i16]* @icrc.icrctb, i64 0, i64 %tmp8
+        *   store i16 %tmp7, i16* %tmp9, align 2 */
+      { label 64 { lref 64 "icrc::bb5::4" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "icrc.icrctb" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } }
+          { dec_unsigned 64 2 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 16 { addr 64 { fref 64 "%tmp7" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT icrc::bb5::8
+        *   %tmp10 = zext i16 %j.0 to i64
+        *   %tmp11 = and i64 %tmp10, 15
+        *   %tmp12 = getelementptr inbounds [16 x i8]* @icrc.it, i64 0, i64 %tmp11
+        *   %tmp13 = load i8* %tmp12, align 1 */
+      { label 64 { lref 64 "icrc::bb5::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.it" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { and 64
+            { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } }
+            { dec_unsigned 64 15 }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb5::13
+        *   %tmp15 = zext i16 %j.0 to i64
+        *   %tmp16 = lshr i64 %tmp15, 4
+        *   %tmp17 = getelementptr inbounds [16 x i8]* @icrc.it, i64 0, i64 %tmp16
+        *   %tmp18 = load i8* %tmp17, align 1 */
+      { label 64 { lref 64 "icrc::bb5::13" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.it" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { r_shift 64 64
+            { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } }
+            { dec_unsigned 64 4 }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb5::17
+        *   %tmp14 = shl i8 %tmp13, 4
+        *   %tmp19 = or i8 %tmp14, %tmp18
+        *   %tmp20 = zext i16 %j.0 to i64
+        *   %tmp21 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp20
+        *   store i8 %tmp19, i8* %tmp21, align 1 */
+      { label 64 { lref 64 "icrc::bb5::17" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } }
+          { dec_unsigned 64 1 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { or 8
+        { l_shift 8 8 { load 8 { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } } { dec_unsigned 8 4 } }
+        { load 8 { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } }
+       }
+      }
+
+      /* STATEMENT icrc::bb5::18
+        *   br label %bb22 */
+      { label 64 { lref 64 "icrc::bb5::18" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb22" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb22 ---------- */
+      { label 64 { lref 64 "icrc::bb22" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb22::0
+        *   %tmp23 = add i16 %j.0, 1 */
+      { store { addr 64 { fref 64 "%tmp23" } { dec_unsigned 64 0 } } with
+       { add 16 { load 16 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } { dec_unsigned 16 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT icrc::bb22::1
+        *   br label %bb3 */
+      { label 64 { lref 64 "icrc::bb22::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp23" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb22::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb24 ---------- */
+      { label 64 { lref 64 "icrc::bb24" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb24::0
+        *   br label %bb25 */
+      { jump { label 64 { lref 64 "icrc::bb25" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb25 ---------- */
+      { label 64 { lref 64 "icrc::bb25" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb25::1
+        *   %tmp26 = icmp sgt i16 %jinit, -1
+        *   br i1 %tmp26, label %bb27, label %bb31 */
+      { switch
+       { s_gt 16 { load 16 { addr 64 { fref 64 "%jinit" } { dec_unsigned 64 0 } } } { dec_signed 16 { minus 1 } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb27" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb31" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb27 ---------- */
+      { label 64 { lref 64 "icrc::bb27" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb27::2
+        *   %tmp28 = and i16 %jinit, 255
+        *   %tmp29 = shl i16 %jinit, 8
+        *   %tmp30 = or i16 %tmp28, %tmp29 */
+      { store { addr 64 { fref 64 "%tmp30" } { dec_unsigned 64 0 } } with
+       { or 16
+        { and 16 { load 16 { addr 64 { fref 64 "%jinit" } { dec_unsigned 64 0 } } } { dec_unsigned 16 255 } }
+        { l_shift 16 16 { load 16 { addr 64 { fref 64 "%jinit" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       }
+      }
+
+      /* STATEMENT icrc::bb27::3
+        *   br label %bb47 */
+      { label 64 { lref 64 "icrc::bb27::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%cword.1" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp30" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb27::3:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb47" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb31 ---------- */
+      { label 64 { lref 64 "icrc::bb31" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb31::1
+        *   %tmp32 = icmp slt i32 %jrev, 0
+        *   br i1 %tmp32, label %bb33, label %bb46 */
+      { switch
+       { s_lt 32 { load 32 { addr 64 { fref 64 "%jrev" } { dec_unsigned 64 0 } } } { dec_unsigned 32 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb33" } { dec_unsigned 64 0 } } }
+       { default
+        { label 64 { lref 64 "icrc::bb31::1::icrc::bb46" } { dec_unsigned 64 0 } }
+       }
+      }
+
+      { label 64 { lref 64 "icrc::bb31::1::icrc::bb46" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%cword.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%crc" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb31::1::icrc::bb46:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb46" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb33 ---------- */
+      { label 64 { lref 64 "icrc::bb33" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb33::3
+        *   %tmp34 = lshr i16 %crc, 8
+        *   %tmp35 = zext i16 %tmp34 to i64
+        *   %tmp36 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp35
+        *   %tmp37 = load i8* %tmp36, align 1 */
+      { store { addr 64 { fref 64 "%tmp37" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 48 16 { dec_unsigned 48 0 }
+            { r_shift 16 16 { load 16 { addr 64 { fref 64 "%crc" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb33::8
+        *   %tmp39 = zext i16 %crc to i64
+        *   %tmp40 = and i64 %tmp39, 255
+        *   %tmp41 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp40
+        *   %tmp42 = load i8* %tmp41, align 1 */
+      { label 64 { lref 64 "icrc::bb33::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp42" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { and 64
+            { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%crc" } { dec_unsigned 64 0 } } } }
+            { dec_unsigned 64 255 }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb33::11
+        *   %tmp38 = zext i8 %tmp37 to i16
+        *   %tmp43 = zext i8 %tmp42 to i16
+        *   %tmp44 = shl nuw i16 %tmp43, 8
+        *   %tmp45 = or i16 %tmp38, %tmp44 */
+      { label 64 { lref 64 "icrc::bb33::11" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp45" } { dec_unsigned 64 0 } } with
+       { or 16
+        { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp37" } { dec_unsigned 64 0 } } } }
+        { l_shift 16 16
+         { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp42" } { dec_unsigned 64 0 } } } }
+         { dec_unsigned 16 8 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb33::12
+        *   br label %bb46 */
+      { label 64 { lref 64 "icrc::bb33::12" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%cword.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp45" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb33::12:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb46" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb46 ---------- */
+      { label 64 { lref 64 "icrc::bb46" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb46::1
+        *   br label %bb47 */
+      { store { addr 64 { fref 64 "%cword.1" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%cword.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb46::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb47" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb47 ---------- */
+      { label 64 { lref 64 "icrc::bb47" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb47::1
+        *   br label %bb48 */
+      { store { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } with { dec_unsigned 16 1 } { load 16 { addr 64 { fref 64 "%cword.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb47::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb48" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb48 ---------- */
+      { label 64 { lref 64 "icrc::bb48" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb48::4
+        *   %tmp49 = zext i16 %j.1 to i64
+        *   %tmp50 = icmp ugt i64 %tmp49, %len
+        *   br i1 %tmp50, label %bb78, label %bb51 */
+      { switch
+       { u_gt 64
+        { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } } }
+        { load 64 { addr 64 { fref 64 "%len" } { dec_unsigned 64 0 } } }
+       }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb78" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb51" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb51 ---------- */
+      { label 64 { lref 64 "icrc::bb51" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb51::1
+        *   %tmp52 = icmp slt i32 %jrev, 0
+        *   br i1 %tmp52, label %bb53, label %bb63 */
+      { switch
+       { s_lt 32 { load 32 { addr 64 { fref 64 "%jrev" } { dec_unsigned 64 0 } } } { dec_unsigned 32 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb53" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb63" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb53 ---------- */
+      { label 64 { lref 64 "icrc::bb53" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb53::2
+        *   %tmp54 = zext i16 %j.1 to i64
+        *   %tmp55 = getelementptr inbounds [256 x i8]* @lin, i64 0, i64 %tmp54
+        *   %tmp56 = load i8* %tmp55, align 1 */
+      { store { addr 64 { fref 64 "%tmp56" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "lin" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } } }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb53::5
+        *   %tmp57 = zext i8 %tmp56 to i64
+        *   %tmp58 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp57
+        *   %tmp59 = load i8* %tmp58, align 1 */
+      { label 64 { lref 64 "icrc::bb53::5" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp59" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 56 8 { dec_unsigned 56 0 } { load 8 { addr 64 { fref 64 "%tmp56" } { dec_unsigned 64 0 } } } }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb53::8
+        *   %tmp60 = zext i8 %tmp59 to i16
+        *   %tmp61 = lshr i16 %cword.2, 8
+        *   %tmp62 = xor i16 %tmp60, %tmp61 */
+      { label 64 { lref 64 "icrc::bb53::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp62" } { dec_unsigned 64 0 } } with
+       { xor 16
+        { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp59" } { dec_unsigned 64 0 } } } }
+        { r_shift 16 16 { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       }
+      }
+
+      /* STATEMENT icrc::bb53::9
+        *   br label %bb70 */
+      { label 64 { lref 64 "icrc::bb53::9" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp1.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp62" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb53::9:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb70" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb63 ---------- */
+      { label 64 { lref 64 "icrc::bb63" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb63::2
+        *   %tmp64 = zext i16 %j.1 to i64
+        *   %tmp65 = getelementptr inbounds [256 x i8]* @lin, i64 0, i64 %tmp64
+        *   %tmp66 = load i8* %tmp65, align 1 */
+      { store { addr 64 { fref 64 "%tmp66" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "lin" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } } }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb63::5
+        *   %tmp67 = zext i8 %tmp66 to i16
+        *   %tmp68 = lshr i16 %cword.2, 8
+        *   %tmp69 = xor i16 %tmp67, %tmp68 */
+      { label 64 { lref 64 "icrc::bb63::5" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp69" } { dec_unsigned 64 0 } } with
+       { xor 16
+        { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp66" } { dec_unsigned 64 0 } } } }
+        { r_shift 16 16 { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       }
+      }
+
+      /* STATEMENT icrc::bb63::6
+        *   br label %bb70 */
+      { label 64 { lref 64 "icrc::bb63::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp1.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp69" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb63::6:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb70" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb70 ---------- */
+      { label 64 { lref 64 "icrc::bb70" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb70::1
+        *   br label %bb71 */
+      { jump { label 64 { lref 64 "icrc::bb71" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb71 ---------- */
+      { label 64 { lref 64 "icrc::bb71" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb71::3
+        *   %tmp72 = zext i16 %tmp1.0 to i64
+        *   %tmp73 = getelementptr inbounds [256 x i16]* @icrc.icrctb, i64 0, i64 %tmp72
+        *   %tmp75 = load i16* %tmp73, align 2 */
+      { store { addr 64 { fref 64 "%tmp75" } { dec_unsigned 64 0 } } with
+       { load 16
+        { add 64 { addr 64 { fref 64 "icrc.icrctb" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%tmp1.0" } { dec_unsigned 64 0 } } } }
+           { dec_unsigned 64 2 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb71::4
+        *   %tmp74 = shl i16 %cword.2, 8
+        *   %tmp76 = xor i16 %tmp75, %tmp74 */
+      { label 64 { lref 64 "icrc::bb71::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp76" } { dec_unsigned 64 0 } } with
+       { xor 16 { load 16 { addr 64 { fref 64 "%tmp75" } { dec_unsigned 64 0 } } }
+        { l_shift 16 16 { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       }
+      }
+
+      /* STATEMENT icrc::bb71::5
+        *   %tmp77 = add i16 %j.1, 1 */
+      { label 64 { lref 64 "icrc::bb71::5" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp77" } { dec_unsigned 64 0 } } with
+       { add 16 { load 16 { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } } { dec_unsigned 16 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT icrc::bb71::6
+        *   br label %bb48 */
+      { label 64 { lref 64 "icrc::bb71::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp77" } { dec_unsigned 64 0 } } } { load 16 { addr 64 { fref 64 "%tmp76" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb71::6:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb48" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb78 ---------- */
+      { label 64 { lref 64 "icrc::bb78" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb78::1
+        *   %tmp79 = icmp sgt i32 %jrev, -1
+        *   br i1 %tmp79, label %bb80, label %bb81 */
+      { switch
+       { s_gt 32 { load 32 { addr 64 { fref 64 "%jrev" } { dec_unsigned 64 0 } } } { dec_signed 32 { minus 1 } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "icrc::bb80" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "icrc::bb81" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb80 ---------- */
+      { label 64 { lref 64 "icrc::bb80" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb80::0
+        *   br label %bb94 */
+      { store { addr 64 { fref 64 "%tmp2.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb80::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb94" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb81 ---------- */
+      { label 64 { lref 64 "icrc::bb81" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb81::3
+        *   %tmp82 = lshr i16 %cword.2, 8
+        *   %tmp83 = zext i16 %tmp82 to i64
+        *   %tmp84 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp83
+        *   %tmp85 = load i8* %tmp84, align 1 */
+      { store { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { conc 48 16 { dec_unsigned 48 0 }
+            { r_shift 16 16 { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb81::8
+        *   %tmp87 = zext i16 %cword.2 to i64
+        *   %tmp88 = and i64 %tmp87, 255
+        *   %tmp89 = getelementptr inbounds [256 x i8]* @icrc.rchr, i64 0, i64 %tmp88
+        *   %tmp90 = load i8* %tmp89, align 1 */
+      { label 64 { lref 64 "icrc::bb81::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp90" } { dec_unsigned 64 0 } } with
+       { load 8
+        { add 64 { addr 64 { fref 64 "icrc.rchr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { and 64
+            { conc 48 16 { dec_unsigned 48 0 } { load 16 { addr 64 { fref 64 "%cword.2" } { dec_unsigned 64 0 } } } }
+            { dec_unsigned 64 255 }
+           }
+           { dec_unsigned 64 1 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb81::11
+        *   %tmp86 = zext i8 %tmp85 to i16
+        *   %tmp91 = zext i8 %tmp90 to i16
+        *   %tmp92 = shl nuw i16 %tmp91, 8
+        *   %tmp93 = or i16 %tmp86, %tmp92 */
+      { label 64 { lref 64 "icrc::bb81::11" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp93" } { dec_unsigned 64 0 } } with
+       { or 16
+        { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } } }
+        { l_shift 16 16
+         { conc 8 8 { dec_unsigned 8 0 } { load 8 { addr 64 { fref 64 "%tmp90" } { dec_unsigned 64 0 } } } }
+         { dec_unsigned 16 8 }
+        }
+       }
+      }
+
+      /* STATEMENT icrc::bb81::12
+        *   br label %bb94 */
+      { label 64 { lref 64 "icrc::bb81::12" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp2.0" } { dec_unsigned 64 0 } } with { load 16 { addr 64 { fref 64 "%tmp93" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "icrc::bb81::12:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "icrc::bb94" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb94 ---------- */
+      { label 64 { lref 64 "icrc::bb94" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT icrc::bb94::1
+        *   ret i16 %tmp2.0 */
+      { return { load 16 { addr 64 { fref 64 "%tmp2.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+
+  /* Definition of function main */
+  { func
+   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls
+     { alloc 64 "%tmp" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp4" 16 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "main::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb::0
+        *   store i8 0, i8* getelementptr inbounds ([256 x i8]* @lin, i64 0, i64 41), align 1 */
+      { store { addr 64 { fref 64 "lin" } { dec_unsigned 64 41 } } with { dec_unsigned 8 0 } }
+
+      /* STATEMENT main::bb::1
+        *   %tmp = call zeroext i16 @icrc(i16 zeroext 0, i64 40, i16 signext 0, i32 1) */
+      { label 64 { lref 64 "main::bb::1" } { dec_unsigned 64 0 } }
+      { call { label 64 { lref 64 "icrc" } { dec_unsigned 64 0 } } { dec_unsigned 16 0 } { dec_unsigned 64 40 } { dec_unsigned 16 0 } { dec_unsigned 32 1 } result { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } }
+
+      /* STATEMENT main::bb::4
+        *   %tmp1 = lshr i16 %tmp, 8
+        *   %tmp2 = trunc i16 %tmp1 to i8
+        *   store i8 %tmp2, i8* getelementptr inbounds ([256 x i8]* @lin, i64 0, i64 41), align 1 */
+      { label 64 { lref 64 "main::bb::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "lin" } { dec_unsigned 64 41 } } with
+       { select 16 0 7
+        { r_shift 16 16 { load 16 { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } } { dec_unsigned 16 8 } }
+       }
+      }
+
+      /* STATEMENT main::bb::6
+        *   %tmp3 = trunc i16 %tmp to i8
+        *   store i8 %tmp3, i8* getelementptr inbounds ([256 x i8]* @lin, i64 0, i64 42), align 2 */
+      { label 64 { lref 64 "main::bb::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "lin" } { dec_unsigned 64 42 } } with
+       { select 16 0 7 { load 16 { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT main::bb::7
+        *   %tmp4 = call zeroext i16 @icrc(i16 zeroext %tmp, i64 42, i16 signext 0, i32 1) */
+      { label 64 { lref 64 "main::bb::7" } { dec_unsigned 64 0 } }
+      { call { label 64 { lref 64 "icrc" } { dec_unsigned 64 0 } } { load 16 { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } } { dec_unsigned 64 42 } { dec_unsigned 16 0 } { dec_unsigned 32 1 } result { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } }
+
+      /* STATEMENT main::bb::8
+        *   ret i32 0 */
+      { label 64 { lref 64 "main::bb::8" } { dec_unsigned 64 0 } }
+      { return { dec_unsigned 32 0 } }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+sweet -i=edn.alf annot=edn.ann -ae ffg=all merge=none -f lang=sg,ff

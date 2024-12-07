@@ -1,0 +1,1 @@
+sweet -i=bsort100.alf annot=bsort100.ann -ae ffg=all merge=all -f lang=sg,ff

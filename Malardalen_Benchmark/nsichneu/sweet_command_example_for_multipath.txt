@@ -1,0 +1,1 @@
+sweet -i=nsichneu.alf annot=nsichneu.ann -ae ffg=uhss,inse merge=all vola=t -f lang=sg,ff

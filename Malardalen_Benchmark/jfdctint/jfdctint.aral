@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @2->"main::1", @110->"alf_label_89", @114->"alf_label_85", @117->"alf_label_87", @118->"alf_label_86", @115->"alf_label_84", @119->"alf_label_83", @0->"jpeg_fdct_islow::0", @6->"alf_label_43", @9->"alf_label_80", @10->"alf_label_79", @11->"alf_label_78", @12->"alf_label_77", @13->"alf_label_76", @14->"alf_label_75", @15->"alf_label_74", @16->"alf_label_73", @17->"alf_label_72", @18->"alf_label_71", @19->"alf_label_70", @20->"alf_label_69", @21->"alf_label_68", @22->"alf_label_67", @23->"alf_label_66", @24->"alf_label_65", @25->"alf_label_64", @26->"alf_label_63", @27->"alf_label_62", @28->"alf_label_61", @29->"alf_label_60", @30->"alf_label_59", @31->"alf_label_58", @32->"alf_label_57", @33->"alf_label_56", @34->"alf_label_55", @35->"alf_label_54", @36->"alf_label_53", @37->"alf_label_52", @38->"alf_label_51", @39->"alf_label_50", @40->"alf_label_49", @41->"alf_label_48", @42->"alf_label_47", @43->"alf_label_46", @44->"alf_label_45", @45->"alf_label_44", @7->"alf_label_42", @46->"alf_label_41", @48->"alf_label_2", @51->"alf_label_39", @52->"alf_label_38", @53->"alf_label_37", @54->"alf_label_36", @55->"alf_label_35", @56->"alf_label_34", @57->"alf_label_33", @58->"alf_label_32", @59->"alf_label_31", @60->"alf_label_30", @61->"alf_label_29", @62->"alf_label_28", @63->"alf_label_27", @64->"alf_label_26", @65->"alf_label_25", @66->"alf_label_24", @67->"alf_label_23", @68->"alf_label_22", @69->"alf_label_21", @70->"alf_label_20", @71->"alf_label_19", @72->"alf_label_18", @73->"alf_label_17", @74->"alf_label_16", @75->"alf_label_15", @76->"alf_label_14", @77->"alf_label_13", @78->"alf_label_12", @79->"alf_label_11", @80->"alf_label_10", @81->"alf_label_9", @82->"alf_label_8", @83->"alf_label_7", @84->"alf_label_6", @85->"alf_label_5", @86->"alf_label_4", @87->"alf_label_3", @49->"alf_label_1", @88->"alf_label_0"};
+
+map(varid, string): {default->"" \ #0->"ctr::0", #179->"data::179", #8->"dataptr::8", #232->"i::232", #238->"seed::238", #157->"tmp0::157", #137->"tmp10::137", #138->"tmp11::138", #110->"tmp12::110", #121->"tmp13::121", #151->"tmp1::151", #152->"tmp2::152", #158->"tmp3::158", #49->"tmp4::49", #40->"tmp5::40", #29->"tmp6::29", #12->"tmp7::12", #13->"z1::13", #30->"z2::30", #32->"z3::32", #15->"z4::15", #55->"z5::55"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(36,[#238],[]), (35,[#232],[]), (34,[#179],[]), (33,[#179],[]), (32,[#158],[]), (31,[#157],[]), (30,[#152],[]), (29,[#151],[]), (28,[#138],[]), (27,[#137],[]), (26,[#121],[]), (25,[#110],[]), (24,[#55],[]), (23,[#49],[]), (22,[#40],[]), (21,[#32],[]), (20,[#30],[]), (19,[#29],[]), (18,[#15],[]), (17,[#13],[]), (16,[#12],[]), (14,[#8],[]), (13,[#0],[]), (12,[],["main::1"]), (10,[],[]), (9,[],["jpeg_fdct_islow::0"]), (7,[],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(33,34), (14,34), (12,10), (9,7)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#179,33), (#157,31), (#151,29), (#152,30), (#158,32), (#49,23), (#40,22), (#29,19), (#12,16), (#137,27), (#138,28), (#110,25), (#121,26), (#13,17), (#30,20), (#32,21), (#15,18), (#55,24), (#8,14), (#0,13), (#232,35), (#238,36)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

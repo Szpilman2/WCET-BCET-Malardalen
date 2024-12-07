@@ -1,0 +1,1 @@
+sweet -i=ndes.alf annot=ndes.ann -ae ffg=uhss merge=all -f lang=sg,ff

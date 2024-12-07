@@ -1,0 +1,1 @@
+sweet -i=fibcall.alf annot=fibcall.ann -ae ffg=all merge=none -f lang=sg,ff

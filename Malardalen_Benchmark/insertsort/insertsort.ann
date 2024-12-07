@@ -1,0 +1,10 @@
+/* 
+Set all values in a[1] to a[10] to any positive number
+
+Note: before you can use this file you must unmangle the alf code, by running
+
+sed 's/::[0-9]* / /g' insertsort.alf > insertsort_unmangled.alf
+
+*/
+
+STMT_ENTRY main alf_label_11 0 ASSIGN a 32 32 10 TOP_INT;

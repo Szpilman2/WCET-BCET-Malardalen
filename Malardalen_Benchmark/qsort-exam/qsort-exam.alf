@@ -1,0 +1,1460 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs
+   { fref 64 "arr" }
+   { fref 64 "istack" }
+  }
+  { lrefs { lref 64 "sort" } { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "arr" 640 }
+  { alloc 64 "istack" 3200 }
+ }
+ { inits
+  { init { ref "arr" { dec_unsigned 64 0 } } { float_val 8 23 5. } }
+  { init { ref "arr" { dec_unsigned 64 4 } } { float_val 8 23 4. } }
+  { init { ref "arr" { dec_unsigned 64 8 } } { float_val 8 23 10.3 } }
+  { init { ref "arr" { dec_unsigned 64 12 } } { float_val 8 23 1.1 } }
+  { init { ref "arr" { dec_unsigned 64 16 } } { float_val 8 23 5.6999998 } }
+  { init { ref "arr" { dec_unsigned 64 20 } } { float_val 8 23 100. } }
+  { init { ref "arr" { dec_unsigned 64 24 } } { float_val 8 23 231. } }
+  { init { ref "arr" { dec_unsigned 64 28 } } { float_val 8 23 111. } }
+  { init { ref "arr" { dec_unsigned 64 32 } } { float_val 8 23 49.5 } }
+  { init { ref "arr" { dec_unsigned 64 36 } } { float_val 8 23 99. } }
+  { init { ref "arr" { dec_unsigned 64 40 } } { float_val 8 23 10. } }
+  { init { ref "arr" { dec_unsigned 64 44 } } { float_val 8 23 150. } }
+  { init { ref "arr" { dec_unsigned 64 48 } } { float_val 8 23 222.22 } }
+  { init { ref "arr" { dec_unsigned 64 52 } } { float_val 8 23 101. } }
+  { init { ref "arr" { dec_unsigned 64 56 } } { float_val 8 23 77. } }
+  { init { ref "arr" { dec_unsigned 64 60 } } { float_val 8 23 44. } }
+  { init { ref "arr" { dec_unsigned 64 64 } } { float_val 8 23 35. } }
+  { init { ref "arr" { dec_unsigned 64 68 } } { float_val 8 23 20.540001 } }
+  { init { ref "arr" { dec_unsigned 64 72 } } { float_val 8 23 99.989997 } }
+  { init { ref "arr" { dec_unsigned 64 76 } } { float_val 8 23 88.879997 } }
+  { init { ref "istack" { dec_unsigned 64 0 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 4 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 8 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 12 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 16 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 20 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 24 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 28 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 32 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 36 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 40 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 44 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 48 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 52 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 56 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 60 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 64 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 68 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 72 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 76 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 80 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 84 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 88 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 92 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 96 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 100 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 104 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 108 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 112 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 116 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 120 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 124 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 128 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 132 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 136 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 140 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 144 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 148 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 152 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 156 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 160 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 164 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 168 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 172 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 176 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 180 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 184 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 188 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 192 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 196 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 200 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 204 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 208 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 212 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 216 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 220 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 224 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 228 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 232 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 236 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 240 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 244 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 248 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 252 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 256 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 260 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 264 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 268 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 272 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 276 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 280 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 284 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 288 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 292 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 296 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 300 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 304 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 308 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 312 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 316 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 320 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 324 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 328 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 332 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 336 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 340 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 344 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 348 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 352 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 356 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 360 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 364 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 368 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 372 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 376 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 380 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 384 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 388 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 392 } } { dec_unsigned 32 0 } }
+  { init { ref "istack" { dec_unsigned 64 396 } } { dec_unsigned 32 0 } }
+ }
+ { funcs
+
+  /* Definition of function sort */
+  { func
+   { label 64 { lref 64 "sort" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%n" 64 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%jstack.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%l.0" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%ir.0" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%j.0.in" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%j.0" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp8" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%i.0" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp13" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp18" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp22" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp34" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp35" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp36" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp39" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp40" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp43" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp45" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp48" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp53" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp55" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp59" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp61" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp67" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp69" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp74" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp76" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp82" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp85" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp89" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp92" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp97" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp100" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%j.1" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%i.1" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%i.2.in" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%i.2" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp104" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%j.2.in" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%j.2" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp110" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp118" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp120" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp125" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp129" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp142" 64 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%l.1" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%ir.1" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%jstack.1" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%l.2" 64 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%ir.2" 64 } /* Local Variable (PHI node) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "sort::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb::0
+        *   br label %bb1 */
+      { store { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 0 } { dec_unsigned 64 1 } { load 64 { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "sort::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb1::5
+        *   %tmp = sub i64 %ir.0, %l.0
+        *   %tmp2 = icmp ult i64 %tmp, 7
+        *   br i1 %tmp2, label %bb3, label %bb41 */
+      { switch
+       { u_lt 64
+        { sub 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+        { dec_unsigned 64 7 }
+       }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb3" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb41" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "sort::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb3::0
+        *   br label %bb4 */
+      { store { addr 64 { fref 64 "%j.0.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb3::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb4 ---------- */
+      { label 64 { lref 64 "sort::bb4" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb4::1
+        *   %j.0 = add i64 %j.0.in, 1 */
+      { store { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%j.0.in" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb4::3
+        *   %tmp5 = icmp ugt i64 %j.0, %ir.0
+        *   br i1 %tmp5, label %bb27, label %bb6 */
+      { label 64 { lref 64 "sort::bb4::3" } { dec_unsigned 64 0 } }
+      { switch
+       { u_gt 64 { load 64 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb27" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb6" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb6 ---------- */
+      { label 64 { lref 64 "sort::bb6" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb6::1
+        *   %tmp7 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.0
+        *   %tmp8 = load float* %tmp7, align 4 */
+      { store { addr 64 { fref 64 "%tmp8" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb6::2
+        *   br label %bb9 */
+      { label 64 { lref 64 "sort::bb6::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%j.0.in" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb6::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb9" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb9 ---------- */
+      { label 64 { lref 64 "sort::bb9" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb9::2
+        *   %tmp10 = icmp ult i64 %i.0, %l.0
+        *   br i1 %tmp10, label %bb23, label %bb11 */
+      { switch
+       { u_lt 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb23" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb11" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb11 ---------- */
+      { label 64 { lref 64 "sort::bb11" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb11::1
+        *   %tmp12 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %i.0
+        *   %tmp13 = load float* %tmp12, align 4 */
+      { store { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb11::3
+        *   %tmp14 = fcmp ugt float %tmp13, %tmp8
+        *   br i1 %tmp14, label %bb16, label %bb15 */
+      { label 64 { lref 64 "sort::bb11::3" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 8 23 { load 32 { addr 64 { fref 64 "%tmp13" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp8" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb16" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb15" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb15 ---------- */
+      { label 64 { lref 64 "sort::bb15" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb15::0
+        *   br label %bb23 */
+      { jump { label 64 { lref 64 "sort::bb23" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb16 ---------- */
+      { label 64 { lref 64 "sort::bb16" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb16::1
+        *   %tmp17 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %i.0
+        *   %tmp18 = load float* %tmp17, align 4 */
+      { store { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb16::4
+        *   %tmp19 = add i64 %i.0, 1
+        *   %tmp20 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp19
+        *   store float %tmp18, float* %tmp20, align 4 */
+      { label 64 { lref 64 "sort::bb16::4" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp18" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb16::5
+        *   br label %bb21 */
+      { label 64 { lref 64 "sort::bb16::5" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb21" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb21 ---------- */
+      { label 64 { lref 64 "sort::bb21" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb21::0
+        *   %tmp22 = add i64 %i.0, -1 */
+      { store { addr 64 { fref 64 "%tmp22" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_signed 64 { minus 1 } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb21::1
+        *   br label %bb9 */
+      { label 64 { lref 64 "sort::bb21::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%tmp22" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb21::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb9" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb23 ---------- */
+      { label 64 { lref 64 "sort::bb23" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb23::2
+        *   %tmp24 = add i64 %i.0, 1
+        *   %tmp25 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp24
+        *   store float %tmp8, float* %tmp25, align 4 */
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp8" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb23::3
+        *   br label %bb26 */
+      { label 64 { lref 64 "sort::bb23::3" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb26" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb26 ---------- */
+      { label 64 { lref 64 "sort::bb26" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb26::0
+        *   br label %bb4 */
+      { store { addr 64 { fref 64 "%j.0.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%j.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb26::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb27 ---------- */
+      { label 64 { lref 64 "sort::bb27" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb27::1
+        *   %tmp28 = icmp eq i32 %jstack.0, 0
+        *   br i1 %tmp28, label %bb29, label %bb30 */
+      { switch
+       { eq 32
+        { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 32 0 }
+       }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb29" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb30" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb29 ---------- */
+      { label 64 { lref 64 "sort::bb29" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb29::0
+        *   br label %bb154 */
+      { jump { label 64 { lref 64 "sort::bb154" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb30 ---------- */
+      { label 64 { lref 64 "sort::bb30" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb30::3
+        *   %tmp32 = sext i32 %jstack.0 to i64
+        *   %tmp33 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp32
+        *   %tmp34 = load i32* %tmp33, align 4 */
+      { store { addr 64 { fref 64 "%tmp34" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { s_ext 32 64
+            { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+           }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb30::4
+        *   %tmp35 = sext i32 %tmp34 to i64 */
+      { label 64 { lref 64 "sort::bb30::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp35" } { dec_unsigned 64 0 } } with
+       { s_ext 32 64 { load 32 { addr 64 { fref 64 "%tmp34" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT sort::bb30::5
+        *   %tmp36 = add nsw i32 %jstack.0, -2 */
+      { label 64 { lref 64 "sort::bb30::5" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp36" } { dec_unsigned 64 0 } } with
+       { add 32
+        { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+        { dec_signed 32 { minus 2 } }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT sort::bb30::8
+        *   %tmp31 = add nsw i32 %jstack.0, -1
+        *   %tmp37 = sext i32 %tmp31 to i64
+        *   %tmp38 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp37
+        *   %tmp39 = load i32* %tmp38, align 4 */
+      { label 64 { lref 64 "sort::bb30::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp39" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { s_ext 32 64
+            { add 32
+             { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+             { dec_signed 32 { minus 1 } }
+             { dec_unsigned 1 0 }
+            }
+           }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb30::9
+        *   %tmp40 = sext i32 %tmp39 to i64 */
+      { label 64 { lref 64 "sort::bb30::9" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp40" } { dec_unsigned 64 0 } } with
+       { s_ext 32 64 { load 32 { addr 64 { fref 64 "%tmp39" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT sort::bb30::10
+        *   br label %bb153 */
+      { label 64 { lref 64 "sort::bb30::10" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%jstack.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%l.2" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.2" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp36" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp40" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp35" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb30::10:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb153" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb41 ---------- */
+      { label 64 { lref 64 "sort::bb41" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb41::1
+        *   %tmp42 = add i64 %l.0, %ir.0
+        *   %tmp43 = lshr i64 %tmp42, 1 */
+      { store { addr 64 { fref 64 "%tmp43" } { dec_unsigned 64 0 } } with
+       { r_shift 64 64
+        { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+        { dec_unsigned 64 1 }
+       }
+      }
+
+      /* STATEMENT sort::bb41::3
+        *   %tmp44 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp43
+        *   %tmp45 = load float* %tmp44, align 4 */
+      { label 64 { lref 64 "sort::bb41::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp45" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%tmp43" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb41::6
+        *   %tmp46 = add i64 %l.0, 1
+        *   %tmp47 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp46
+        *   %tmp48 = load float* %tmp47, align 4 */
+      { label 64 { lref 64 "sort::bb41::6" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp48" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb41::8
+        *   %tmp49 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp43
+        *   store float %tmp48, float* %tmp49, align 4 */
+      { label 64 { lref 64 "sort::bb41::8" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%tmp43" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp48" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb41::11
+        *   %tmp50 = add i64 %l.0, 1
+        *   %tmp51 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp50
+        *   store float %tmp45, float* %tmp51, align 4 */
+      { label 64 { lref 64 "sort::bb41::11" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp45" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb41::13
+        *   %tmp52 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   %tmp53 = load float* %tmp52, align 4 */
+      { label 64 { lref 64 "sort::bb41::13" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp53" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb41::15
+        *   %tmp54 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   %tmp55 = load float* %tmp54, align 4 */
+      { label 64 { lref 64 "sort::bb41::15" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp55" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb41::17
+        *   %tmp56 = fcmp ogt float %tmp53, %tmp55
+        *   br i1 %tmp56, label %bb57, label %bb64 */
+      { label 64 { lref 64 "sort::bb41::17" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 8 23 { load 32 { addr 64 { fref 64 "%tmp53" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp55" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb57" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb64" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb57 ---------- */
+      { label 64 { lref 64 "sort::bb57" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb57::1
+        *   %tmp58 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   %tmp59 = load float* %tmp58, align 4 */
+      { store { addr 64 { fref 64 "%tmp59" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb57::3
+        *   %tmp60 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   %tmp61 = load float* %tmp60, align 4 */
+      { label 64 { lref 64 "sort::bb57::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp61" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb57::5
+        *   %tmp62 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   store float %tmp61, float* %tmp62, align 4 */
+      { label 64 { lref 64 "sort::bb57::5" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp61" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb57::7
+        *   %tmp63 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   store float %tmp59, float* %tmp63, align 4 */
+      { label 64 { lref 64 "sort::bb57::7" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp59" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb57::8
+        *   br label %bb64 */
+      { label 64 { lref 64 "sort::bb57::8" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb64" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb64 ---------- */
+      { label 64 { lref 64 "sort::bb64" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb64::2
+        *   %tmp65 = add i64 %l.0, 1
+        *   %tmp66 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp65
+        *   %tmp67 = load float* %tmp66, align 4 */
+      { store { addr 64 { fref 64 "%tmp67" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb64::4
+        *   %tmp68 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   %tmp69 = load float* %tmp68, align 4 */
+      { label 64 { lref 64 "sort::bb64::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp69" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb64::6
+        *   %tmp70 = fcmp ogt float %tmp67, %tmp69
+        *   br i1 %tmp70, label %bb71, label %bb80 */
+      { label 64 { lref 64 "sort::bb64::6" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 8 23 { load 32 { addr 64 { fref 64 "%tmp67" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp69" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb71" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb80" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb71 ---------- */
+      { label 64 { lref 64 "sort::bb71" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb71::2
+        *   %tmp72 = add i64 %l.0, 1
+        *   %tmp73 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp72
+        *   %tmp74 = load float* %tmp73, align 4 */
+      { store { addr 64 { fref 64 "%tmp74" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb71::4
+        *   %tmp75 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   %tmp76 = load float* %tmp75, align 4 */
+      { label 64 { lref 64 "sort::bb71::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp76" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb71::7
+        *   %tmp77 = add i64 %l.0, 1
+        *   %tmp78 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp77
+        *   store float %tmp76, float* %tmp78, align 4 */
+      { label 64 { lref 64 "sort::bb71::7" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp76" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb71::9
+        *   %tmp79 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %ir.0
+        *   store float %tmp74, float* %tmp79, align 4 */
+      { label 64 { lref 64 "sort::bb71::9" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp74" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb71::10
+        *   br label %bb80 */
+      { label 64 { lref 64 "sort::bb71::10" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb80" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb80 ---------- */
+      { label 64 { lref 64 "sort::bb80" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb80::1
+        *   %tmp81 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   %tmp82 = load float* %tmp81, align 4 */
+      { store { addr 64 { fref 64 "%tmp82" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb80::4
+        *   %tmp83 = add i64 %l.0, 1
+        *   %tmp84 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp83
+        *   %tmp85 = load float* %tmp84, align 4 */
+      { label 64 { lref 64 "sort::bb80::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb80::6
+        *   %tmp86 = fcmp ogt float %tmp82, %tmp85
+        *   br i1 %tmp86, label %bb87, label %bb96 */
+      { label 64 { lref 64 "sort::bb80::6" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 8 23 { load 32 { addr 64 { fref 64 "%tmp82" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp85" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb87" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb96" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb87 ---------- */
+      { label 64 { lref 64 "sort::bb87" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb87::1
+        *   %tmp88 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   %tmp89 = load float* %tmp88, align 4 */
+      { store { addr 64 { fref 64 "%tmp89" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb87::4
+        *   %tmp90 = add i64 %l.0, 1
+        *   %tmp91 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp90
+        *   %tmp92 = load float* %tmp91, align 4 */
+      { label 64 { lref 64 "sort::bb87::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp92" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb87::6
+        *   %tmp93 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %l.0
+        *   store float %tmp92, float* %tmp93, align 4 */
+      { label 64 { lref 64 "sort::bb87::6" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp92" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb87::9
+        *   %tmp94 = add i64 %l.0, 1
+        *   %tmp95 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp94
+        *   store float %tmp89, float* %tmp95, align 4 */
+      { label 64 { lref 64 "sort::bb87::9" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp89" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb87::10
+        *   br label %bb96 */
+      { label 64 { lref 64 "sort::bb87::10" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb96" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb96 ---------- */
+      { label 64 { lref 64 "sort::bb96" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb96::0
+        *   %tmp97 = add i64 %l.0, 1 */
+      { store { addr 64 { fref 64 "%tmp97" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb96::3
+        *   %tmp98 = add i64 %l.0, 1
+        *   %tmp99 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp98
+        *   %tmp100 = load float* %tmp99, align 4 */
+      { label 64 { lref 64 "sort::bb96::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64
+           { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+           { dec_unsigned 64 4 }
+          }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb96::4
+        *   br label %bb101 */
+      { label 64 { lref 64 "sort::bb96::4" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%i.1" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp97" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb96::4:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb101" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb101 ---------- */
+      { label 64 { lref 64 "sort::bb101" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb101::2
+        *   br label %bb102 */
+      { store { addr 64 { fref 64 "%i.2.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%i.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb101::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb102" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb102 ---------- */
+      { label 64 { lref 64 "sort::bb102" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb102::1
+        *   %i.2 = add i64 %i.2.in, 1 */
+      { store { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%i.2.in" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb102::3
+        *   %tmp103 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %i.2
+        *   %tmp104 = load float* %tmp103, align 4 */
+      { label 64 { lref 64 "sort::bb102::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp104" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb102::5
+        *   %tmp105 = fcmp olt float %tmp104, %tmp100
+        *   br i1 %tmp105, label %bb106, label %bb107 */
+      { label 64 { lref 64 "sort::bb102::5" } { dec_unsigned 64 0 } }
+      { switch
+       { f_lt 8 23 { load 32 { addr 64 { fref 64 "%tmp104" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb106" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb107" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb106 ---------- */
+      { label 64 { lref 64 "sort::bb106" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb106::0
+        *   br label %bb102 */
+      { store { addr 64 { fref 64 "%i.2.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb106::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb102" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb107 ---------- */
+      { label 64 { lref 64 "sort::bb107" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb107::0
+        *   br label %bb108 */
+      { store { addr 64 { fref 64 "%j.2.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb107::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb108" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb108 ---------- */
+      { label 64 { lref 64 "sort::bb108" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb108::1
+        *   %j.2 = add i64 %j.2.in, -1 */
+      { store { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%j.2.in" } { dec_unsigned 64 0 } } } { dec_signed 64 { minus 1 } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb108::3
+        *   %tmp109 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.2
+        *   %tmp110 = load float* %tmp109, align 4 */
+      { label 64 { lref 64 "sort::bb108::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp110" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb108::5
+        *   %tmp111 = fcmp ogt float %tmp110, %tmp100
+        *   br i1 %tmp111, label %bb112, label %bb113 */
+      { label 64 { lref 64 "sort::bb108::5" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 8 23 { load 32 { addr 64 { fref 64 "%tmp110" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb112" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb113" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb112 ---------- */
+      { label 64 { lref 64 "sort::bb112" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb112::0
+        *   br label %bb108 */
+      { store { addr 64 { fref 64 "%j.2.in" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb112::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb108" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb113 ---------- */
+      { label 64 { lref 64 "sort::bb113" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb113::1
+        *   %tmp114 = icmp ult i64 %j.2, %i.2
+        *   br i1 %tmp114, label %bb115, label %bb116 */
+      { switch
+       { u_lt 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb115" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb116" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb115 ---------- */
+      { label 64 { lref 64 "sort::bb115" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb115::0
+        *   br label %bb123 */
+      { jump { label 64 { lref 64 "sort::bb123" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb116 ---------- */
+      { label 64 { lref 64 "sort::bb116" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb116::1
+        *   %tmp117 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %i.2
+        *   %tmp118 = load float* %tmp117, align 4 */
+      { store { addr 64 { fref 64 "%tmp118" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb116::3
+        *   %tmp119 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.2
+        *   %tmp120 = load float* %tmp119, align 4 */
+      { label 64 { lref 64 "sort::bb116::3" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp120" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb116::5
+        *   %tmp121 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %i.2
+        *   store float %tmp120, float* %tmp121, align 4 */
+      { label 64 { lref 64 "sort::bb116::5" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp120" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb116::7
+        *   %tmp122 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.2
+        *   store float %tmp118, float* %tmp122, align 4 */
+      { label 64 { lref 64 "sort::bb116::7" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp118" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb116::8
+        *   br label %bb101 */
+      { label 64 { lref 64 "sort::bb116::8" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%j.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%i.1" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb116::8:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb101" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb123 ---------- */
+      { label 64 { lref 64 "sort::bb123" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb123::1
+        *   %tmp124 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.2
+        *   %tmp125 = load float* %tmp124, align 4 */
+      { store { addr 64 { fref 64 "%tmp125" } { dec_unsigned 64 0 } } with
+       { load 32
+        { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+         { select 128 0 63
+          { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+         }
+         { dec_unsigned 1 0 }
+        }
+       }
+      }
+
+      /* STATEMENT sort::bb123::4
+        *   %tmp126 = add i64 %l.0, 1
+        *   %tmp127 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %tmp126
+        *   store float %tmp125, float* %tmp127, align 4 */
+      { label 64 { lref 64 "sort::bb123::4" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { add 64 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 64 1 } { dec_unsigned 1 0 } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp125" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb123::6
+        *   %tmp128 = getelementptr inbounds [20 x float]* @arr, i64 0, i64 %j.2
+        *   store float %tmp100, float* %tmp128, align 4 */
+      { label 64 { lref 64 "sort::bb123::6" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "arr" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4 } }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { load 32 { addr 64 { fref 64 "%tmp100" } { dec_unsigned 64 0 } } }
+      }
+
+      /* STATEMENT sort::bb123::7
+        *   %tmp129 = add nsw i32 %jstack.0, 2 */
+      { label 64 { lref 64 "sort::bb123::7" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp129" } { dec_unsigned 64 0 } } with
+       { add 32
+        { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+        { dec_unsigned 32 2 }
+        { dec_unsigned 1 0 }
+       }
+      }
+
+      /* STATEMENT sort::bb123::12
+        *   %tmp130 = sub i64 %ir.0, %i.2
+        *   %tmp131 = add i64 %tmp130, 1
+        *   %tmp132 = sub i64 %j.2, %l.0
+        *   %tmp133 = icmp ult i64 %tmp131, %tmp132
+        *   br i1 %tmp133, label %bb143, label %bb134 */
+      { label 64 { lref 64 "sort::bb123::12" } { dec_unsigned 64 0 } }
+      { switch
+       { u_lt 64
+        { add 64
+         { sub 64 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+         { dec_unsigned 64 1 }
+         { dec_unsigned 1 0 }
+        }
+        { sub 64 { load 64 { addr 64 { fref 64 "%j.2" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { dec_unsigned 1 1 } }
+       }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sort::bb143" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sort::bb134" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb134 ---------- */
+      { label 64 { lref 64 "sort::bb134" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb134::3
+        *   %tmp135 = trunc i64 %ir.0 to i32
+        *   %tmp136 = sext i32 %tmp129 to i64
+        *   %tmp137 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp136
+        *   store i32 %tmp135, i32* %tmp137, align 4 */
+      { store
+       { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { s_ext 32 64 { load 32 { addr 64 { fref 64 "%tmp129" } { dec_unsigned 64 0 } } } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { select 64 0 31 { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT sort::bb134::8
+        *   %tmp138 = trunc i64 %i.2 to i32
+        *   %tmp139 = add nsw i32 %jstack.0, 1
+        *   %tmp140 = sext i32 %tmp139 to i64
+        *   %tmp141 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp140
+        *   store i32 %tmp138, i32* %tmp141, align 4 */
+      { label 64 { lref 64 "sort::bb134::8" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { s_ext 32 64
+           { add 32
+            { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+            { dec_unsigned 32 1 }
+            { dec_unsigned 1 0 }
+           }
+          }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { select 64 0 31 { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT sort::bb134::9
+        *   %tmp142 = add i64 %j.2.in, -2 */
+      { label 64 { lref 64 "sort::bb134::9" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp142" } { dec_unsigned 64 0 } } with
+       { add 64 { load 64 { addr 64 { fref 64 "%j.2.in" } { dec_unsigned 64 0 } } } { dec_signed 64 { minus 2 } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sort::bb134::10
+        *   br label %bb152 */
+      { label 64 { lref 64 "sort::bb134::10" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%l.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.1" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%tmp142" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb134::10:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb152" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb143 ---------- */
+      { label 64 { lref 64 "sort::bb143" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb143::4
+        *   %tmp144 = add i64 %j.2.in, 4294967294
+        *   %tmp145 = trunc i64 %tmp144 to i32
+        *   %tmp146 = sext i32 %tmp129 to i64
+        *   %tmp147 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp146
+        *   store i32 %tmp145, i32* %tmp147, align 4 */
+      { store
+       { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { s_ext 32 64 { load 32 { addr 64 { fref 64 "%tmp129" } { dec_unsigned 64 0 } } } }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { select 64 0 31
+        { add 64 { load 64 { addr 64 { fref 64 "%j.2.in" } { dec_unsigned 64 0 } } } { dec_unsigned 64 4294967294 } { dec_unsigned 1 0 } }
+       }
+      }
+
+      /* STATEMENT sort::bb143::9
+        *   %tmp148 = trunc i64 %l.0 to i32
+        *   %tmp149 = add nsw i32 %jstack.0, 1
+        *   %tmp150 = sext i32 %tmp149 to i64
+        *   %tmp151 = getelementptr inbounds [100 x i32]* @istack, i64 0, i64 %tmp150
+        *   store i32 %tmp148, i32* %tmp151, align 4 */
+      { label 64 { lref 64 "sort::bb143::9" } { dec_unsigned 64 0 } }
+      { store
+       { add 64 { addr 64 { fref 64 "istack" } { dec_unsigned 64 0 } }
+        { select 128 0 63
+         { u_mul 64 64
+          { s_ext 32 64
+           { add 32
+            { load 32 { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } }
+            { dec_unsigned 32 1 }
+            { dec_unsigned 1 0 }
+           }
+          }
+          { dec_unsigned 64 4 }
+         }
+        }
+        { dec_unsigned 1 0 }
+       }
+       with
+       { select 64 0 31 { load 64 { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT sort::bb143::10
+        *   br label %bb152 */
+      { label 64 { lref 64 "sort::bb143::10" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%l.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.1" } { dec_unsigned 64 0 } } with { load 64 { addr 64 { fref 64 "%i.2" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb143::10:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb152" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb152 ---------- */
+      { label 64 { lref 64 "sort::bb152" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb152::2
+        *   br label %bb153 */
+      { store { addr 64 { fref 64 "%jstack.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%l.2" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.2" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp129" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%l.1" } { dec_unsigned 64 0 } } } { load 64 { addr 64 { fref 64 "%ir.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sort::bb152::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb153" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb153 ---------- */
+      { label 64 { lref 64 "sort::bb153" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb153::3
+        *   br label %bb1 */
+      { store { addr 64 { fref 64 "%jstack.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%l.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%ir.0" } { dec_unsigned 64 0 } } with
+       { load 32 { addr 64 { fref 64 "%jstack.1" } { dec_unsigned 64 0 } } }
+       { load 64 { addr 64 { fref 64 "%l.2" } { dec_unsigned 64 0 } } }
+       { load 64 { addr 64 { fref 64 "%ir.2" } { dec_unsigned 64 0 } } }
+      }
+
+      { label 64 { lref 64 "sort::bb153::3:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sort::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb154 ---------- */
+      { label 64 { lref 64 "sort::bb154" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sort::bb154::0
+        *   ret void */
+      { return }
+    }
+   }
+  }
+
+  /* Definition of function main */
+  { func
+   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "main::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb::0
+        *   call void @sort(i64 19) */
+      { call { label 64 { lref 64 "sort" } { dec_unsigned 64 0 } } { dec_unsigned 64 19 } result }
+
+      /* STATEMENT main::bb::1
+        *   ret i32 0 */
+      { label 64 { lref 64 "main::bb::1" } { dec_unsigned 64 0 } }
+      { return { dec_unsigned 32 0 } }
+    }
+   }
+  }
+ }
+}

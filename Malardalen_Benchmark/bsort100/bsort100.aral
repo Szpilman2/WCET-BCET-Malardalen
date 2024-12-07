@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @4->"BubbleSort::2", @31->"alf_label_11", @35->"alf_label_23", @38->"alf_label_14", @42->"alf_label_16", @43->"alf_label_20", @44->"alf_label_19", @45->"alf_label_18", @46->"alf_label_17", @48->"alf_label_15", @39->"alf_label_13", @50->"alf_label_12", @32->"alf_label_10", @2->"Initialize::1", @21->"alf_label_6", @24->"alf_label_7", @22->"alf_label_5", @25->"alf_label_4", @26->"alf_label_3", @0->"main::0", @8->"alf_label_2", @11->"alf_label_1", @16->"alf_label_0"};
+
+map(varid, string): {default->"" \ #13->"Array::13", #2147483647->"Array::2147483647", #33->"Array::33", #5->"Array::5", #29->"Index::29", #7->"Index::7", #46->"Seed::46", #27->"Sorted::27", #39->"Temp::39", #15->"fact::15", #18->"factor::18", #22->"i::22"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(28,[#39],[]), (27,[#29],[]), (26,[#27],[]), (25,[#22],[]), (24,[#18],[]), (23,[#15],[]), (22,[#7],[]), (21,[#5, #33, #13],[]), (20,[#5],[]), (17,[],["BubbleSort::2"]), (15,[],[]), (14,[#33],[]), (13,[],["Initialize::1"]), (11,[],[]), (10,[#13],[]), (9,[],["main::0"]), (7,[],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(20,21), (17,15), (14,21), (13,11), (10,21), (9,7)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#5,20), (#18,24), (#13,10), (#7,22), (#15,23), (#33,14), (#27,26), (#39,28), (#29,27), (#22,25)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

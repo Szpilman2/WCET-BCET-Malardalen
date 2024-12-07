@@ -1,0 +1,1 @@
+sweet -i=janne_complex.alf annot=janne_complex.ann -ae ffg=all merge=none -f lang=sg,ff

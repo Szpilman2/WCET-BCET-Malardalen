@@ -1,0 +1,14 @@
+/* Function calls in main modified:
+   latsynth(a, b, N, d):  parameter N: 100 -> [90..100]
+   codebook(d, 1, 17, e[0], d, a, c, 1) 
+	parameter 2 (bitchanged): 1 -> [1..2]
+	parameter 3 (numbasis): 17 -> [16..17]
+
+Note: the alf code has been unmangled, by running
+
+sed 's/::[0-9]* / /g' edn.alf > edn_unmangled.alf
+mv edn_unmangled.alf edn.alf
+
+*/
+FUNC_ENTRY latsynth ASSIGN n INT 90 100 ;
+FUNC_ENTRY codebook ASSIGN bitchanged INT 1 2 || numbasis INT 16 17 ;

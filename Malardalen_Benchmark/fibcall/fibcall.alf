@@ -1,0 +1,126 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs }
+  { lrefs { lref 64 "fib" } { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls }
+ { inits }
+ { funcs
+
+  /* Definition of function fib */
+  { func
+   { label 64 { lref 64 "fib" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%n" 32 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%Fnew.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%i.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%Fold.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp4" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp5" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "fib::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fib::bb::0
+        *   br label %bb1 */
+      { store { addr 64 { fref 64 "%Fnew.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%Fold.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 1 } { dec_unsigned 32 2 } { dec_unsigned 32 0 } }
+
+      { label 64 { lref 64 "fib::bb::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fib::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "fib::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fib::bb1::4
+        *   %tmp = icmp sgt i32 %i.0, %n
+        *   br i1 %tmp, label %bb6, label %bb2 */
+      { switch
+       { s_gt 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%n" } { dec_unsigned 64 0 } } } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "fib::bb6" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "fib::bb2" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb2 ---------- */
+      { label 64 { lref 64 "fib::bb2" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fib::bb2::0
+        *   br label %bb3 */
+      { jump { label 64 { lref 64 "fib::bb3" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "fib::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fib::bb3::0
+        *   %tmp4 = add nsw i32 %Fnew.0, %Fold.0 */
+      { store { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%Fnew.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%Fold.0" } { dec_unsigned 64 0 } } } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT fib::bb3::1
+        *   %tmp5 = add nsw i32 %i.0, 1 */
+      { label 64 { lref 64 "fib::bb3::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT fib::bb3::2
+        *   br label %bb1 */
+      { label 64 { lref 64 "fib::bb3::2" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%Fnew.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%Fold.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp4" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp5" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%Fnew.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "fib::bb3::2:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fib::bb1" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb6 ---------- */
+      { label 64 { lref 64 "fib::bb6" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fib::bb6::0
+        *   ret i32 %Fnew.0 */
+      { return { load 32 { addr 64 { fref 64 "%Fnew.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+
+  /* Definition of function main */
+  { func
+   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }
+   { arg_decls }
+   { scope
+    { decls
+     { alloc 64 "%tmp" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "main::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT main::bb::0
+        *   %tmp = call i32 @fib(i32 30) */
+      { call { label 64 { lref 64 "fib" } { dec_unsigned 64 0 } } { dec_unsigned 32 30 } result { addr 64 { fref 64 "%tmp" } { dec_unsigned 64 0 } } }
+
+      /* STATEMENT main::bb::1
+        *   ret i32 30 */
+      { label 64 { lref 64 "main::bb::1" } { dec_unsigned 64 0 } }
+      { return { dec_unsigned 32 30 } }
+    }
+   }
+  }
+ }
+}

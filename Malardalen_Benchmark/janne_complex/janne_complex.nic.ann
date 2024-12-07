@@ -1,0 +1,4 @@
+/* In main: a = [0..18] b = [0..18] */
+complex par 1 int 0 18 ;
+complex par 2 int 0 18 ;
+

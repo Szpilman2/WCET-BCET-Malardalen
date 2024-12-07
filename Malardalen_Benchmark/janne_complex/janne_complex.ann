@@ -1,0 +1,8 @@
+/* At entry to the call to complex: a = [1..30] b = [1..30] 
+
+Note: before you can use this file you must unmangle the alf code, by running
+
+sed 's/::[0-9]* / /g' jcomplex.alf > jcomplex_unmangled.alf
+
+*/
+FUNC_ENTRY complex ASSIGN "%a" INT 1 30 || "%b" INT 1 30;

@@ -1,0 +1,1904 @@
+        NAME main
+        PUBLIC main
+        PUBLIC arr
+        PUBLIC select
+        EXTERN __fAdd
+        EXTERN __fSub
+        EXTERN __fMul
+        EXTERN __fDiv
+        EXTERN __dAdd
+        EXTERN __dSub
+        EXTERN __dMul
+        EXTERN __dDiv
+        EXTERN __floatToLong
+        EXTERN __longToFloat
+        EXTERN __ulongToFloat
+        EXTERN __doubleToUlong
+        EXTERN __ulongToDouble
+        EXTERN __doubleToLong
+        EXTERN __longToDouble
+        EXTERN __floatToDouble
+        EXTERN __doubleToFloat
+        EXTERN ??div32_a
+        EXTERN ??divu32_a
+        EXTERN __fEqual
+        EXTERN __fNotEqual
+        EXTERN __fLess
+        EXTERN __fLessEqual
+        EXTERN __dEqual
+        EXTERN __dNotEqual
+        EXTERN __dLess
+        EXTERN __dLessEqual
+        RSEG HUGE_C:HUGECONST:SORT:NOROOT(2)
+global_$1_arr:
+        DC32 0x40a00000
+        DC32 0x40800000
+        DC32 0x4124cccd
+        DC32 0x3f8ccccd
+        DC32 0x40b66666
+        DC32 0x42c80000
+        DC32 0x43670000
+        DC32 0x42de0000
+        DC32 0x42460000
+        DC32 0x42c60000
+        DC32 0x41200000
+        DC32 0x43160000
+        DC32 0x435e3852
+        DC32 0x42ca0000
+        DC32 0x429a0000
+        DC32 0x42300000
+        DC32 0x420c0000
+        DC32 0x41a451ec
+        DC32 0x42c7fae1
+        DC32 0x445e3852
+        DATA
+        RSEG ICODE
+        CODE32
+select:
+        MOV R4, #0
+        MOV R5, #111b
+        ADD R4, R4, R5, LSL #8
+        ADD R4, R4, #11011000b
+        SUB SP, SP, R4
+        ADD R5, SP, #0		;BB1
+        STR R5, [SP, #216]
+        MOV R5, R0
+        STR R5, [SP, #216]
+        ADD R5, SP, #8		;BB2
+        STR R5, [SP, #220]
+        MOV R5, R1
+        STR R5, [SP, #220]
+        ADD R5, SP, #4		;BB3
+        STR R5, [SP, #224]
+        ADD R5, SP, #0
+        STR R5, [SP, #228]
+        LDR R4, [SP, #228]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #232]
+        LDR R4, [SP, #232]
+        LDR R5, [SP, #224]
+        STR R4, [R5, #0]
+        ADD R5, SP, #12		;BB4
+        STR R5, [SP, #236]
+        ADD R5, SP, #8
+        STR R5, [SP, #240]
+        LDR R4, [SP, #240]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #244]
+        LDR R4, [SP, #244]
+        LDR R5, [SP, #236]
+        STR R4, [R5, #0]
+        ADD R5, SP, #32		;BB5
+        STR R5, [SP, #248]
+        MOV R5, #1b
+        STR R5, [SP, #252]
+        LDR R4, [SP, #252]
+        LDR R5, [SP, #248]
+        STR R4, [R5]
+        ADD R5, SP, #40		;BB6
+        STR R5, [SP, #256]
+        ADD R5, SP, #12
+        STR R5, [SP, #260]
+        LDR R4, [SP, #260]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #264]
+        LDR R4, [SP, #264]
+        LDR R5, [SP, #256]
+        STR R4, [R5, #0]
+        ADD R5, SP, #52		;BB7
+        STR R5, [SP, #268]
+        MOV R5, #0b
+        STR R5, [SP, #272]
+        LDR R4, [SP, #272]
+        LDR R5, [SP, #268]
+        STR R4, [R5]
+        ADD R5, SP, #28		;BB8
+        STR R5, [SP, #276]
+        ADD R5, SP, #52
+        STR R5, [SP, #280]
+        LDR R4, [SP, #280]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #284]
+        LDR R4, [SP, #284]
+        LDR R5, [SP, #276]
+        STR R4, [R5, #0]
+        ADD R5, SP, #44		;BB9
+        STR R5, [SP, #288]
+        ADD R5, SP, #52
+        STR R5, [SP, #292]
+        LDR R4, [SP, #292]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #296]
+        LDR R4, [SP, #296]
+        LDR R5, [SP, #288]
+        STR R4, [R5, #0]
+;NULL
+        B select_107
+select_107:			;BB107
+;NULL
+        ADD R5, SP, #44		;BB108
+        STR R5, [SP, #1616]
+        LDR R4, [SP, #1616]
+        LDR R6, [R4]
+        STR R6, [SP, #1620]
+        MOV R5, #0b
+        STR R5, [SP, #1612]
+        LDR R4, [SP, #1620]
+        LDR R5, [SP, #1612]
+        CMP R4, R5
+        BEQ select_11
+        B select_109
+select_11:			;BB11
+;NULL
+        ADD R5, SP, #40		;BB12
+        STR R5, [SP, #316]
+        LDR R4, [SP, #316]
+        LDR R6, [R4]
+        STR R6, [SP, #320]
+        ADD R5, SP, #32
+        STR R5, [SP, #304]
+        LDR R4, [SP, #304]
+        LDR R6, [R4]
+        STR R6, [SP, #308]
+        MOV R5, #1b
+        STR R5, [SP, #300]
+        LDR R4, [SP, #308]
+        LDR R5, [SP, #300]
+        ADD R7, R4, R5
+        STR R7, [SP, #308]
+        LDR R4, [SP, #308]
+        MOV R6, R4
+        STR R6, [SP, #312]
+        LDR R4, [SP, #320]
+        LDR R5, [SP, #312]
+        CMP R4, R5
+        BGT select_27
+        B select_13
+select_13:			;BB13
+        ADD R5, SP, #40
+        STR R5, [SP, #340]
+        LDR R4, [SP, #340]
+        LDR R6, [R4]
+        STR R6, [SP, #344]
+        ADD R5, SP, #32
+        STR R5, [SP, #328]
+        LDR R4, [SP, #328]
+        LDR R6, [R4]
+        STR R6, [SP, #332]
+        MOV R5, #1b
+        STR R5, [SP, #324]
+        LDR R4, [SP, #332]
+        LDR R5, [SP, #324]
+        ADD R7, R4, R5
+        STR R7, [SP, #332]
+        LDR R4, [SP, #332]
+        MOV R6, R4
+        STR R6, [SP, #336]
+        LDR R4, [SP, #344]
+        LDR R5, [SP, #336]
+        CMP R4, R5
+        BNE select_24
+        B select_14
+select_14:			;BB14
+        ADD R5, SP, #56
+        STR R5, [SP, #348]
+        MOV R5, #10b
+        STR R5, [SP, #352]
+        LDR R4, [SP, #352]
+        LDR R5, [SP, #348]
+        STR R4, [R5]
+        ADD R5, SP, #60		;BB15
+        STR R5, [SP, #356]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #360]
+        LDR R4, [SP, #360]
+        LDR R5, [SP, #356]
+        STR R4, [R5]
+;NULL
+        ADD R5, SP, #32		;BB112
+        STR R5, [SP, #1664]
+        LDR R4, [SP, #1664]
+        LDR R6, [R4]
+        STR R6, [SP, #1668]
+        ADD R5, SP, #56
+        STR R5, [SP, #1656]
+        LDR R4, [SP, #1656]
+        LDR R6, [R4]
+        STR R6, [SP, #1660]
+        LDR R4, [SP, #1668]
+        LDR R5, [SP, #1660]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1668]
+        LDR R4, [SP, #1668]
+        MOV R6, R4
+        STR R6, [SP, #1672]
+        ADD R5, SP, #60
+        STR R5, [SP, #1648]
+        LDR R4, [SP, #1648]
+        LDR R6, [R4]
+        STR R6, [SP, #1652]
+        LDR R4, [SP, #1672]
+        LDR R5, [SP, #1652]
+        ADD R7, R4, R5
+        STR R7, [SP, #1672]
+        LDR R4, [SP, #1672]
+        LDR R0, [R4]
+        ADD R5, SP, #40
+        STR R5, [SP, #1692]
+        LDR R4, [SP, #1692]
+        LDR R6, [R4]
+        STR R6, [SP, #1696]
+        ADD R5, SP, #56
+        STR R5, [SP, #1684]
+        LDR R4, [SP, #1684]
+        LDR R6, [R4]
+        STR R6, [SP, #1688]
+        LDR R4, [SP, #1696]
+        LDR R5, [SP, #1688]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1696]
+        LDR R4, [SP, #1696]
+        MOV R6, R4
+        STR R6, [SP, #1700]
+        ADD R5, SP, #60
+        STR R5, [SP, #1676]
+        LDR R4, [SP, #1676]
+        LDR R6, [R4]
+        STR R6, [SP, #1680]
+        LDR R4, [SP, #1700]
+        LDR R5, [SP, #1680]
+        ADD R7, R4, R5
+        STR R7, [SP, #1700]
+        LDR R4, [SP, #1700]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLessEqual
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB113
+        STR R5, [SP, #192]
+        LDR R4, [SP, #192]		;BB114
+        MOV R6, R4
+        STR R6, [SP, #1708]
+        MOV R5, #0b
+        STR R5, [SP, #1704]
+        LDR R4, [SP, #1708]
+        LDR R5, [SP, #1704]
+        CMP R4, R5
+        BNE select_23
+        B select_17
+select_17:			;BB17
+        ADD R5, SP, #64
+        STR R5, [SP, #364]
+        MOV R5, #10b
+        STR R5, [SP, #368]
+        LDR R4, [SP, #368]
+        LDR R5, [SP, #364]
+        STR R4, [R5]
+        ADD R5, SP, #68		;BB18
+        STR R5, [SP, #372]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #376]
+        LDR R4, [SP, #376]
+        LDR R5, [SP, #372]
+        STR R4, [R5]
+        ADD R5, SP, #72		;BB19
+        STR R5, [SP, #380]
+        ADD R5, SP, #32
+        STR R5, [SP, #400]
+        LDR R4, [SP, #400]
+        LDR R6, [R4]
+        STR R6, [SP, #404]
+        ADD R5, SP, #64
+        STR R5, [SP, #392]
+        LDR R4, [SP, #392]
+        LDR R6, [R4]
+        STR R6, [SP, #396]
+        LDR R4, [SP, #404]
+        LDR R5, [SP, #396]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #404]
+        LDR R4, [SP, #404]
+        MOV R6, R4
+        STR R6, [SP, #408]
+        ADD R5, SP, #68
+        STR R5, [SP, #384]
+        LDR R4, [SP, #384]
+        LDR R6, [R4]
+        STR R6, [SP, #388]
+        LDR R4, [SP, #408]
+        LDR R5, [SP, #388]
+        ADD R7, R4, R5
+        STR R7, [SP, #408]
+        LDR R4, [SP, #408]
+        LDR R5, [SP, #380]
+        STR R4, [R5]
+        ADD R5, SP, #36		;BB20
+        STR R5, [SP, #412]
+        ADD R5, SP, #72
+        STR R5, [SP, #416]
+        LDR R4, [SP, #416]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #420]
+        LDR R4, [SP, #420]
+        LDR R5, [SP, #412]
+        STR R4, [R5, #0]
+        ADD R5, SP, #72		;BB21
+        STR R5, [SP, #424]
+        ADD R5, SP, #40
+        STR R5, [SP, #444]
+        LDR R4, [SP, #444]
+        LDR R6, [R4]
+        STR R6, [SP, #448]
+        ADD R5, SP, #64
+        STR R5, [SP, #436]
+        LDR R4, [SP, #436]
+        LDR R6, [R4]
+        STR R6, [SP, #440]
+        LDR R4, [SP, #448]
+        LDR R5, [SP, #440]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #448]
+        LDR R4, [SP, #448]
+        MOV R6, R4
+        STR R6, [SP, #452]
+        ADD R5, SP, #68
+        STR R5, [SP, #428]
+        LDR R4, [SP, #428]
+        LDR R6, [R4]
+        STR R6, [SP, #432]
+        LDR R4, [SP, #452]
+        LDR R5, [SP, #432]
+        ADD R7, R4, R5
+        STR R7, [SP, #452]
+        LDR R4, [SP, #452]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #456]
+        LDR R4, [SP, #456]
+        LDR R5, [SP, #424]
+        STR R4, [R5, #0]
+        ADD R5, SP, #40		;BB22
+        STR R5, [SP, #468]
+        LDR R4, [SP, #468]
+        LDR R6, [R4]
+        STR R6, [SP, #472]
+        LDR R4, [SP, #472]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #476]
+        LDR R4, [SP, #476]
+        MOV R6, R4
+        STR R6, [SP, #480]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #460]
+        LDR R4, [SP, #460]
+        MOV R6, R4
+        STR R6, [SP, #464]
+        LDR R4, [SP, #480]
+        LDR R5, [SP, #464]
+        ADD R7, R4, R5
+        STR R7, [SP, #480]
+        ADD R5, SP, #36
+        STR R5, [SP, #484]
+        LDR R4, [SP, #484]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #488]
+        LDR R4, [SP, #488]
+        LDR R5, [SP, #480]
+        STR R4, [R5, #0]
+        B select_23
+select_23:			;BB23
+;NULL
+        B select_24
+select_24:			;BB24
+;NULL
+        ADD R5, SP, #44		;BB25
+        STR R5, [SP, #492]
+        MOV R5, #1b
+        STR R5, [SP, #496]
+        LDR R4, [SP, #496]
+        LDR R5, [SP, #492]
+        STR R4, [R5]
+;NULL
+        B select_106
+select_106:			;BB106
+;NULL
+        B select_107
+select_27:			;BB27
+;NULL
+        ADD R5, SP, #44		;BB28
+        STR R5, [SP, #504]
+        LDR R4, [SP, #504]
+        LDR R6, [R4]
+        STR R6, [SP, #508]
+        MOV R5, #0b
+        STR R5, [SP, #500]
+        LDR R4, [SP, #508]
+        LDR R5, [SP, #500]
+        CMP R4, R5
+        BNE select_105
+        B select_29
+select_29:			;BB29
+        ADD R5, SP, #48
+        STR R5, [SP, #512]
+        ADD R5, SP, #32
+        STR R5, [SP, #524]
+        LDR R4, [SP, #524]
+        LDR R6, [R4]
+        STR R6, [SP, #528]
+        ADD R5, SP, #40
+        STR R5, [SP, #516]
+        LDR R4, [SP, #516]
+        LDR R6, [R4]
+        STR R6, [SP, #520]
+        LDR R4, [SP, #528]
+        LDR R5, [SP, #520]
+        ADD R7, R4, R5
+        STR R7, [SP, #528]
+        LDR R4, [SP, #528]
+        MOV R6, R4
+        STR R6, [SP, #532]
+        LDR R4, [SP, #532]
+        MOV R6, R4, LSR #1
+        STR R6, [SP, #536]
+        LDR R4, [SP, #536]
+        LDR R5, [SP, #512]
+        STR R4, [R5]
+        ADD R5, SP, #80		;BB30
+        STR R5, [SP, #540]
+        MOV R5, #10b
+        STR R5, [SP, #544]
+        LDR R4, [SP, #544]
+        LDR R5, [SP, #540]
+        STR R4, [R5]
+        ADD R5, SP, #84		;BB31
+        STR R5, [SP, #548]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #552]
+        LDR R4, [SP, #552]
+        LDR R5, [SP, #548]
+        STR R4, [R5]
+        ADD R5, SP, #88		;BB32
+        STR R5, [SP, #556]
+        ADD R5, SP, #48
+        STR R5, [SP, #576]
+        LDR R4, [SP, #576]
+        LDR R6, [R4]
+        STR R6, [SP, #580]
+        ADD R5, SP, #80
+        STR R5, [SP, #568]
+        LDR R4, [SP, #568]
+        LDR R6, [R4]
+        STR R6, [SP, #572]
+        LDR R4, [SP, #580]
+        LDR R5, [SP, #572]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #580]
+        LDR R4, [SP, #580]
+        MOV R6, R4
+        STR R6, [SP, #584]
+        ADD R5, SP, #84
+        STR R5, [SP, #560]
+        LDR R4, [SP, #560]
+        LDR R6, [R4]
+        STR R6, [SP, #564]
+        LDR R4, [SP, #584]
+        LDR R5, [SP, #564]
+        ADD R7, R4, R5
+        STR R7, [SP, #584]
+        LDR R4, [SP, #584]
+        LDR R5, [SP, #556]
+        STR R4, [R5]
+        ADD R5, SP, #36		;BB33
+        STR R5, [SP, #588]
+        ADD R5, SP, #88
+        STR R5, [SP, #592]
+        LDR R4, [SP, #592]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #596]
+        LDR R4, [SP, #596]
+        LDR R5, [SP, #588]
+        STR R4, [R5, #0]
+        ADD R5, SP, #88		;BB34
+        STR R5, [SP, #600]
+        ADD R5, SP, #32
+        STR R5, [SP, #624]
+        LDR R4, [SP, #624]
+        LDR R6, [R4]
+        STR R6, [SP, #628]
+        MOV R5, #1b
+        STR R5, [SP, #620]
+        LDR R4, [SP, #628]
+        LDR R5, [SP, #620]
+        ADD R7, R4, R5
+        STR R7, [SP, #628]
+        LDR R4, [SP, #628]
+        MOV R6, R4
+        STR R6, [SP, #632]
+        ADD R5, SP, #80
+        STR R5, [SP, #612]
+        LDR R4, [SP, #612]
+        LDR R6, [R4]
+        STR R6, [SP, #616]
+        LDR R4, [SP, #632]
+        LDR R5, [SP, #616]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #632]
+        LDR R4, [SP, #632]
+        MOV R6, R4
+        STR R6, [SP, #636]
+        ADD R5, SP, #84
+        STR R5, [SP, #604]
+        LDR R4, [SP, #604]
+        LDR R6, [R4]
+        STR R6, [SP, #608]
+        LDR R4, [SP, #636]
+        LDR R5, [SP, #608]
+        ADD R7, R4, R5
+        STR R7, [SP, #636]
+        LDR R4, [SP, #636]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #640]
+        LDR R4, [SP, #640]
+        LDR R5, [SP, #600]
+        STR R4, [R5, #0]
+        ADD R5, SP, #32		;BB35
+        STR R5, [SP, #656]
+        LDR R4, [SP, #656]
+        LDR R6, [R4]
+        STR R6, [SP, #660]
+        MOV R5, #1b
+        STR R5, [SP, #652]
+        LDR R4, [SP, #660]
+        LDR R5, [SP, #652]
+        ADD R7, R4, R5
+        STR R7, [SP, #660]
+        LDR R4, [SP, #660]
+        MOV R6, R4
+        STR R6, [SP, #664]
+        LDR R4, [SP, #664]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #668]
+        LDR R4, [SP, #668]
+        MOV R6, R4
+        STR R6, [SP, #672]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #644]
+        LDR R4, [SP, #644]
+        MOV R6, R4
+        STR R6, [SP, #648]
+        LDR R4, [SP, #672]
+        LDR R5, [SP, #648]
+        ADD R7, R4, R5
+        STR R7, [SP, #672]
+        ADD R5, SP, #36
+        STR R5, [SP, #676]
+        LDR R4, [SP, #676]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #680]
+        LDR R4, [SP, #680]
+        LDR R5, [SP, #672]
+        STR R4, [R5, #0]
+        ADD R5, SP, #92		;BB36
+        STR R5, [SP, #684]
+        MOV R5, #10b
+        STR R5, [SP, #688]
+        LDR R4, [SP, #688]
+        LDR R5, [SP, #684]
+        STR R4, [R5]
+        ADD R5, SP, #96		;BB37
+        STR R5, [SP, #692]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #696]
+        LDR R4, [SP, #696]
+        LDR R5, [SP, #692]
+        STR R4, [R5]
+;NULL
+        ADD R5, SP, #32		;BB115
+        STR R5, [SP, #1732]
+        LDR R4, [SP, #1732]
+        LDR R6, [R4]
+        STR R6, [SP, #1736]
+        MOV R5, #1b
+        STR R5, [SP, #1728]
+        LDR R4, [SP, #1736]
+        LDR R5, [SP, #1728]
+        ADD R7, R4, R5
+        STR R7, [SP, #1736]
+        LDR R4, [SP, #1736]
+        MOV R6, R4
+        STR R6, [SP, #1740]
+        ADD R5, SP, #92
+        STR R5, [SP, #1720]
+        LDR R4, [SP, #1720]
+        LDR R6, [R4]
+        STR R6, [SP, #1724]
+        LDR R4, [SP, #1740]
+        LDR R5, [SP, #1724]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1740]
+        LDR R4, [SP, #1740]
+        MOV R6, R4
+        STR R6, [SP, #1744]
+        ADD R5, SP, #96
+        STR R5, [SP, #1712]
+        LDR R4, [SP, #1712]
+        LDR R6, [R4]
+        STR R6, [SP, #1716]
+        LDR R4, [SP, #1744]
+        LDR R5, [SP, #1716]
+        ADD R7, R4, R5
+        STR R7, [SP, #1744]
+        LDR R4, [SP, #1744]
+        LDR R0, [R4]
+        ADD R5, SP, #40
+        STR R5, [SP, #1764]
+        LDR R4, [SP, #1764]
+        LDR R6, [R4]
+        STR R6, [SP, #1768]
+        ADD R5, SP, #92
+        STR R5, [SP, #1756]
+        LDR R4, [SP, #1756]
+        LDR R6, [R4]
+        STR R6, [SP, #1760]
+        LDR R4, [SP, #1768]
+        LDR R5, [SP, #1760]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1768]
+        LDR R4, [SP, #1768]
+        MOV R6, R4
+        STR R6, [SP, #1772]
+        ADD R5, SP, #96
+        STR R5, [SP, #1748]
+        LDR R4, [SP, #1748]
+        LDR R6, [R4]
+        STR R6, [SP, #1752]
+        LDR R4, [SP, #1772]
+        LDR R5, [SP, #1752]
+        ADD R7, R4, R5
+        STR R7, [SP, #1772]
+        LDR R4, [SP, #1772]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLessEqual
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB116
+        STR R5, [SP, #196]
+        LDR R4, [SP, #196]		;BB117
+        MOV R6, R4
+        STR R6, [SP, #1780]
+        MOV R5, #0b
+        STR R5, [SP, #1776]
+        LDR R4, [SP, #1780]
+        LDR R5, [SP, #1776]
+        CMP R4, R5
+        BNE select_45
+        B select_39
+select_39:			;BB39
+        ADD R5, SP, #100
+        STR R5, [SP, #700]
+        MOV R5, #10b
+        STR R5, [SP, #704]
+        LDR R4, [SP, #704]
+        LDR R5, [SP, #700]
+        STR R4, [R5]
+        ADD R5, SP, #104		;BB40
+        STR R5, [SP, #708]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #712]
+        LDR R4, [SP, #712]
+        LDR R5, [SP, #708]
+        STR R4, [R5]
+        ADD R5, SP, #108		;BB41
+        STR R5, [SP, #716]
+        ADD R5, SP, #32
+        STR R5, [SP, #740]
+        LDR R4, [SP, #740]
+        LDR R6, [R4]
+        STR R6, [SP, #744]
+        MOV R5, #1b
+        STR R5, [SP, #736]
+        LDR R4, [SP, #744]
+        LDR R5, [SP, #736]
+        ADD R7, R4, R5
+        STR R7, [SP, #744]
+        LDR R4, [SP, #744]
+        MOV R6, R4
+        STR R6, [SP, #748]
+        ADD R5, SP, #100
+        STR R5, [SP, #728]
+        LDR R4, [SP, #728]
+        LDR R6, [R4]
+        STR R6, [SP, #732]
+        LDR R4, [SP, #748]
+        LDR R5, [SP, #732]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #748]
+        LDR R4, [SP, #748]
+        MOV R6, R4
+        STR R6, [SP, #752]
+        ADD R5, SP, #104
+        STR R5, [SP, #720]
+        LDR R4, [SP, #720]
+        LDR R6, [R4]
+        STR R6, [SP, #724]
+        LDR R4, [SP, #752]
+        LDR R5, [SP, #724]
+        ADD R7, R4, R5
+        STR R7, [SP, #752]
+        LDR R4, [SP, #752]
+        LDR R5, [SP, #716]
+        STR R4, [R5]
+        ADD R5, SP, #36		;BB42
+        STR R5, [SP, #756]
+        ADD R5, SP, #108
+        STR R5, [SP, #760]
+        LDR R4, [SP, #760]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #764]
+        LDR R4, [SP, #764]
+        LDR R5, [SP, #756]
+        STR R4, [R5, #0]
+        ADD R5, SP, #108		;BB43
+        STR R5, [SP, #768]
+        ADD R5, SP, #40
+        STR R5, [SP, #788]
+        LDR R4, [SP, #788]
+        LDR R6, [R4]
+        STR R6, [SP, #792]
+        ADD R5, SP, #100
+        STR R5, [SP, #780]
+        LDR R4, [SP, #780]
+        LDR R6, [R4]
+        STR R6, [SP, #784]
+        LDR R4, [SP, #792]
+        LDR R5, [SP, #784]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #792]
+        LDR R4, [SP, #792]
+        MOV R6, R4
+        STR R6, [SP, #796]
+        ADD R5, SP, #104
+        STR R5, [SP, #772]
+        LDR R4, [SP, #772]
+        LDR R6, [R4]
+        STR R6, [SP, #776]
+        LDR R4, [SP, #796]
+        LDR R5, [SP, #776]
+        ADD R7, R4, R5
+        STR R7, [SP, #796]
+        LDR R4, [SP, #796]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #800]
+        LDR R4, [SP, #800]
+        LDR R5, [SP, #768]
+        STR R4, [R5, #0]
+        ADD R5, SP, #40		;BB44
+        STR R5, [SP, #812]
+        LDR R4, [SP, #812]
+        LDR R6, [R4]
+        STR R6, [SP, #816]
+        LDR R4, [SP, #816]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #820]
+        LDR R4, [SP, #820]
+        MOV R6, R4
+        STR R6, [SP, #824]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #804]
+        LDR R4, [SP, #804]
+        MOV R6, R4
+        STR R6, [SP, #808]
+        LDR R4, [SP, #824]
+        LDR R5, [SP, #808]
+        ADD R7, R4, R5
+        STR R7, [SP, #824]
+        ADD R5, SP, #36
+        STR R5, [SP, #828]
+        LDR R4, [SP, #828]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #832]
+        LDR R4, [SP, #832]
+        LDR R5, [SP, #824]
+        STR R4, [R5, #0]
+        B select_45
+select_45:			;BB45
+;NULL
+        ADD R5, SP, #112		;BB46
+        STR R5, [SP, #836]
+        MOV R5, #10b
+        STR R5, [SP, #840]
+        LDR R4, [SP, #840]
+        LDR R5, [SP, #836]
+        STR R4, [R5]
+        ADD R5, SP, #116		;BB47
+        STR R5, [SP, #844]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #848]
+        LDR R4, [SP, #848]
+        LDR R5, [SP, #844]
+        STR R4, [R5]
+;NULL
+        ADD R5, SP, #32		;BB118
+        STR R5, [SP, #1800]
+        LDR R4, [SP, #1800]
+        LDR R6, [R4]
+        STR R6, [SP, #1804]
+        ADD R5, SP, #112
+        STR R5, [SP, #1792]
+        LDR R4, [SP, #1792]
+        LDR R6, [R4]
+        STR R6, [SP, #1796]
+        LDR R4, [SP, #1804]
+        LDR R5, [SP, #1796]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1804]
+        LDR R4, [SP, #1804]
+        MOV R6, R4
+        STR R6, [SP, #1808]
+        ADD R5, SP, #116
+        STR R5, [SP, #1784]
+        LDR R4, [SP, #1784]
+        LDR R6, [R4]
+        STR R6, [SP, #1788]
+        LDR R4, [SP, #1808]
+        LDR R5, [SP, #1788]
+        ADD R7, R4, R5
+        STR R7, [SP, #1808]
+        LDR R4, [SP, #1808]
+        LDR R0, [R4]
+        ADD R5, SP, #40
+        STR R5, [SP, #1828]
+        LDR R4, [SP, #1828]
+        LDR R6, [R4]
+        STR R6, [SP, #1832]
+        ADD R5, SP, #112
+        STR R5, [SP, #1820]
+        LDR R4, [SP, #1820]
+        LDR R6, [R4]
+        STR R6, [SP, #1824]
+        LDR R4, [SP, #1832]
+        LDR R5, [SP, #1824]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1832]
+        LDR R4, [SP, #1832]
+        MOV R6, R4
+        STR R6, [SP, #1836]
+        ADD R5, SP, #116
+        STR R5, [SP, #1812]
+        LDR R4, [SP, #1812]
+        LDR R6, [R4]
+        STR R6, [SP, #1816]
+        LDR R4, [SP, #1836]
+        LDR R5, [SP, #1816]
+        ADD R7, R4, R5
+        STR R7, [SP, #1836]
+        LDR R4, [SP, #1836]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLessEqual
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB119
+        STR R5, [SP, #200]
+        LDR R4, [SP, #200]		;BB120
+        MOV R6, R4
+        STR R6, [SP, #1844]
+        MOV R5, #0b
+        STR R5, [SP, #1840]
+        LDR R4, [SP, #1844]
+        LDR R5, [SP, #1840]
+        CMP R4, R5
+        BNE select_55
+        B select_49
+select_49:			;BB49
+        ADD R5, SP, #120
+        STR R5, [SP, #852]
+        MOV R5, #10b
+        STR R5, [SP, #856]
+        LDR R4, [SP, #856]
+        LDR R5, [SP, #852]
+        STR R4, [R5]
+        ADD R5, SP, #124		;BB50
+        STR R5, [SP, #860]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #864]
+        LDR R4, [SP, #864]
+        LDR R5, [SP, #860]
+        STR R4, [R5]
+        ADD R5, SP, #128		;BB51
+        STR R5, [SP, #868]
+        ADD R5, SP, #32
+        STR R5, [SP, #888]
+        LDR R4, [SP, #888]
+        LDR R6, [R4]
+        STR R6, [SP, #892]
+        ADD R5, SP, #120
+        STR R5, [SP, #880]
+        LDR R4, [SP, #880]
+        LDR R6, [R4]
+        STR R6, [SP, #884]
+        LDR R4, [SP, #892]
+        LDR R5, [SP, #884]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #892]
+        LDR R4, [SP, #892]
+        MOV R6, R4
+        STR R6, [SP, #896]
+        ADD R5, SP, #124
+        STR R5, [SP, #872]
+        LDR R4, [SP, #872]
+        LDR R6, [R4]
+        STR R6, [SP, #876]
+        LDR R4, [SP, #896]
+        LDR R5, [SP, #876]
+        ADD R7, R4, R5
+        STR R7, [SP, #896]
+        LDR R4, [SP, #896]
+        LDR R5, [SP, #868]
+        STR R4, [R5]
+        ADD R5, SP, #36		;BB52
+        STR R5, [SP, #900]
+        ADD R5, SP, #128
+        STR R5, [SP, #904]
+        LDR R4, [SP, #904]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #908]
+        LDR R4, [SP, #908]
+        LDR R5, [SP, #900]
+        STR R4, [R5, #0]
+        ADD R5, SP, #128		;BB53
+        STR R5, [SP, #912]
+        ADD R5, SP, #40
+        STR R5, [SP, #932]
+        LDR R4, [SP, #932]
+        LDR R6, [R4]
+        STR R6, [SP, #936]
+        ADD R5, SP, #120
+        STR R5, [SP, #924]
+        LDR R4, [SP, #924]
+        LDR R6, [R4]
+        STR R6, [SP, #928]
+        LDR R4, [SP, #936]
+        LDR R5, [SP, #928]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #936]
+        LDR R4, [SP, #936]
+        MOV R6, R4
+        STR R6, [SP, #940]
+        ADD R5, SP, #124
+        STR R5, [SP, #916]
+        LDR R4, [SP, #916]
+        LDR R6, [R4]
+        STR R6, [SP, #920]
+        LDR R4, [SP, #940]
+        LDR R5, [SP, #920]
+        ADD R7, R4, R5
+        STR R7, [SP, #940]
+        LDR R4, [SP, #940]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #944]
+        LDR R4, [SP, #944]
+        LDR R5, [SP, #912]
+        STR R4, [R5, #0]
+        ADD R5, SP, #40		;BB54
+        STR R5, [SP, #956]
+        LDR R4, [SP, #956]
+        LDR R6, [R4]
+        STR R6, [SP, #960]
+        LDR R4, [SP, #960]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #964]
+        LDR R4, [SP, #964]
+        MOV R6, R4
+        STR R6, [SP, #968]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #948]
+        LDR R4, [SP, #948]
+        MOV R6, R4
+        STR R6, [SP, #952]
+        LDR R4, [SP, #968]
+        LDR R5, [SP, #952]
+        ADD R7, R4, R5
+        STR R7, [SP, #968]
+        ADD R5, SP, #36
+        STR R5, [SP, #972]
+        LDR R4, [SP, #972]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #976]
+        LDR R4, [SP, #976]
+        LDR R5, [SP, #968]
+        STR R4, [R5, #0]
+        B select_55
+select_55:			;BB55
+;NULL
+        ADD R5, SP, #136		;BB56
+        STR R5, [SP, #980]
+        MOV R5, #10b
+        STR R5, [SP, #984]
+        LDR R4, [SP, #984]
+        LDR R5, [SP, #980]
+        STR R4, [R5]
+        ADD R5, SP, #140		;BB57
+        STR R5, [SP, #988]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #992]
+        LDR R4, [SP, #992]
+        LDR R5, [SP, #988]
+        STR R4, [R5]
+;NULL
+        ADD R5, SP, #32		;BB121
+        STR R5, [SP, #1868]
+        LDR R4, [SP, #1868]
+        LDR R6, [R4]
+        STR R6, [SP, #1872]
+        MOV R5, #1b
+        STR R5, [SP, #1864]
+        LDR R4, [SP, #1872]
+        LDR R5, [SP, #1864]
+        ADD R7, R4, R5
+        STR R7, [SP, #1872]
+        LDR R4, [SP, #1872]
+        MOV R6, R4
+        STR R6, [SP, #1876]
+        ADD R5, SP, #136
+        STR R5, [SP, #1856]
+        LDR R4, [SP, #1856]
+        LDR R6, [R4]
+        STR R6, [SP, #1860]
+        LDR R4, [SP, #1876]
+        LDR R5, [SP, #1860]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1876]
+        LDR R4, [SP, #1876]
+        MOV R6, R4
+        STR R6, [SP, #1880]
+        ADD R5, SP, #140
+        STR R5, [SP, #1848]
+        LDR R4, [SP, #1848]
+        LDR R6, [R4]
+        STR R6, [SP, #1852]
+        LDR R4, [SP, #1880]
+        LDR R5, [SP, #1852]
+        ADD R7, R4, R5
+        STR R7, [SP, #1880]
+        LDR R4, [SP, #1880]
+        LDR R0, [R4]
+        ADD R5, SP, #32
+        STR R5, [SP, #1900]
+        LDR R4, [SP, #1900]
+        LDR R6, [R4]
+        STR R6, [SP, #1904]
+        ADD R5, SP, #136
+        STR R5, [SP, #1892]
+        LDR R4, [SP, #1892]
+        LDR R6, [R4]
+        STR R6, [SP, #1896]
+        LDR R4, [SP, #1904]
+        LDR R5, [SP, #1896]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1904]
+        LDR R4, [SP, #1904]
+        MOV R6, R4
+        STR R6, [SP, #1908]
+        ADD R5, SP, #140
+        STR R5, [SP, #1884]
+        LDR R4, [SP, #1884]
+        LDR R6, [R4]
+        STR R6, [SP, #1888]
+        LDR R4, [SP, #1908]
+        LDR R5, [SP, #1888]
+        ADD R7, R4, R5
+        STR R7, [SP, #1908]
+        LDR R4, [SP, #1908]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLessEqual
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB122
+        STR R5, [SP, #204]
+        LDR R4, [SP, #204]		;BB123
+        MOV R6, R4
+        STR R6, [SP, #1916]
+        MOV R5, #0b
+        STR R5, [SP, #1912]
+        LDR R4, [SP, #1916]
+        LDR R5, [SP, #1912]
+        CMP R4, R5
+        BNE select_65
+        B select_59
+select_59:			;BB59
+        ADD R5, SP, #148
+        STR R5, [SP, #996]
+        MOV R5, #10b
+        STR R5, [SP, #1000]
+        LDR R4, [SP, #1000]
+        LDR R5, [SP, #996]
+        STR R4, [R5]
+        ADD R5, SP, #152		;BB60
+        STR R5, [SP, #1004]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1008]
+        LDR R4, [SP, #1008]
+        LDR R5, [SP, #1004]
+        STR R4, [R5]
+        ADD R5, SP, #156		;BB61
+        STR R5, [SP, #1012]
+        ADD R5, SP, #32
+        STR R5, [SP, #1036]
+        LDR R4, [SP, #1036]
+        LDR R6, [R4]
+        STR R6, [SP, #1040]
+        MOV R5, #1b
+        STR R5, [SP, #1032]
+        LDR R4, [SP, #1040]
+        LDR R5, [SP, #1032]
+        ADD R7, R4, R5
+        STR R7, [SP, #1040]
+        LDR R4, [SP, #1040]
+        MOV R6, R4
+        STR R6, [SP, #1044]
+        ADD R5, SP, #148
+        STR R5, [SP, #1024]
+        LDR R4, [SP, #1024]
+        LDR R6, [R4]
+        STR R6, [SP, #1028]
+        LDR R4, [SP, #1044]
+        LDR R5, [SP, #1028]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1044]
+        LDR R4, [SP, #1044]
+        MOV R6, R4
+        STR R6, [SP, #1048]
+        ADD R5, SP, #152
+        STR R5, [SP, #1016]
+        LDR R4, [SP, #1016]
+        LDR R6, [R4]
+        STR R6, [SP, #1020]
+        LDR R4, [SP, #1048]
+        LDR R5, [SP, #1020]
+        ADD R7, R4, R5
+        STR R7, [SP, #1048]
+        LDR R4, [SP, #1048]
+        LDR R5, [SP, #1012]
+        STR R4, [R5]
+        ADD R5, SP, #36		;BB62
+        STR R5, [SP, #1052]
+        ADD R5, SP, #156
+        STR R5, [SP, #1056]
+        LDR R4, [SP, #1056]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1060]
+        LDR R4, [SP, #1060]
+        LDR R5, [SP, #1052]
+        STR R4, [R5, #0]
+        ADD R5, SP, #156		;BB63
+        STR R5, [SP, #1064]
+        ADD R5, SP, #32
+        STR R5, [SP, #1084]
+        LDR R4, [SP, #1084]
+        LDR R6, [R4]
+        STR R6, [SP, #1088]
+        ADD R5, SP, #148
+        STR R5, [SP, #1076]
+        LDR R4, [SP, #1076]
+        LDR R6, [R4]
+        STR R6, [SP, #1080]
+        LDR R4, [SP, #1088]
+        LDR R5, [SP, #1080]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1088]
+        LDR R4, [SP, #1088]
+        MOV R6, R4
+        STR R6, [SP, #1092]
+        ADD R5, SP, #152
+        STR R5, [SP, #1068]
+        LDR R4, [SP, #1068]
+        LDR R6, [R4]
+        STR R6, [SP, #1072]
+        LDR R4, [SP, #1092]
+        LDR R5, [SP, #1072]
+        ADD R7, R4, R5
+        STR R7, [SP, #1092]
+        LDR R4, [SP, #1092]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1096]
+        LDR R4, [SP, #1096]
+        LDR R5, [SP, #1064]
+        STR R4, [R5, #0]
+        ADD R5, SP, #32		;BB64
+        STR R5, [SP, #1108]
+        LDR R4, [SP, #1108]
+        LDR R6, [R4]
+        STR R6, [SP, #1112]
+        LDR R4, [SP, #1112]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1116]
+        LDR R4, [SP, #1116]
+        MOV R6, R4
+        STR R6, [SP, #1120]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1100]
+        LDR R4, [SP, #1100]
+        MOV R6, R4
+        STR R6, [SP, #1104]
+        LDR R4, [SP, #1120]
+        LDR R5, [SP, #1104]
+        ADD R7, R4, R5
+        STR R7, [SP, #1120]
+        ADD R5, SP, #36
+        STR R5, [SP, #1124]
+        LDR R4, [SP, #1124]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1128]
+        LDR R4, [SP, #1128]
+        LDR R5, [SP, #1120]
+        STR R4, [R5, #0]
+        B select_65
+select_65:			;BB65
+;NULL
+        ADD R5, SP, #20		;BB66
+        STR R5, [SP, #1132]
+        ADD R5, SP, #32
+        STR R5, [SP, #1140]
+        LDR R4, [SP, #1140]
+        LDR R6, [R4]
+        STR R6, [SP, #1144]
+        MOV R5, #1b
+        STR R5, [SP, #1136]
+        LDR R4, [SP, #1144]
+        LDR R5, [SP, #1136]
+        ADD R7, R4, R5
+        STR R7, [SP, #1144]
+        LDR R4, [SP, #1144]
+        LDR R5, [SP, #1132]
+        STR R4, [R5]
+        ADD R5, SP, #16		;BB67
+        STR R5, [SP, #1148]
+        ADD R5, SP, #40
+        STR R5, [SP, #1152]
+        LDR R4, [SP, #1152]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1156]
+        LDR R4, [SP, #1156]
+        LDR R5, [SP, #1148]
+        STR R4, [R5, #0]
+        ADD R5, SP, #24		;BB68
+        STR R5, [SP, #1160]
+        ADD R5, SP, #32
+        STR R5, [SP, #1172]
+        LDR R4, [SP, #1172]
+        LDR R6, [R4]
+        STR R6, [SP, #1176]
+        LDR R4, [SP, #1176]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1180]
+        LDR R4, [SP, #1180]
+        MOV R6, R4
+        STR R6, [SP, #1184]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1164]
+        LDR R4, [SP, #1164]
+        MOV R6, R4
+        STR R6, [SP, #1168]
+        LDR R4, [SP, #1184]
+        LDR R5, [SP, #1168]
+        ADD R7, R4, R5
+        STR R7, [SP, #1184]
+        LDR R4, [SP, #1184]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1188]
+        LDR R4, [SP, #1188]
+        LDR R5, [SP, #1160]
+        STR R4, [R5, #0]
+;NULL
+        B select_93
+select_93:			;BB93
+;NULL
+        ADD R5, SP, #28		;BB94
+        STR R5, [SP, #1436]
+        LDR R4, [SP, #1436]
+        LDR R6, [R4]
+        STR R6, [SP, #1440]
+        MOV R5, #0b
+        STR R5, [SP, #1432]
+        LDR R4, [SP, #1440]
+        LDR R5, [SP, #1432]
+        CMP R4, R5
+        BEQ select_70
+        B select_95
+select_70:			;BB70
+;NULL
+        ADD R5, SP, #20		;BB71
+        STR R5, [SP, #1192]
+        ADD R5, SP, #20
+        STR R5, [SP, #1200]
+        LDR R4, [SP, #1200]
+        LDR R6, [R4]
+        STR R6, [SP, #1204]
+        MOV R5, #1b
+        STR R5, [SP, #1196]
+        LDR R4, [SP, #1204]
+        LDR R5, [SP, #1196]
+        ADD R7, R4, R5
+        STR R7, [SP, #1204]
+        LDR R4, [SP, #1204]
+        LDR R5, [SP, #1192]
+        STR R4, [R5]
+;NULL
+        B select_75
+select_75:			;BB75
+;NULL
+;NULL
+        ADD R5, SP, #20		;BB124
+        STR R5, [SP, #1928]
+        LDR R4, [SP, #1928]
+        LDR R6, [R4]
+        STR R6, [SP, #1932]
+        LDR R4, [SP, #1932]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1936]
+        LDR R4, [SP, #1936]
+        MOV R6, R4
+        STR R6, [SP, #1940]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1920]
+        LDR R4, [SP, #1920]
+        MOV R6, R4
+        STR R6, [SP, #1924]
+        LDR R4, [SP, #1940]
+        LDR R5, [SP, #1924]
+        ADD R7, R4, R5
+        STR R7, [SP, #1940]
+        LDR R4, [SP, #1940]
+        LDR R0, [R4]
+        ADD R5, SP, #24
+        STR R5, [SP, #1944]
+        LDR R4, [SP, #1944]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLess
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB125
+        STR R5, [SP, #208]
+        LDR R4, [SP, #208]		;BB126
+        MOV R6, R4
+        STR R6, [SP, #1952]
+        MOV R5, #0b
+        STR R5, [SP, #1948]
+        LDR R4, [SP, #1952]
+        LDR R5, [SP, #1948]
+        CMP R4, R5
+        BNE select_73
+        B select_77
+select_73:			;BB73
+;NULL
+        ADD R5, SP, #20		;BB74
+        STR R5, [SP, #1208]
+        ADD R5, SP, #20
+        STR R5, [SP, #1216]
+        LDR R4, [SP, #1216]
+        LDR R6, [R4]
+        STR R6, [SP, #1220]
+        MOV R5, #1b
+        STR R5, [SP, #1212]
+        LDR R4, [SP, #1220]
+        LDR R5, [SP, #1212]
+        ADD R7, R4, R5
+        STR R7, [SP, #1220]
+        LDR R4, [SP, #1220]
+        LDR R5, [SP, #1208]
+        STR R4, [R5]
+        B select_75
+select_77:			;BB77
+        ADD R5, SP, #16
+        STR R5, [SP, #1224]
+        ADD R5, SP, #16
+        STR R5, [SP, #1232]
+        LDR R4, [SP, #1232]
+        LDR R6, [R4]
+        STR R6, [SP, #1236]
+        MOV R5, #1b
+        STR R5, [SP, #1228]
+        LDR R4, [SP, #1236]
+        LDR R5, [SP, #1228]
+        SUB R7, R4, R5
+        STR R7, [SP, #1236]
+        LDR R4, [SP, #1236]
+        LDR R5, [SP, #1224]
+        STR R4, [R5]
+;NULL
+        B select_81
+select_81:			;BB81
+;NULL
+;NULL
+        ADD R5, SP, #24		;BB127
+        STR R5, [SP, #1956]
+        LDR R4, [SP, #1956]
+        LDR R0, [R4]
+        ADD R5, SP, #16
+        STR R5, [SP, #1968]
+        LDR R4, [SP, #1968]
+        LDR R6, [R4]
+        STR R6, [SP, #1972]
+        LDR R4, [SP, #1972]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1976]
+        LDR R4, [SP, #1976]
+        MOV R6, R4
+        STR R6, [SP, #1980]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1960]
+        LDR R4, [SP, #1960]
+        MOV R6, R4
+        STR R6, [SP, #1964]
+        LDR R4, [SP, #1980]
+        LDR R5, [SP, #1964]
+        ADD R7, R4, R5
+        STR R7, [SP, #1980]
+        LDR R4, [SP, #1980]
+        LDR R1, [R4]
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL __fLess
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB128
+        STR R5, [SP, #212]
+        LDR R4, [SP, #212]		;BB129
+        MOV R6, R4
+        STR R6, [SP, #1988]
+        MOV R5, #0b
+        STR R5, [SP, #1984]
+        LDR R4, [SP, #1988]
+        LDR R5, [SP, #1984]
+        CMP R4, R5
+        BNE select_79
+        B select_83
+select_79:			;BB79
+;NULL
+        ADD R5, SP, #16		;BB80
+        STR R5, [SP, #1240]
+        ADD R5, SP, #16
+        STR R5, [SP, #1248]
+        LDR R4, [SP, #1248]
+        LDR R6, [R4]
+        STR R6, [SP, #1252]
+        MOV R5, #1b
+        STR R5, [SP, #1244]
+        LDR R4, [SP, #1252]
+        LDR R5, [SP, #1244]
+        SUB R7, R4, R5
+        STR R7, [SP, #1252]
+        LDR R4, [SP, #1252]
+        LDR R5, [SP, #1240]
+        STR R4, [R5]
+        B select_81
+select_83:			;BB83
+        ADD R5, SP, #16
+        STR R5, [SP, #1264]
+        LDR R4, [SP, #1264]
+        LDR R6, [R4]
+        STR R6, [SP, #1268]
+        ADD R5, SP, #20
+        STR R5, [SP, #1256]
+        LDR R4, [SP, #1256]
+        LDR R6, [R4]
+        STR R6, [SP, #1260]
+        LDR R4, [SP, #1268]
+        LDR R5, [SP, #1260]
+        CMP R4, R5
+        BGE select_85
+        B select_84
+select_84:			;BB84
+        ADD R5, SP, #28
+        STR R5, [SP, #1272]
+        MOV R5, #1b
+        STR R5, [SP, #1276]
+        LDR R4, [SP, #1276]
+        LDR R5, [SP, #1272]
+        STR R4, [R5]
+        B select_85
+select_85:			;BB85
+;NULL
+        ADD R5, SP, #28		;BB86
+        STR R5, [SP, #1284]
+        LDR R4, [SP, #1284]
+        LDR R6, [R4]
+        STR R6, [SP, #1288]
+        MOV R5, #0b
+        STR R5, [SP, #1280]
+        LDR R4, [SP, #1288]
+        LDR R5, [SP, #1280]
+        CMP R4, R5
+        BNE select_88
+        B select_87
+select_87:			;BB87
+        ADD R5, SP, #36
+        STR R5, [SP, #1292]
+        ADD R5, SP, #20
+        STR R5, [SP, #1304]
+        LDR R4, [SP, #1304]
+        LDR R6, [R4]
+        STR R6, [SP, #1308]
+        LDR R4, [SP, #1308]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1312]
+        LDR R4, [SP, #1312]
+        MOV R6, R4
+        STR R6, [SP, #1316]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1296]
+        LDR R4, [SP, #1296]
+        MOV R6, R4
+        STR R6, [SP, #1300]
+        LDR R4, [SP, #1316]
+        LDR R5, [SP, #1300]
+        ADD R7, R4, R5
+        STR R7, [SP, #1316]
+        LDR R4, [SP, #1316]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1320]
+        LDR R4, [SP, #1320]
+        LDR R5, [SP, #1292]
+        STR R4, [R5, #0]
+        B select_88
+select_88:			;BB88
+;NULL
+        ADD R5, SP, #164		;BB89
+        STR R5, [SP, #1324]
+        MOV R5, #10b
+        STR R5, [SP, #1328]
+        LDR R4, [SP, #1328]
+        LDR R5, [SP, #1324]
+        STR R4, [R5]
+        ADD R5, SP, #168		;BB90
+        STR R5, [SP, #1332]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1336]
+        LDR R4, [SP, #1336]
+        LDR R5, [SP, #1332]
+        STR R4, [R5]
+        ADD R5, SP, #20		;BB91
+        STR R5, [SP, #1356]
+        LDR R4, [SP, #1356]
+        LDR R6, [R4]
+        STR R6, [SP, #1360]
+        ADD R5, SP, #164
+        STR R5, [SP, #1348]
+        LDR R4, [SP, #1348]
+        LDR R6, [R4]
+        STR R6, [SP, #1352]
+        LDR R4, [SP, #1360]
+        LDR R5, [SP, #1352]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1360]
+        LDR R4, [SP, #1360]
+        MOV R6, R4
+        STR R6, [SP, #1364]
+        ADD R5, SP, #168
+        STR R5, [SP, #1340]
+        LDR R4, [SP, #1340]
+        LDR R6, [R4]
+        STR R6, [SP, #1344]
+        LDR R4, [SP, #1364]
+        LDR R5, [SP, #1344]
+        ADD R7, R4, R5
+        STR R7, [SP, #1364]
+        ADD R5, SP, #16
+        STR R5, [SP, #1384]
+        LDR R4, [SP, #1384]
+        LDR R6, [R4]
+        STR R6, [SP, #1388]
+        ADD R5, SP, #164
+        STR R5, [SP, #1376]
+        LDR R4, [SP, #1376]
+        LDR R6, [R4]
+        STR R6, [SP, #1380]
+        LDR R4, [SP, #1388]
+        LDR R5, [SP, #1380]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1388]
+        LDR R4, [SP, #1388]
+        MOV R6, R4
+        STR R6, [SP, #1392]
+        ADD R5, SP, #168
+        STR R5, [SP, #1368]
+        LDR R4, [SP, #1368]
+        LDR R6, [R4]
+        STR R6, [SP, #1372]
+        LDR R4, [SP, #1392]
+        LDR R5, [SP, #1372]
+        ADD R7, R4, R5
+        STR R7, [SP, #1392]
+        LDR R4, [SP, #1392]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1396]
+        LDR R4, [SP, #1396]
+        LDR R5, [SP, #1364]
+        STR R4, [R5, #0]
+        ADD R5, SP, #16		;BB92
+        STR R5, [SP, #1408]
+        LDR R4, [SP, #1408]
+        LDR R6, [R4]
+        STR R6, [SP, #1412]
+        LDR R4, [SP, #1412]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1416]
+        LDR R4, [SP, #1416]
+        MOV R6, R4
+        STR R6, [SP, #1420]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1400]
+        LDR R4, [SP, #1400]
+        MOV R6, R4
+        STR R6, [SP, #1404]
+        LDR R4, [SP, #1420]
+        LDR R5, [SP, #1404]
+        ADD R7, R4, R5
+        STR R7, [SP, #1420]
+        ADD R5, SP, #36
+        STR R5, [SP, #1424]
+        LDR R4, [SP, #1424]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1428]
+        LDR R4, [SP, #1428]
+        LDR R5, [SP, #1420]
+        STR R4, [R5, #0]
+        B select_93
+select_95:			;BB95
+        ADD R5, SP, #172
+        STR R5, [SP, #1444]
+        MOV R5, #10b
+        STR R5, [SP, #1448]
+        LDR R4, [SP, #1448]
+        LDR R5, [SP, #1444]
+        STR R4, [R5]
+        ADD R5, SP, #176		;BB96
+        STR R5, [SP, #1452]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1456]
+        LDR R4, [SP, #1456]
+        LDR R5, [SP, #1452]
+        STR R4, [R5]
+        ADD R5, SP, #32		;BB97
+        STR R5, [SP, #1476]
+        LDR R4, [SP, #1476]
+        LDR R6, [R4]
+        STR R6, [SP, #1480]
+        ADD R5, SP, #172
+        STR R5, [SP, #1468]
+        LDR R4, [SP, #1468]
+        LDR R6, [R4]
+        STR R6, [SP, #1472]
+        LDR R4, [SP, #1480]
+        LDR R5, [SP, #1472]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1480]
+        LDR R4, [SP, #1480]
+        MOV R6, R4
+        STR R6, [SP, #1484]
+        ADD R5, SP, #176
+        STR R5, [SP, #1460]
+        LDR R4, [SP, #1460]
+        LDR R6, [R4]
+        STR R6, [SP, #1464]
+        LDR R4, [SP, #1484]
+        LDR R5, [SP, #1464]
+        ADD R7, R4, R5
+        STR R7, [SP, #1484]
+        ADD R5, SP, #16
+        STR R5, [SP, #1504]
+        LDR R4, [SP, #1504]
+        LDR R6, [R4]
+        STR R6, [SP, #1508]
+        ADD R5, SP, #172
+        STR R5, [SP, #1496]
+        LDR R4, [SP, #1496]
+        LDR R6, [R4]
+        STR R6, [SP, #1500]
+        LDR R4, [SP, #1508]
+        LDR R5, [SP, #1500]
+        MOV R7, R4, LSL R5
+        STR R7, [SP, #1508]
+        LDR R4, [SP, #1508]
+        MOV R6, R4
+        STR R6, [SP, #1512]
+        ADD R5, SP, #176
+        STR R5, [SP, #1488]
+        LDR R4, [SP, #1488]
+        LDR R6, [R4]
+        STR R6, [SP, #1492]
+        LDR R4, [SP, #1512]
+        LDR R5, [SP, #1492]
+        ADD R7, R4, R5
+        STR R7, [SP, #1512]
+        LDR R4, [SP, #1512]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1516]
+        LDR R4, [SP, #1516]
+        LDR R5, [SP, #1484]
+        STR R4, [R5, #0]
+        ADD R5, SP, #16		;BB98
+        STR R5, [SP, #1528]
+        LDR R4, [SP, #1528]
+        LDR R6, [R4]
+        STR R6, [SP, #1532]
+        LDR R4, [SP, #1532]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1536]
+        LDR R4, [SP, #1536]
+        MOV R6, R4
+        STR R6, [SP, #1540]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1520]
+        LDR R4, [SP, #1520]
+        MOV R6, R4
+        STR R6, [SP, #1524]
+        LDR R4, [SP, #1540]
+        LDR R5, [SP, #1524]
+        ADD R7, R4, R5
+        STR R7, [SP, #1540]
+        ADD R5, SP, #24
+        STR R5, [SP, #1544]
+        LDR R4, [SP, #1544]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1548]
+        LDR R4, [SP, #1548]
+        LDR R5, [SP, #1540]
+        STR R4, [R5, #0]
+        ADD R5, SP, #16		;BB99
+        STR R5, [SP, #1560]
+        LDR R4, [SP, #1560]
+        LDR R6, [R4]
+        STR R6, [SP, #1564]
+        ADD R5, SP, #4
+        STR R5, [SP, #1552]
+        LDR R4, [SP, #1552]
+        LDR R6, [R4]
+        STR R6, [SP, #1556]
+        LDR R4, [SP, #1564]
+        LDR R5, [SP, #1556]
+        CMP R4, R5
+        BLT select_101
+        B select_100
+select_100:			;BB100
+        ADD R5, SP, #40
+        STR R5, [SP, #1568]
+        ADD R5, SP, #16
+        STR R5, [SP, #1576]
+        LDR R4, [SP, #1576]
+        LDR R6, [R4]
+        STR R6, [SP, #1580]
+        MOV R5, #1b
+        STR R5, [SP, #1572]
+        LDR R4, [SP, #1580]
+        LDR R5, [SP, #1572]
+        SUB R7, R4, R5
+        STR R7, [SP, #1580]
+        LDR R4, [SP, #1580]
+        LDR R5, [SP, #1568]
+        STR R4, [R5]
+        B select_101
+select_101:			;BB101
+;NULL
+        ADD R5, SP, #16		;BB102
+        STR R5, [SP, #1592]
+        LDR R4, [SP, #1592]
+        LDR R6, [R4]
+        STR R6, [SP, #1596]
+        ADD R5, SP, #4
+        STR R5, [SP, #1584]
+        LDR R4, [SP, #1584]
+        LDR R6, [R4]
+        STR R6, [SP, #1588]
+        LDR R4, [SP, #1596]
+        LDR R5, [SP, #1588]
+        CMP R4, R5
+        BGT select_104
+        B select_103
+select_103:			;BB103
+        ADD R5, SP, #32
+        STR R5, [SP, #1600]
+        ADD R5, SP, #20
+        STR R5, [SP, #1604]
+        LDR R4, [SP, #1604]
+        LDR R6, [R4, #0]
+        STR R6, [SP, #1608]
+        LDR R4, [SP, #1608]
+        LDR R5, [SP, #1600]
+        STR R4, [R5, #0]
+        B select_104
+select_104:			;BB104
+;NULL
+        B select_105
+select_105:			;BB105
+;NULL
+        B select_106
+select_109:			;BB109
+        ADD R5, SP, #4
+        STR R5, [SP, #1632]
+        LDR R4, [SP, #1632]
+        LDR R6, [R4]
+        STR R6, [SP, #1636]
+        LDR R4, [SP, #1636]
+        MOV R6, R4, LSL #2
+        STR R6, [SP, #1640]
+        LDR R4, [SP, #1640]
+        MOV R6, R4
+        STR R6, [SP, #1644]
+        LDR R5, =global_$1_arr
+        STR R5, [SP, #1624]
+        LDR R4, [SP, #1624]
+        MOV R6, R4
+        STR R6, [SP, #1628]
+        LDR R4, [SP, #1644]
+        LDR R5, [SP, #1628]
+        ADD R7, R4, R5
+        STR R7, [SP, #1644]
+        LDR R4, [SP, #1644]
+        LDR R6, [R4]
+        STR R6, [SP, #188]
+;NULL
+        LDR R4, [SP, #188]		;BB111
+        MOV R0, R4
+        MOV R4, #0
+        MOV R5, #111b
+        ADD R4, R4, R5, LSL #8
+        ADD R4, R4, #11011000b
+        ADD SP, SP, R4
+        MOV PC, R14
+main:			;BB130
+        SUB SP, SP, #32
+        MOV R5, #1010b		;BB131
+        STR R5, [SP, #0]
+        MOV R5, #10011b		;BB132
+        STR R5, [SP, #4]
+        LDR R4, [SP, #0]		;BB133
+        MOV R0, R4
+        LDR R4, [SP, #4]
+        MOV R1, R4
+        STR R14, [SP, #-4]
+        SUB SP, SP, #8
+        BL select
+        ADD SP, SP, #8
+        LDR R14, [SP, #-4]
+        MOV R5, R0		;BB134
+        STR R5, [SP, #8]
+        MOV R5, #0b		;BB135
+        STR R5, [SP, #12]
+;NULL
+        B main_7
+main_7:
+        LDR R4, [SP, #12]
+        MOV R0, R4
+        ADD SP, SP, #32
+        MOV PC, R14
+        END main

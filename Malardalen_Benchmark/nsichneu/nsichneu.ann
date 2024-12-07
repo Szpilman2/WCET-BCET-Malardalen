@@ -1,0 +1,9 @@
+/* In main:
+      dummy_i = [0..2]
+      P1_is_marked: 3 -> [2..3]
+      P2_is_marked: 5 -> [3..5]
+      P3_is_marked: 5 -> [0..2]
+      P1_marking_member_0[1] = 1
+      P2_marking_member_0[1] = 1
+*/
+FUNC_ENTRY main ASSIGN dummy_i INT 0 2 || P1_is_marked INT 2 3 ||P2_is_marked INT 3 5 || P3_is_marked INT 2 || P1_marking_member_0 INT 1 1|| P2_marking_member_0 INT 1 1 ;

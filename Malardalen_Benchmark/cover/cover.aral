@@ -1,0 +1,55 @@
+ANALYSIS
+IDMAP
+map(label, string): {default->"" \ @6->"main::3", @615->"alf_label_407", @618->"alf_label_406", @623->"alf_label_405", @628->"alf_label_404", @4->"swi10::2", @574->"alf_label_403", @576->"alf_label_377", @579->"alf_label_378", @581->"alf_label_400", @584->"alf_label_398", @587->"alf_label_396", @590->"alf_label_394", @593->"alf_label_392", @596->"alf_label_390", @599->"alf_label_388", @602->"alf_label_386", @605->"alf_label_384", @608->"alf_label_382", @611->"alf_label_380", @577->"alf_label_376", @2->"swi50::1", @383->"alf_label_375", @385->"alf_label_249", @388->"alf_label_250", @390->"alf_label_372", @393->"alf_label_370", @396->"alf_label_368", @399->"alf_label_366", @402->"alf_label_364", @405->"alf_label_362", @408->"alf_label_360", @411->"alf_label_358", @414->"alf_label_356", @417->"alf_label_354", @420->"alf_label_352", @423->"alf_label_350", @426->"alf_label_348", @429->"alf_label_346", @432->"alf_label_344", @435->"alf_label_342", @438->"alf_label_340", @441->"alf_label_338", @444->"alf_label_336", @447->"alf_label_334", @450->"alf_label_332", @453->"alf_label_330", @456->"alf_label_328", @459->"alf_label_326", @462->"alf_label_324", @465->"alf_label_322", @468->"alf_label_320", @471->"alf_label_318", @474->"alf_label_316", @477->"alf_label_314", @480->"alf_label_312", @483->"alf_label_310", @486->"alf_label_308", @489->"alf_label_306", @492->"alf_label_304", @495->"alf_label_302", @498->"alf_label_300", @501->"alf_label_298", @504->"alf_label_296", @507->"alf_label_294", @510->"alf_label_292", @513->"alf_label_290", @516->"alf_label_288", @519->"alf_label_286", @522->"alf_label_284", @525->"alf_label_282", @528->"alf_label_280", @531->"alf_label_278", @534->"alf_label_276", @537->"alf_label_274", @540->"alf_label_272", @543->"alf_label_270", @546->"alf_label_268", @549->"alf_label_266", @552->"alf_label_264", @555->"alf_label_262", @558->"alf_label_260", @561->"alf_label_258", @564->"alf_label_256", @567->"alf_label_254", @570->"alf_label_252", @386->"alf_label_248", @0->"swi120::0", @12->"alf_label_247", @14->"alf_label_1", @17->"alf_label_2", @19->"alf_label_244", @22->"alf_label_242", @25->"alf_label_240", @28->"alf_label_238", @31->"alf_label_236", @34->"alf_label_234", @37->"alf_label_232", @40->"alf_label_230", @43->"alf_label_228", @46->"alf_label_226", @49->"alf_label_224", @52->"alf_label_222", @55->"alf_label_220", @58->"alf_label_218", @61->"alf_label_216", @64->"alf_label_214", @67->"alf_label_212", @70->"alf_label_210", @73->"alf_label_208", @76->"alf_label_206", @79->"alf_label_204", @82->"alf_label_202", @85->"alf_label_200", @88->"alf_label_198", @91->"alf_label_196", @94->"alf_label_194", @97->"alf_label_192", @100->"alf_label_190", @103->"alf_label_188", @106->"alf_label_186", @109->"alf_label_184", @112->"alf_label_182", @115->"alf_label_180", @118->"alf_label_178", @121->"alf_label_176", @124->"alf_label_174", @127->"alf_label_172", @130->"alf_label_170", @133->"alf_label_168", @136->"alf_label_166", @139->"alf_label_164", @142->"alf_label_162", @145->"alf_label_160", @148->"alf_label_158", @151->"alf_label_156", @154->"alf_label_154", @157->"alf_label_152", @160->"alf_label_150", @163->"alf_label_148", @166->"alf_label_146", @169->"alf_label_144", @172->"alf_label_142", @175->"alf_label_140", @178->"alf_label_138", @181->"alf_label_136", @184->"alf_label_134", @187->"alf_label_132", @190->"alf_label_130", @193->"alf_label_128", @196->"alf_label_126", @199->"alf_label_124", @202->"alf_label_122", @205->"alf_label_120", @208->"alf_label_118", @211->"alf_label_116", @214->"alf_label_114", @217->"alf_label_112", @220->"alf_label_110", @223->"alf_label_108", @226->"alf_label_106", @229->"alf_label_104", @232->"alf_label_102", @235->"alf_label_100", @238->"alf_label_98", @241->"alf_label_96", @244->"alf_label_94", @247->"alf_label_92", @250->"alf_label_90", @253->"alf_label_88", @256->"alf_label_86", @259->"alf_label_84", @262->"alf_label_82", @265->"alf_label_80", @268->"alf_label_78", @271->"alf_label_76", @274->"alf_label_74", @277->"alf_label_72", @280->"alf_label_70", @283->"alf_label_68", @286->"alf_label_66", @289->"alf_label_64", @292->"alf_label_62", @295->"alf_label_60", @298->"alf_label_58", @301->"alf_label_56", @304->"alf_label_54", @307->"alf_label_52", @310->"alf_label_50", @313->"alf_label_48", @316->"alf_label_46", @319->"alf_label_44", @322->"alf_label_42", @325->"alf_label_40", @328->"alf_label_38", @331->"alf_label_36", @334->"alf_label_34", @337->"alf_label_32", @340->"alf_label_30", @343->"alf_label_28", @346->"alf_label_26", @349->"alf_label_24", @352->"alf_label_22", @355->"alf_label_20", @358->"alf_label_18", @361->"alf_label_16", @364->"alf_label_14", @367->"alf_label_12", @370->"alf_label_10", @373->"alf_label_8", @376->"alf_label_6", @379->"alf_label_4", @15->"alf_label_0"};
+
+map(varid, string): {default->"" \ #1->"c::1", #130->"c::130", #138->"c::138", #2147483647->"c::2147483647", #146->"cnt::146", #132->"i::132", #140->"i::140", #3->"i::3"};
+
+RESULT NAME interval
+TYPE <tuple(funcid, int(32))>
+     map(varid, tuple(lift(int(32)), lift(int(32))))
+DATA
+END
+
+RESULT NAME pointsto_locations
+TYPE location = int(32);
+     funcname = string;
+     set(tuple(location, list(varid), list(funcname)))
+DATA
+program noflow {(25,[#146],[]), (24,[#140],[]), (23,[#132],[]), (22,[#3],[]), (21,[],["main::3"]), (19,[],[]), (18,[],["swi10::2"]), (16,[],[]), (15,[#138],[]), (14,[],["swi50::1"]), (12,[],[]), (11,[#130],[]), (10,[],["swi120::0"]), (8,[],[]), (7,[#1],[])};
+END
+
+RESULT NAME pointsto_relations
+TYPE location = int(32);
+     points_to = tuple(location, location);
+     set(points_to)
+DATA
+program noflow {(21,19), (18,16), (14,12), (10,8)};
+END
+
+RESULT NAME variable_locations
+TYPE location = int(32);
+     <tuple(funcid, int(32))>
+     set(tuple(varid, location))
+DATA
+program noflow {(#1,7), (#3,22), (#130,11), (#132,23), (#138,15), (#140,24), (#146,25)};
+END
+
+RESULT NAME callstrings
+TYPE callsite = label;
+     <tuple(funcid, int(32))>
+     list(callsite)
+DATA
+END
+
+RESULT NAME ASLs
+TYPE string
+DATA
+END
+
+RESULT NAME callsite_locations
+TYPE location = int(32);
+     location
+DATA
+END
+
+END

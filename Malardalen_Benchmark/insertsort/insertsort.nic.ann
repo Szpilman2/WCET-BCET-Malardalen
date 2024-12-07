@@ -1,0 +1,12 @@
+/* Set all values in a to any positive number */
+
+$1_main BB0 13 store $0_a 4 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 8 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 12 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 16 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 20 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 24 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 28 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 32 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 36 32 int 1 2147483647;
+$1_main BB0 13 store $0_a 40 32 int 1 2147483647;

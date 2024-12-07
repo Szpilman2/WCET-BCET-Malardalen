@@ -1,0 +1,308 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs }
+  { lrefs { lref 64 "fabs" } { lref 64 "sqrtfcn" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls }
+ { inits }
+ { funcs
+
+  /* Definition of function fabs */
+  { func
+   { label 64 { lref 64 "fabs" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%x" 32 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%tmp2" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%.0" 32 } /* Local Variable (PHI node) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "fabs::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fabs::bb::1
+        *   %tmp = fcmp olt float %x, 0.000000e+00
+        *   br i1 %tmp, label %bb1, label %bb3 */
+      { switch
+       { f_lt 8 23 { load 32 { addr 64 { fref 64 "%x" } { dec_unsigned 64 0 } } } { float_val 8 23 0. } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "fabs::bb1" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "fabs::bb3" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "fabs::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fabs::bb1::0
+        *   %tmp2 = fsub float -0.000000e+00, %x */
+      { store { addr 64 { fref 64 "%tmp2" } { dec_unsigned 64 0 } } with
+       { f_neg 8 23 { load 32 { addr 64 { fref 64 "%x" } { dec_unsigned 64 0 } } } }
+      }
+
+      /* STATEMENT fabs::bb1::1
+        *   br label %bb4 */
+      { label 64 { lref 64 "fabs::bb1::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "fabs::bb1::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fabs::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb3 ---------- */
+      { label 64 { lref 64 "fabs::bb3" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fabs::bb3::0
+        *   br label %bb4 */
+      { store { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%x" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "fabs::bb3::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "fabs::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb4 ---------- */
+      { label 64 { lref 64 "fabs::bb4" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT fabs::bb4::1
+        *   ret float %.0 */
+      { return { load 32 { addr 64 { fref 64 "%.0" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+
+  /* Definition of function sqrtfcn */
+  { func
+   { label 64 { lref 64 "sqrtfcn" } { dec_unsigned 64 0 } }
+   { arg_decls
+    { alloc 64 "%val" 32 }
+   }
+   { scope
+    { decls
+     { alloc 64 "%tmp3" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%i.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%x.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%flag.0" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp16" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%tmp19" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%flag.1" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%x.1" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%flag.2" 32 } /* Local Variable (PHI node) */ 
+     { alloc 64 "%tmp27" 32 } /* Local Variable (Non-Inlinable Instruction) */ 
+     { alloc 64 "%x.2" 32 } /* Local Variable (PHI node) */ 
+    }
+    { inits }
+    { stmts
+
+     /* --------- BASIC BLOCK bb ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb::1
+        *   %tmp = fcmp oeq float %val, 0.000000e+00
+        *   br i1 %tmp, label %bb1, label %bb2 */
+      { switch
+       { f_eq 8 23 { load 32 { addr 64 { fref 64 "%val" } { dec_unsigned 64 0 } } } { float_val 8 23 0. } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sqrtfcn::bb1" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sqrtfcn::bb2" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb1 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb1" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb1::0
+        *   br label %bb29 */
+      { store { addr 64 { fref 64 "%x.2" } { dec_unsigned 64 0 } } with { float_val 8 23 0. } }
+
+      { label 64 { lref 64 "sqrtfcn::bb1::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb29" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb2 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb2" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb2::0
+        *   %tmp3 = fdiv float %val, 1.000000e+01 */
+      { store { addr 64 { fref 64 "%tmp3" } { dec_unsigned 64 0 } } with
+       { f_div 8 23 { load 32 { addr 64 { fref 64 "%val" } { dec_unsigned 64 0 } } } { float_val 8 23 10. } }
+      }
+
+      /* STATEMENT sqrtfcn::bb2::1
+        *   br label %bb4 */
+      { label 64 { lref 64 "sqrtfcn::bb2::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%flag.0" } { dec_unsigned 64 0 } } with { dec_unsigned 32 1 } { load 32 { addr 64 { fref 64 "%tmp3" } { dec_unsigned 64 0 } } } { dec_unsigned 32 0 } }
+
+      { label 64 { lref 64 "sqrtfcn::bb2::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb4 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb4" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb4::4
+        *   %tmp5 = icmp slt i32 %i.0, 20
+        *   br i1 %tmp5, label %bb6, label %bb28 */
+      { switch
+       { s_lt 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 20 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sqrtfcn::bb6" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sqrtfcn::bb28" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb6 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb6" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb6::1
+        *   %tmp7 = icmp eq i32 %flag.0, 0
+        *   br i1 %tmp7, label %bb8, label %bb24 */
+      { switch
+       { eq 32 { load 32 { addr 64 { fref 64 "%flag.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 0 } }
+       { target { dec_signed 1 { minus 1 } } { label 64 { lref 64 "sqrtfcn::bb8" } { dec_unsigned 64 0 } } }
+       { default { label 64 { lref 64 "sqrtfcn::bb24" } { dec_unsigned 64 0 } } }
+      }
+
+     /* --------- BASIC BLOCK bb8 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb8" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb8::7
+        *   %tmp9 = fmul float %x.0, %x.0
+        *   %tmp10 = fsub float %val, %tmp9
+        *   %tmp11 = fpext float %tmp10 to double
+        *   %tmp12 = fpext float %x.0 to double
+        *   %tmp13 = fmul double %tmp12, 2.000000e+00
+        *   %tmp14 = fdiv double %tmp11, %tmp13
+        *   %tmp15 = fptrunc double %tmp14 to float
+        *   %tmp16 = fadd float %x.0, %tmp15 */
+      { store { addr 64 { fref 64 "%tmp16" } { dec_unsigned 64 0 } } with
+       { f_add 8 23 { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } }
+        { f_to_f 11 8 52 23
+         { f_div 11 52
+          { f_to_f 8 11 23 52
+           { f_sub 8 23 { load 32 { addr 64 { fref 64 "%val" } { dec_unsigned 64 0 } } }
+            { f_mul 8 23 { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } } }
+           }
+          }
+          { f_mul 11 52
+           { f_to_f 8 11 23 52 { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } } }
+           { float_val 11 52 2. }
+          }
+         }
+        }
+       }
+      }
+
+      /* STATEMENT sqrtfcn::bb8::10
+        *   %tmp17 = fmul float %tmp16, %tmp16
+        *   %tmp18 = fsub float %val, %tmp17
+        *   %tmp19 = call float @fabs(float %tmp18) */
+      { label 64 { lref 64 "sqrtfcn::bb8::10" } { dec_unsigned 64 0 } }
+      { call { label 64 { lref 64 "fabs" } { dec_unsigned 64 0 } }
+       { f_sub 8 23 { load 32 { addr 64 { fref 64 "%val" } { dec_unsigned 64 0 } } }
+        { f_mul 8 23 { load 32 { addr 64 { fref 64 "%tmp16" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%tmp16" } { dec_unsigned 64 0 } } } }
+       }
+       result
+       { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } }
+      }
+
+      /* STATEMENT sqrtfcn::bb8::13
+        *   %tmp20 = fpext float %tmp19 to double
+        *   %tmp21 = fcmp ugt double %tmp20, 1.000000e-05
+        *   br i1 %tmp21, label %bb23, label %bb22 */
+      { label 64 { lref 64 "sqrtfcn::bb8::13" } { dec_unsigned 64 0 } }
+      { switch
+       { f_gt 11 52
+        { f_to_f 8 11 23 52 { load 32 { addr 64 { fref 64 "%tmp19" } { dec_unsigned 64 0 } } } }
+        { float_val 11 52 1.0E-5 }
+       }
+       { target { dec_signed 1 { minus 1 } }
+        { label 64 { lref 64 "sqrtfcn::bb8::13::sqrtfcn::bb23" } { dec_unsigned 64 0 } }
+       }
+       { default { label 64 { lref 64 "sqrtfcn::bb22" } { dec_unsigned 64 0 } } }
+      }
+
+      { label 64 { lref 64 "sqrtfcn::bb8::13::sqrtfcn::bb23" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%flag.1" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%flag.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sqrtfcn::bb8::13::sqrtfcn::bb23:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb23" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb22 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb22" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb22::0
+        *   br label %bb23 */
+      { store { addr 64 { fref 64 "%flag.1" } { dec_unsigned 64 0 } } with { dec_unsigned 32 1 } }
+
+      { label 64 { lref 64 "sqrtfcn::bb22::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb23" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb23 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb23" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb23::1
+        *   br label %bb25 */
+      { store { addr 64 { fref 64 "%x.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%flag.2" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp16" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%flag.1" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sqrtfcn::bb23::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb25" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb24 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb24" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb24::0
+        *   br label %bb25 */
+      { store { addr 64 { fref 64 "%x.1" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%flag.2" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%flag.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sqrtfcn::bb24::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb25" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb25 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb25" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb25::2
+        *   br label %bb26 */
+      { jump { label 64 { lref 64 "sqrtfcn::bb26" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb26 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb26" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb26::0
+        *   %tmp27 = add nsw i32 %i.0, 1 */
+      { store { addr 64 { fref 64 "%tmp27" } { dec_unsigned 64 0 } } with
+       { add 32 { load 32 { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } } { dec_unsigned 32 1 } { dec_unsigned 1 0 } }
+      }
+
+      /* STATEMENT sqrtfcn::bb26::1
+        *   br label %bb4 */
+      { label 64 { lref 64 "sqrtfcn::bb26::1" } { dec_unsigned 64 0 } }
+      { store { addr 64 { fref 64 "%i.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } { addr 64 { fref 64 "%flag.0" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%tmp27" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%x.1" } { dec_unsigned 64 0 } } } { load 32 { addr 64 { fref 64 "%flag.2" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sqrtfcn::bb26::1:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb4" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb28 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb28" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb28::0
+        *   br label %bb29 */
+      { store { addr 64 { fref 64 "%x.2" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%x.0" } { dec_unsigned 64 0 } } } }
+
+      { label 64 { lref 64 "sqrtfcn::bb28::0:::1" } { dec_unsigned 64 0 } }
+      { jump { label 64 { lref 64 "sqrtfcn::bb29" } { dec_unsigned 64 0 } } leaving 0 }
+
+     /* --------- BASIC BLOCK bb29 ---------- */
+      { label 64 { lref 64 "sqrtfcn::bb29" } { dec_unsigned 64 0 } }
+
+      /* STATEMENT sqrtfcn::bb29::1
+        *   ret float %x.2 */
+      { return { load 32 { addr 64 { fref 64 "%x.2" } { dec_unsigned 64 0 } } } }
+    }
+   }
+  }
+ }
+}
